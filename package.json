@@ -7,7 +7,7 @@
     "start": "parcel serve src/index.html",
     "prebuild": "rm -rf dist",
     "build": "parcel build ./src/index.html",
-    "now-build": "parcel build"
+    "now-build": "parcel build ./src/index.html"
   },
   "author": "Julian Kaindl <kaindl745@gmail.com>",
   "license": "MIT",

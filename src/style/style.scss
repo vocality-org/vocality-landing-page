@@ -1,5 +1,16 @@
 @import 'colors.scss';
+@import 'utils.scss';
+
+html, body {
+    height: 100%;
+}
 
 body {
     background-color: $body-background-color;
+    display: flex;
+    justify-content: center;
+}
+
+#three-canvas {
+    margin-top: auto;
 }

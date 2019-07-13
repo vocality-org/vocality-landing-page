@@ -1,5 +1,6 @@
-import 'purecss';
-import { PerspectiveCamera, PointLight, Scene, WebGLRenderer } from 'three';
+import 'normalize.css';
+import 'basscss';
+import { PerspectiveCamera, AmbientLight, Scene, WebGLRenderer } from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 //import { WebGLRenderer } from 'three/src/renderers/WebGLRenderer';
 //import { Scene } from 'three/src/scenes/Scene';
@@ -34,7 +35,9 @@ function init() {
         }
     )
 
-    renderer = new WebGLRenderer({ canvas: document.getElementById('three-canvas') });
+    renderer = new WebGLRenderer({ 
+        canvas: document.getElementById('three-canvas') 
+    });
     renderer.setSize(500, 500);
     renderer.setClearColor(0x252525, 1);
 }

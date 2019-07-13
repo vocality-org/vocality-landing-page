@@ -1,24 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Vocality - Discord Music Bot</title>
-    <meta name="description" content="Vocality is a free easy to use Discord music bot made to deliver the best audio quality possible. Add Vocality to your Discord server in just a few clicks.">
+    <meta name="description"
+        content="Vocality is a free easy to use Discord music bot made to deliver the best audio quality possible. Add Vocality to your Discord server in just a few clicks.">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta property="og:title" content="Vocality - Discord Music Bot">
-    <meta property="og:description" content="Vocality is a free easy to use Discord music bot made to deliver the best audio quality possible.">
+    <meta property="og:description"
+        content="Vocality is a free easy to use Discord music bot made to deliver the best audio quality possible.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
     <meta property="og:image" content="">
     <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/style.scss">
 </head>
+
 <body>
 
-    <canvas id="three-canvas"></canvas>
+    <header class="flex py1 px2">
+        <div class="logo flex">
+            <img src="assets/logo.svg" alt="vocality-logo" class="my-auto">
+        </div>
+        <div class="flex-auto"></div>
+        <nav>
+            <ul class="list-reset flex items-center m0 h-100">
+                <li class="px2">
+                    <a href="#" class="text-decoration-none">Commands</a>
+                </li>
+                <li class="px2">
+                    <a href="#" class="text-decoration-none">FAQ</a>
+                </li>
+                <li class="px2">
+                    <a href="#" class="text-decoration-none">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="pt2">
+            <div class="clearfix">
+                <div class="sm-col sm-col-1 op1">_</div>
+                <div class="sm-col sm-col-10">
+                    <div class="clearfix mx2">
+                        <div class="md-col md-col-6 mb4 mt3">
+                            <h1 class="regular">
+                                Vocality
+                                <div class="line mt1"></div>
+                            </h1>
+                            <p class="h5 md-col-9 m0 mb1">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent
+                                libero. Sed cursus ante dapibus
+                                diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
+                                Praesent mauris.
+                            </p>
+                            <div class="cta mt4">
+                                <a class="h3 bold rounded text-decoration-none" target="_blank"
+                                    href="https://discordapp.com/api/oauth2/authorize?client_id=589595189631385602&permissions=3164224&scope=bot">
+                                    Invite Vocality
+                                </a>
+                            </div>
+                        </div>
+                        <div class="md-col md-col-6">
+                            <div class="three-container mx-auto">
+                                <canvas id="three-canvas"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sm-col sm-col-1 op1">_</div>
+            </div>
+
+
+        </article>
+    </main>
+
+    <footer></footer>
 
 </body>
 <script src="./index.js"></script>
+
 </html>

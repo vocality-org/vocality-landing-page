@@ -1,5 +1,3 @@
-import 'normalize.css';
-import 'basscss';
 import { PerspectiveCamera, AmbientLight, Scene, WebGLRenderer } from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 //import { WebGLRenderer } from 'three/src/renderers/WebGLRenderer';
@@ -39,7 +37,7 @@ function init() {
         canvas: document.getElementById('three-canvas') 
     });
     renderer.setSize(500, 500);
-    renderer.setClearColor(0x252525, 1);
+    renderer.setClearColor('#121212', 1);
 }
 
 function animate() {

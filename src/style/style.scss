@@ -10,6 +10,7 @@ html, body {
     margin: 0;
     body {
         background-color: $body-background;
+        color: $text-primary;
     }
 }
 
@@ -31,12 +32,10 @@ header {
 // -------------------------------------------
 main {
     h1 {
-        color: $text-primary;
         font-size: 72px;
         text-align: center;
         .line {
             height: 2px;
-            background-color: $text-primary;
         }
     }
     p {
@@ -49,12 +48,16 @@ main {
         line-height: 42px;
         text-align: center; 
         a {
-                    color: $text-primary;
+            color: $text-primary;
         }
     }
     .cta:hover {
         background-color: #ff3f5fc5;
         cursor: pointer;
+    }
+
+    .divider {
+        margin: 128px;
     }
 }
 
@@ -68,13 +71,33 @@ main {
             background-color: $text-primary;
         }
     }
+    section {
+        .cell {
+            width: 90%;
+        }
+        p {
+            max-width: 80%;
+        }
+    }
 }
 
 // THREE
 // -------------------------------------------
 .three-container {
     width: 500px;
-    #three-canvas {
-        background-color: transparent;
+}
+
+// FOOTER
+// -------------------------------------------
+footer {
+    background-color: $footer-background;
+    box-shadow: 15px 15px 10px 3px #000000;
+    margin-top: 128px;
+    ul a {
+        color: $text-secondary;
+    }
+    li  {
+        text-align: center;
+        min-width: 80px;
     }
 }

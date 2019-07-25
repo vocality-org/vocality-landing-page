@@ -12,9 +12,9 @@ animate();
 
 function init() {
 
-    camera = new PerspectiveCamera();
-    camera.position.z = 1;
-    camera.position.y = 0.25;  
+    camera = new PerspectiveCamera(50);
+    camera.position.z = 0.75;
+    camera.position.y = 0.3;  
 
     scene = new Scene();
 
@@ -36,7 +36,7 @@ function init() {
     renderer = new WebGLRenderer({ 
         canvas: document.getElementById('three-canvas') 
     });
-    renderer.setSize(500, 500);
+    renderer.setSize(500, 500, false);
     renderer.setClearColor('#121212', 1);
 }
 

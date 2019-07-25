@@ -10,3 +10,23 @@
     color: transparent;
     background-color: transparent;
 }
+.icon {
+    img {
+        height: 42px;
+    }
+}
+
+.hide-on-sm {
+    display: block;
+}
+.show-on-sm {
+    display: none;
+}
+@media (max-width: 40em) {
+    .hide-on-sm {
+        display: none;
+    }
+    .show-on-sm {
+        display: block;
+    }
+}

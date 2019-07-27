@@ -34,10 +34,11 @@ function init() {
     )
 
     renderer = new WebGLRenderer({ 
-        canvas: document.getElementById('three-canvas') 
+        canvas: document.getElementById('three-canvas')
     });
     renderer.setSize(500, 500, false);
     renderer.setClearColor('#121212', 1);
+    renderer.gammaOutput = true;
 }
 
 function animate() {

@@ -64,7 +64,7 @@ header {
 // SEARCH FIELD
 // -------------------------------------------
 .search {
-    img {
+    .search-icon {
         height: 36px;
         margin: auto 8px;
     }
@@ -74,6 +74,7 @@ header {
         white-space: pre;
         background-color:  transparent;
         color: $text-primary;
+
         &::placeholder {
             color: $text-secondary;
         }

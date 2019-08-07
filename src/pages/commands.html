@@ -42,7 +42,7 @@
     </header>
 
     <div class="search flex justify-center pt4">
-        <img src="../assets/search.svg" alt="search"    >
+        <img src="../assets/search.svg" alt="search" class="search-icon">
         <input type="search" placeholder="Search Commands" name="search" contenteditable="true" autocomplete="off"
             maxlength="48" id="search-field" class="border-none">
         <span id="search-field-helper"></span>
@@ -68,6 +68,10 @@
             const resizeForText = (text) => {
                 if (!text.trim()) {
                     text = searchElement.getAttribute('placeholder').trim();
+                    showSearchIcon();
+                } 
+                else {
+                    hideSearchIcon();
                 }
                 span.innerHTML = text;
                 searchElement.style.width = window.getComputedStyle(span).width;
@@ -91,6 +95,13 @@
             resizeForText('');
         });
 
+        const hideSearchIcon = () => {
+            document.getElementsByClassName('search-icon')[0].style.display = 'none';
+        }
+
+        const showSearchIcon = () => {
+            document.getElementsByClassName('search-icon')[0].style.display = 'block';
+        }
 
     </script>
 

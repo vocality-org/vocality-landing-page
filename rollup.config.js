@@ -5,7 +5,7 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import { sass } from 'svelte-preprocess-sass';
 import scss from 'rollup-plugin-scss';
-import postcss from 'rollup-plugin-postcss';
+import copy from "rollup-plugin-copy-assets";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -55,6 +55,14 @@ export default {
 		scss({
 			output: 'public/global.css',
 		}),
+
+		// copy assets and static resources
+		copy({
+			assets: [
+				"../static/vocality-logo.glb",
+				"src/assets",
+			]
+		})
 	],
 	watch: {
 		clearScreen: false

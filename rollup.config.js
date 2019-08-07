@@ -3,6 +3,9 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
+import { sass } from 'svelte-preprocess-sass';
+import scss from 'rollup-plugin-scss';
+import postcss from 'rollup-plugin-postcss';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -16,6 +19,9 @@ export default {
 	},
 	plugins: [
 		svelte({
+			preprocess: {
+				style: sass({}, { all: true }),
+			},
 			// enable run-time checks when not in production
 			dev: !production,
 			// we'll extract any component CSS out into
@@ -42,7 +48,17 @@ export default {
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
-		production && terser()
+		production && terser(),
+		
+		// Since the svelte sass preprocessor only handles
+		// .svelte files we need to compile the global files seperately
+		scss({
+			output: 'public/global.css',
+		}),
+
+		postcss({
+			minmize: true
+		})
 	],
 	watch: {
 		clearScreen: false

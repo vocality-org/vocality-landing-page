@@ -55,10 +55,6 @@ export default {
 		scss({
 			output: 'public/global.css',
 		}),
-
-		postcss({
-			minmize: true
-		})
 	],
 	watch: {
 		clearScreen: false

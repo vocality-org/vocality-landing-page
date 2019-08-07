@@ -5,9 +5,8 @@
   "scripts": {
     "build": "rollup -c",
     "autobuild": "rollup -c -w",
-    "dev": "run-p start:dev autobuild",
-    "start": "sirv public --single",
-    "start:dev": "sirv public --single --dev"
+    "serve": "sirv public --single --dev",
+    "start": "run-p autobuild serve"
   },
   "author": "Julian Kaindl <kaindl745@gmail.com>",
   "license": "MIT",

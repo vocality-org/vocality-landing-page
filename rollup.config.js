@@ -59,7 +59,6 @@ export default {
 		// copy assets and static resources
 		copy({
 			assets: [
-				"../static/vocality-logo.glb",
 				"src/assets",
 			]
 		})

@@ -13,6 +13,7 @@
   "dependencies": {
     "basscss": "^8.1.0",
     "normalize.css": "^8.0.1",
+    "svero": "^1.0.0",
     "three": "^0.106.2"
   },
   "devDependencies": {

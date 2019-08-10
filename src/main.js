@@ -4,8 +4,8 @@ import 'normalize.css/normalize.css';
 import 'basscss/css/basscss.css';
 import './styles/main.scss';
 
-const app = new App({
-    target: document.body,
+document.addEventListener('DOMContentLoaded', () => {
+    new App({
+        target: document.body
+    });
 });
-
-export default app;

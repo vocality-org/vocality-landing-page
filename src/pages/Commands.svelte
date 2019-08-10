@@ -2,6 +2,7 @@
     import Navbar from '../components/Navbar.svelte';
 
     setTimeout(() => {
+        svgSetup();
         const searchElement = document.getElementById('search-field');
         searchElement.focus();
         const span = document.getElementById('search-field-helper');
@@ -43,6 +44,13 @@
 
     const showSearchIcon = () => {
         document.getElementsByClassName('search-icon')[0].style.display = 'block';
+    }
+
+    const svgSetup = () => {
+        const body = document.getElementsByTagName('body')[0];
+        const bodyHeight = window.getComputedStyle(body).height;
+        console.log(bodyHeight);
+        document.getElementsByClassName('bg-svg')[0].style.height = bodyHeight;
     }
 </script>
 
@@ -86,24 +94,54 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
 
+// LIST
+// ------------------------------------------
+.list-container {
+    background-color: var(--body-background);
+    height: 1000px;
+    .tabs {
+        height: 36px;
+        margin-top: -18px;
+        * {
+            font-size: var(--footer-font-size);
+            line-height: 36px;
+            background-color: var(--body-background);
+            border-radius: 18px;
+            width: 180px;
+            text-align: center;
+        }
+        .active {
+            border: 4px solid var(--brand-cyan);
+            line-height: 28px;
+        }
+    }
+}
 
 // BACKGROUND SVG
 // -------------------------------------------
 .bg-svg {
-    position: fixed;
+    position: absolute;
     z-index: -1;
     top: 0;
-    height: 100vh;
+    height: 100%;
 }
 </style>
 
 <Navbar/>
 
-<div class="search flex justify-center pt4">
+<div class="search flex justify-center pt4 pb2">
     <img src="../assets/search.svg" alt="search" class="search-icon">
-    <input type="search" placeholder="Search Commands" name="search" contenteditable="true" autocomplete="off"
+    <input type="search" placeholder="Search Commands..." name="search" contenteditable="true" autocomplete="off"
         maxlength="48" id="search-field" class="border-none">
     <span id="search-field-helper"></span>
+</div>
+
+<div class="list-container flex col-10 mt4 mx-auto">
+    <div class="tabs mx-auto flex">
+        <div class="mx2">Music</div>
+        <div class="mx2 active">All</div>
+        <div class="mx2">General</div>
+    </div>
 </div>
 
 <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" fill="none" viewBox="0 0 1920 2524"
@@ -115,4 +153,3 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     <rect width="727.426" height="4670.24" fill="#29ABE2"
         transform="matrix(-0.311873 -0.950124 0.936184 -0.35151 -1361.14 1709.78)" />
 </svg>
-

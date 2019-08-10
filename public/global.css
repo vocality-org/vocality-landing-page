@@ -42,8 +42,8 @@
   --text-secondary: #f2f2f296; }
 
 html, body {
-  height: 100%;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  font-display: swap; }
   html body, body body {
     background-color: #121212;
     color: #f2f2f2; }

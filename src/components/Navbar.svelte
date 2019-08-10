@@ -1,11 +1,22 @@
 <script>
+    import { navigateTo } from 'svero';
 
+    function navigateIndex() {
+        navigateTo('/');
+    }
 </script>
 
 <style lang="scss">
 header {
     background-color: transparent;
     height: var(--nav-bar-height);
+
+    .icon {
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
 
     li > a {
         color: var(--text-secondary);
@@ -39,7 +50,7 @@ header {
 </style>
 
 <header class="flex py1 px3">
-    <div class="icon flex">
+    <div class="icon flex"  on:click={navigateIndex}>
         <img src="../assets/logo.svg" alt="vocality-logo" class="my-auto">
     </div>
     <div class="flex-auto"></div>

@@ -59,6 +59,13 @@
         background-color: var(--body-background);
         height: var(--nav-bar-height);
 
+        .icon {
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+
         li > a {
             color: var(--text-secondary);
             font-size: var(--navbar-text-font-size);
@@ -264,7 +271,7 @@
                                 diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
                                 Praesent mauris.
                             </p>
-                            <a class="cta h3 bold text-decoration-none mt4 inline-block" target="_blank"
+                            <a class="cta h3 bold text-decoration-none mt4 inline-block" target="_blank" rel="noreferrer"
                                 href="https://discordapp.com/api/oauth2/authorize?client_id=589595189631385602&permissions=3164224&scope=bot">
                                 Invite Vocality
                             </a>
@@ -272,7 +279,6 @@
                         <div class="md-col md-col-6">
                             <div class="three-container flex justify-center">
                                 <canvas id="three-canvas"></canvas>
-                                <div class="t"></div>
                             </div>
                         </div>
                     </div>

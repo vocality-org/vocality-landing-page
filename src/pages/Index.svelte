@@ -1,4 +1,6 @@
 <script>
+    import Footer from '../components/Footer.svelte';
+
     import { PerspectiveCamera, AmbientLight, Scene, WebGLRenderer } from 'three';
     import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
@@ -53,182 +55,152 @@
 </script>
 
 <style lang="scss">
-header {
-    background-color: var(--body-background);
-    height: var(--nav-bar-height);
+    header {
+        background-color: var(--body-background);
+        height: var(--nav-bar-height);
 
-    li > a {
-        color: var(--text-secondary);
-        font-size: var(--navbar-text-font-size);
-        font-weight: 900;
-        position: relative;
-        transition: color 0.3s ease;
+        li > a {
+            color: var(--text-secondary);
+            font-size: var(--navbar-text-font-size);
+            font-weight: 900;
+            position: relative;
+            transition: color 0.3s ease;
 
-        &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            height: 4px;
-            width: 0;
-            background-color: var(--brand-pink);
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            transition: width 0.3s ease;
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                height: 4px;
+                width: 0;
+                background-color: var(--brand-pink);
+                bottom: -8px;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: width 0.3s ease;
+            }
+
+            &:hover, 
+            &:focus {
+                color: var(--text-primary);
+                &::after {
+                    width: 30%;
+                }
+            }
         }
 
-        &:hover, 
-        &:focus {
-            color: var(--text-primary);
-            &::after {
-                width: 30%;
+        .close-menu {
+            display: none;
+        }
+    }
+
+    #side-navigation:target {
+        width: 40%;
+    }
+
+    #side-navigation:target + .page-wrap {
+        margin-right: 40%;
+
+        .open-menu {
+            display: none;
+        }
+
+        .close-menu {
+            display: flex;
+        }
+    }
+
+    .sidenav {
+        width: 0; 
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        transition: width 0.3s ease;
+        background-color: var(--footer-background);
+
+        a {
+            height: 48px;
+            line-height: 48px;
+            &:hover,
+            &:focus
+            {
+                background-color: var(--brand-pink);
             }
         }
     }
 
-    .close-menu {
-        display: none;
-    }
-}
-
-#side-navigation:target {
-    width: 40%;
-}
-
-#side-navigation:target + .page-wrap {
-    margin-right: 40%;
-
-    .open-menu {
-        display: none;
-    }
-
-    .close-menu {
-        display: flex;
-    }
-}
-
-.sidenav {
-    width: 0; 
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    transition: width 0.3s ease;
-    background-color: var(--footer-background);
-
-    a {
-        height: 48px;
-        line-height: 48px;
-        &:hover,
-        &:focus
-        {
-            background-color: var(--brand-pink);
+    @media (min-width: 40em) {
+        .sidenav {
+            width: 0 !important;
         }
-    }
-}
 
-@media (min-width: 40em) {
-    .sidenav {
-        width: 0 !important;
-    }
-
-    .page-wrap {
-        margin-right: 0 !important;
-    }
-}
-
-main {
-    h1 {
-        font-size: var(--title-font-size);
-        text-align: center;
-    }
-
-    p {
-        color: var(--text-secondary);
-    }
-
-    .cta {
-        height: 42px;
-        width: 200px;
-        background-color: var(--brand-pink);
-        line-height: 42px;
-        text-align: center; 
-        color: var(--text-primary);
-        
-        &:hover, &:focus {
-            background-color: #ff3f5fc5;
+        .page-wrap {
+            margin-right: 0 !important;
         }
     }
 
-    .divider {
-        margin: 200px auto;
-    }
-}
-
-@media (min-width:  52em) {
-    h1 {
-        text-align: start !important;
-
-        .line {
-            height: 4px;
-            width: 55px;
-            background-color: var(--text-primary);
-        }
-    }
-
-    section {
-
-        .cell {
-            width: 90%;
+    main {
+        h1 {
+            font-size: var(--title-font-size);
+            text-align: center;
         }
 
         p {
-            max-width: 80%;
+            color: var(--text-secondary);
         }
-    }
-}
 
-// THREE
-// -------------------------------------------
-.three-container {
-    height: 100%;
-
-    * {
-        height: 80%;
-        width: 80%;
-    }
-}
-
-// FOOTER
-// -------------------------------------------
-footer {
-    background-color: var(--footer-background);
-    font-size: var(--footer-font-size);
-    box-shadow: 0 -2px 20px 2px #00000060;
-    margin-top: 128px;
-
-    ul a {
-        color: var(--text-secondary);
-        &:hover, &:focus {
+        .cta {
+            height: 42px;
+            width: 200px;
+            background-color: var(--brand-pink);
+            line-height: 42px;
+            text-align: center; 
             color: var(--text-primary);
+            
+            &:hover, &:focus {
+                background-color: #ff3f5fc5;
+            }
+        }
+
+        .divider {
+            margin: 200px auto;
         }
     }
 
-    li  {
-        text-align: center;
-        min-width: 80px;
-    }
+    @media (min-width:  52em) {
+        h1 {
+            text-align: start !important;
 
-    @media (max-width: 40em) {
-        ul {
-            flex-direction: column;
-            li {
-                padding: 8px 0;
+            .line {
+                height: 4px;
+                width: 55px;
+                background-color: var(--text-primary);
+            }
+        }
+
+        section {
+
+            .cell {
+                width: 90%;
+            }
+
+            p {
+                max-width: 80%;
             }
         }
     }
-}
+
+    // THREE
+    // -------------------------------------------
+    .three-container {
+        height: 100%;
+
+        * {
+            height: 80%;
+            width: 80%;
+        }
+    }
 </style>
 
 
@@ -373,30 +345,5 @@ footer {
         </article>
     </main>
 
-    <footer>
-        <div class="flex justify-center py3">
-            <nav>
-                <ul class="list-reset flex items-center">
-                    <li class="px3">
-                        <a href="commands" class="text-decoration-none h5">Commands</a>
-                    </li>
-                    <li class="px3">
-                        <a href="donate" class="text-decoration-none h5">Donate</a>
-                    </li>
-                    <li class="px3">
-                        <a href="support" class="text-decoration-none h5">Support</a>
-                    </li>
-                    <li class="px3">
-                        <a href="faq" class="text-decoration-none h5">FAQ</a>
-                    </li>
-                    <li class="px3">
-                        <a href="about" class="text-decoration-none h5">About</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="flex justify-center" style="padding-bottom: 48px">
-            <img src="assets/logo.svg" width="42" height="42" alt="vocality-logo">
-        </div>
-    </footer>
+    <Footer />
 </div>

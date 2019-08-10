@@ -12,16 +12,3 @@
     <Route path="/commands" component={Commands} />
     <Route fallback path="*"></Route> 
 </Router>
-
-<!--
-
-<Router>
-    <Route fallback path="*"><h1>404</h1></Route>
-    <Router exact path="/">
-        <Route path="#:any" component={Index}/>
-        <Route path="#" component={Index}/>
-    </Router>
-    <Route path="/commands" component={Commands} />
-</Router>
-
--->

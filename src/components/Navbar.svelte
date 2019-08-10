@@ -46,13 +46,13 @@ header {
     <nav class="hide-on-sm">
         <ul class="list-reset flex items-center m0 h-100">
             <li>
-                <a href="" class="text-decoration-none px3">Commands</a>
+                <a href="commands" class="text-decoration-none px3">Commands</a>
             </li>
             <li>
-                <a href="" class="text-decoration-none px3">FAQ</a>
+                <a href="faq" class="text-decoration-none px3">FAQ</a>
             </li>
             <li>
-                <a href="" class="text-decoration-none px3">About</a>
+                <a href="about" class="text-decoration-none px3">About</a>
             </li>
         </ul>
     </nav>

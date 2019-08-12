@@ -6,12 +6,8 @@
             "use": "@now/static-build"
         }
     ],
-    "static": {
-        "rewrites": [
-            {
-                "source": "**",
-                "destination": "/index.html"
-            }
-        ]
-    }
+    "routes": [
+        {"src": "/assets/(.*)", "dest": "/assets/$1"},
+        {"src": "/(.*)", "dest": "/index.html"}
+    ]
 }

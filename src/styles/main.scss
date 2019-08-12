@@ -1,0 +1,29 @@
+@import 'utils.scss';
+@import 'variables.scss';
+
+// GLOBAL
+// -------------------------------------------
+html, body {
+    font-family: 'Roboto', sans-serif;
+    font-display: swap;
+
+    body {
+        background-color: $body-background;
+        color: $text-primary;
+
+        .page-wrap {
+            float: right;
+            width: 100%;
+            transition: margin-right 0.3s ease-out;
+        }
+    }
+}
+
+a {
+    cursor: pointer;
+    color: $text-primary;
+}
+
+:focus {
+    outline: none;
+}

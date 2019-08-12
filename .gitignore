@@ -3,3 +3,5 @@ dist
 .cache
 .vscode/*
 .npm
+public/bundle.*
+public/assets/*

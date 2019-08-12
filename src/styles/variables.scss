@@ -1,0 +1,47 @@
+// Layout
+$nav-bar-height: 64px;
+
+// Breakpoints
+$sm-breakpoint: 40em;
+$md-breakpoint: 52em;
+
+// Typography
+$title-font-size: 72px;
+$subtitle-font-size: 24px;
+$text-font-size: 19px;
+$navbar-text-font-size: 17px;
+$footer-font-size: 15px;
+
+// Colors
+$brand-cyan: #29abe2;
+$brand-blue: #0c003f;
+$brand-pink: #ff3f60;
+$body-background: #121212;
+$footer-background: #252525;
+$text-primary: #f2f2f2;
+$text-secondary: #f2f2f296;
+
+:root {
+    // Layout
+    --nav-bar-height: 64px;
+
+    // Breakpoints
+    --sm-breakpoint: 40em;
+    --md-breakpoint: 52em;
+
+    // Typography
+    --title-font-size: 72px;
+    --subtitle-font-size: 24px;
+    --text-font-size: 19px;
+    --navbar-text-font-size: 17px;
+    --footer-font-size: 15px;
+
+    // Colors
+    --brand-cyan: #29abe2;
+    --brand-blue: #0c003f;
+    --brand-pink: #ff3f60;
+    --body-background: #121212;
+    --footer-background: #252525;
+    --text-primary: #f2f2f2;
+    --text-secondary: #f2f2f296;
+}

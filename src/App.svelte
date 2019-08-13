@@ -6,9 +6,8 @@
 </script>
 
 <Router>
-
     <Route exact path="/" component={Index}/>
     <Route exact path="/#" component={Index}/>
-    <Route path="/commands" component={Commands} />
+    <Route path="/commands" component={Commands}/>
     <Route fallback path="*"><h1>404 :)</h1></Route> 
 </Router>

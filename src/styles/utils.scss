@@ -24,9 +24,9 @@
 }
 @media (max-width: 40em) {
     .hide-on-sm {
-        display: none;
+        display: none !important;
     }
     .show-on-sm {
-        display: block;
+        display: block !important;
     }
 }

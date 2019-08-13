@@ -49,82 +49,112 @@
     const svgSetup = () => {
         const body = document.getElementsByTagName('body')[0];
         const bodyHeight = window.getComputedStyle(body).height;
-        console.log(bodyHeight);
         document.getElementsByClassName('bg-svg')[0].style.height = bodyHeight;
+    }
+
+    function setActive(event) {
+        const tabs = [...document.getElementsByClassName('tab')];
+        tabs.forEach(t => {
+            t.classList.remove('active');       
+        });
+        event.target.classList.add('active');
     }
 </script>
 
 <style lang="scss">
+    // SEARCH FIELD
+    // -------------------------------------------
+    .search {
+        height: 116px;
+        .search-icon {
+            height: 36px;
+            margin: auto 8px;
+        }
+        input, span {
+            font-size: 36px;
+            line-height: 36px;
+            white-space: pre;
+            background-color:  transparent;
+            color: var(--text-primary);
 
-// SEARCH FIELD
-// -------------------------------------------
-.search {
-    .search-icon {
-        height: 36px;
-        margin: auto 8px;
-    }
-    input, span {
-        font-size: 36px;
-        line-height: 36px;
-        white-space: pre;
-        background-color:  transparent;
-        color: var(--text-primary);
-
-        &::placeholder {
-            color: var(--text-secondary);
+            &::placeholder {
+                color: var(--text-secondary);
+            }
+        }
+        span {
+            // display: none; 
+            // (width is auto on display none elements when using computedStyle)
+            visibility: hidden;
+            position: absolute;
+            z-index: -1;
+            user-select: none;
         }
     }
-    span {
-        // display: none; 
-        //stupid workaround but whatever (width is auto on display none elements when using computedStyle)
-        visibility: hidden;
+
+    @media (max-width: 40em) {
+        .search {
+            .search-icon {
+                height: 24px;
+            }
+            input, span {
+                font-size: 24px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    /* clears the 'X' from Internet Explorer */
+    input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+    input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+    /* clears the 'X' from Chrome */
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+    // LIST
+    // ------------------------------------------
+    .list-container {
+        background-color: var(--body-background);
+        height: 1000px;
+        .tabs {
+            height: 36px;
+            margin-top: -18px;
+            .tab {
+                font-size: var(--footer-font-size);
+                line-height: 36px;
+                background-color: var(--body-background);
+                border-radius: 18px;
+                width: 180px;
+                text-align: center;
+                cursor: pointer;
+                transition: border-width 0.15s linear;
+                &:hover {
+                    background-color: var(--footer-background);
+                }
+            }
+            .active {
+                border: 4px solid var(--brand-cyan);
+                line-height: 28px;
+            }
+        }
+    }
+
+    @media (max-width: 40em) {
+        .tabs {
+            display: none !important;
+        }
+    }
+
+    // BACKGROUND SVG
+    // -------------------------------------------
+    .bg-svg {
         position: absolute;
         z-index: -1;
-        user-select: none;
+        top: 0;
+        height: 100%;
     }
-}
-
-/* clears the 'X' from Internet Explorer */
-input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
-input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
-
-/* clears the 'X' from Chrome */
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration { display: none; }
-
-// LIST
-// ------------------------------------------
-.list-container {
-    background-color: var(--body-background);
-    height: 1000px;
-    .tabs {
-        height: 36px;
-        margin-top: -18px;
-        * {
-            font-size: var(--footer-font-size);
-            line-height: 36px;
-            background-color: var(--body-background);
-            border-radius: 18px;
-            width: 180px;
-            text-align: center;
-        }
-        .active {
-            border: 4px solid var(--brand-cyan);
-            line-height: 28px;
-        }
-    }
-}
-
-// BACKGROUND SVG
-// -------------------------------------------
-.bg-svg {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    height: 100%;
-}
 </style>
 
 <Navbar/>
@@ -138,9 +168,9 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 <div class="list-container flex col-10 mt4 mx-auto">
     <div class="tabs mx-auto flex">
-        <div class="mx2">Music</div>
-        <div class="mx2 active">All</div>
-        <div class="mx2">General</div>
+        <div class="mx2 tab" on:click={setActive}>Music</div>
+        <div class="mx2 tab active" on:click={setActive}>All</div>
+        <div class="mx2 tab" on:click={setActive}>General</div>
     </div>
 </div>
 

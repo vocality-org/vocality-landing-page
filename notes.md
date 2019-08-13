@@ -8,8 +8,5 @@ https://css-tricks.com/having-fun-with-link-hover-effects/
 https://threejsfundamentals.org/threejs/lessons/threejs-responsive.html
 https://stripe.com/en-at/enterprise
 
-# swtichign to a framework
-- svelte
-- polymer/lit-html
-
-https://github.com/sveltejs/templates
+# commands list 
+https://jsoneditoronline.org/?id=438681bf5bfa42f98ef5d9a2f894b81e

@@ -1,11 +1,10 @@
-import App from './App.svelte';
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
 
-import 'normalize.css/normalize.css';
-import 'basscss/css/basscss.css';
-import './styles/main.scss';
+Vue.config.productionTip = false
 
-document.addEventListener('DOMContentLoaded', () => {
-    new App({
-        target: document.body
-    });
-});
+new Vue({
+  router,
+  render: function (h) { return h(App) }
+}).$mount('#app')

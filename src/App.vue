@@ -1,32 +1,62 @@
 <template>
     <div id="app">
-        <router-view/>
+        <Sidenav :width="400" :isOpen="sidenavOpenState" @closeSidenav="() => {this.sidenavOpenState = false}"></Sidenav>
+        <div id="page-wrap">
+            <Navbar :sidenavOpen="sidenavOpenState" @sidenavStateChange="(state) => this.sidenavOpenState = state"></Navbar>
+            <router-view />
+            <Footer></Footer>
+        </div>
     </div>
 </template>
 
-<style lang="scss">
-    html, body {
-        font-family: 'Roboto', sans-serif;
+<script>
+import Footer from '@/components/Footer.vue'
+import Navbar from '@/components/Navbar.vue'
+import Sidenav from '@/components/Sidenav.vue'
 
-        body {
-            background-color: $color-background;
-            color: $color-text;
-            margin: 0;
-
-            .page-wrap {
-                float: right;
-                width: 100%;
-                transition: margin-right 0.3s ease-out;
-            }
+export default {
+    components: {
+        Footer,
+        Navbar,
+        Sidenav
+    },
+    data () {
+        return {
+            sidenavOpenState: false
         }
     }
+}
 
-    a {
-        cursor: pointer;
+</script>
+
+<style lang="scss">
+html,
+body {
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+    body {
         color: $color-text;
+        background-color: rgb(73, 73, 73);
+        margin: 0;
     }
+}
 
-    :focus {
-        outline: none;
-    }
+#app {
+    height: 100%;
+}
+
+#page-wrap {
+    height: 100%;
+    background-color: $color-background;
+}
+
+a {
+    cursor: pointer;
+    color: $color-text;
+}
+
+:focus {
+    outline: none;
+}
 </style>

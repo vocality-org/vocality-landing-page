@@ -123,20 +123,22 @@
             margin-top: -18px;
             .tab {
                 font-size: var(--footer-font-size);
-                line-height: 36px;
+                line-height: 28px;
                 background-color: var(--body-background);
                 border-radius: 18px;
+                border: 4px solid transparent;
                 width: 180px;
                 text-align: center;
                 cursor: pointer;
-                transition: border-width 0.15s linear;
+                transition: box-shadow 0.15s linear;
                 &:hover {
                     background-color: var(--footer-background);
                 }
             }
             .active {
-                border: 4px solid var(--brand-cyan);
-                line-height: 28px;
+                box-shadow: 0 0 0 4px var(--brand-cyan);
+                // blurred shadow version
+                // box-shadow: 0 0 10px 4px var(--brand-cyan);
             }
         }
     }

@@ -1,6 +1,18 @@
 <template>
-    <div>
-        <div ref="sidenavRef" class="sidenav fixed h-100"></div>
+    <div ref="sidenavRef" class="sidenav fixed h-100">
+        <nav>
+            <ul class="list-reset flex-column">
+                <li>
+                    <a href="commands" class="text-decoration-none block h-100 pl2 h3">Commands</a>
+                </li>
+                <li>
+                    <a href="faq" class="text-decoration-none block h-100 pl2 h3">FAQ</a>
+                </li>
+                <li>
+                    <a href="about" class="text-decoration-none block h-100 pl2 h3">About</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </template>
 
@@ -109,11 +121,20 @@ export default {
     width: 0;
     z-index: 100;
     overflow-x: hidden;
-    padding-top: 60px;
+    padding-top: 64px;
     top: 0;
     left: auto;
     right: 0;
     background-color: $color-background-secondary;
     transition: width 0.3s ease;
+    a {
+        height: 48px;
+        line-height: 48px;
+        &:hover,
+        &:focus
+        {
+            background-color: $color-brand-pink;
+        }
+    }
 }
 </style>

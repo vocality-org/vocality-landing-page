@@ -10,24 +10,24 @@
             <nav class="hide-on-sm">
                 <ul class="list-reset flex items-center m0 h-100">
                     <li>
-                        <router-link to="/commands" class="text-decoration-none px3">Commands</router-link>
+                        <router-link to="/commands" class="text-decoration-none px3 h3">Commands</router-link>
                     </li>
                     <li>
-                        <router-link to="/faq" class="text-decoration-none px3">Donate</router-link>
+                        <router-link to="/faq" class="text-decoration-none px3 h3">Donate</router-link>
                     </li>
                     <li>
-                        <router-link to="/about" class="text-decoration-none px3">About</router-link>
+                        <router-link to="/about" class="text-decoration-none px3 h3">About</router-link>
                     </li>
                 </ul>
             </nav>
             <div class="show-on-sm flex relative">
                 <transition name="fade">
-                    <div key=1 v-if="!sidenavOpen" class="flex h-100 absolute" style="right: 32px">
+                    <div key=1 v-if="!sidenavOpen" class="flex h-100 absolute" style="right: 0">
                         <button class="icon" @click="openSidenavClick">
                             <img src="@/assets/menu.svg" alt="Open the menu" class="sidenav-button">
                         </button>
                     </div>
-                    <div key=2 v-else class="flex h-100 absolute" style="right: 32px">
+                    <div key=2 v-else class="flex h-100 absolute" style="right: 0">
                         <button class="icon" @click="closeSidenavClick">
                             <img src="@/assets/close.svg" alt="Close the menu" class="sidenav-button">
                         </button>

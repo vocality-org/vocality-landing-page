@@ -60,24 +60,20 @@ export default {
 
         pushPage () {
             document.querySelector('#page-wrap').style.transition = 'all 0.3s ease 0s'
-            document.querySelector('#page-wrap').style.transform = `translate3d(-${this.openedWidth}, 0px, -600px ) rotateY(20deg)`
-            document.querySelector('#page-wrap').style.transformStyle = 'preserve-3d'
-            document.querySelector('#app').style.perspective = '1500px'
+            document.querySelector('#page-wrap').style.transform = `translate3d(-${this.openedWidth}, 0px, 0px )`
             document.querySelector('#app').style.overflow = 'hidden'
         },
 
         pullPage () {
             document.querySelector('#page-wrap').style.transition = 'all 0.3s ease 0s'
             document.querySelector('#page-wrap').style.transform = ''
-            document.querySelector('#page-wrap').style.transformStyle = ''
-            document.querySelector('#page-wrap').style.transformOrigin = ''
         }
     },
     mounted () {
         document.addEventListener('keyup', this.closeSidenavOnEsc)
     },
     created: function () {
-        document.addEventListener('click', this.closeSidenavOnDocumentClick)
+        // document.addEventListener('click', this.closeSidenavOnDocumentClick)
     },
     destroyed: function () {
         document.removeEventListener('keyup', this.closeSidenavOnEsc)

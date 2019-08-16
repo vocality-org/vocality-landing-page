@@ -40,7 +40,8 @@
                 scene: null,
                 renderer: null,
                 mesh: null,
-                logo: null
+                logo: null,
+                rotation: -1
             }
         },
         methods: {
@@ -57,7 +58,8 @@
                     ('vocality-logo.glb'),
                     (gltf) => {
                         this.logo = gltf.scene
-                        this.logo.scale.set(3.5, 3.5, 3.5)
+                        this.logo.scale.set(4.5, 4.5, 4.5)
+                        this.logo.position.set(0.28, 0.05, 0)
                         this.scene.add(this.logo)
                     },
                     (xhr) => {
@@ -73,22 +75,27 @@
                 this.renderer.gammaOutput = true
                 this.renderer.setSize(this.ww, this.wh)
                 container.appendChild(this.renderer.domElement)
-
             },
             animate: function () {
                 requestAnimationFrame(this.animate)
                 if (this.logo) {
-                    this.logo.rotation.y += -0.001
+                    if (this.logo.rotation.y > 0.45) {
+                        this.rotation = -1
+                    }
+                    else if (this.logo.rotation.y < -0.65) {
+                        this.rotation = 1
+                    }
+                    this.logo.rotation.y += 0.001 * this.rotation;
                 }
                 this.renderer.render(this.scene, this.camera)
             },
             onResize: function () {
                 if (this.renderer && this.camera) {
-                    const ww = window.innerWidth;
-                    const wh = window.innerHeight;
-                    this.renderer.setSize(ww, wh);
-                    this.camera.aspect = ww / wh;
-                    this.camera.updateProjectionMatrix();
+                    const ww = window.innerWidth
+                    const wh = window.innerHeight
+                    this.renderer.setSize(ww, wh)
+                    this.camera.aspect = ww / wh
+                    this.camera.updateProjectionMatrix()
                 }
             }
         },
@@ -100,7 +107,7 @@
             window.addEventListener('resize', this.onResize)
         },
         destroyed: function () {
-            window.removeEventListener('resize', this.onResize);
+            window.removeEventListener('resize', this.onResize)
         }
     }
 
@@ -124,10 +131,7 @@
         height: 100vh;
         cursor: grab;
         display: flex;
-        justify-content: flex-end;  
-        canvas {
-
-        }
+        justify-content: flex-end;
     }
 }
 .header {
@@ -135,6 +139,7 @@
     padding: 120px 20px 0px;
     position: relative;
     pointer-events: none;
+    min-height: 100vh;
     .content {
         flex-basis: 100%;
         @include mq(md) {
@@ -145,12 +150,13 @@
             max-width: 300px;
             pointer-events: auto;
             @include mq(sm) {
-                font-size: 72px;
+                font-size: 92px;
             }
         }
         p {
             max-width: 440px;
             pointer-events: auto;
+            line-height: 1.9rem;
         }
         .cta {
             height: 52px;

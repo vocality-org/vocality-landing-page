@@ -33,7 +33,6 @@ export default {
 html,
 body {
     font-family: "Roboto", sans-serif;
-    height: 100%;
     overflow-x: hidden;
     body {
         color: clr('text');

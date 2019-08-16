@@ -1,7 +1,7 @@
 <template>
 	<div class="navbar">
-        <header class="flex py1 px3">
-            <div class="icon flex" @click="navigate('/')">
+        <header class="flex py1 px2">
+            <div class="icon flex">
                 <router-link to="/" class="flex">
                     <img src="@/assets/logo.svg" alt="vocality-logo">
                 </router-link>
@@ -10,13 +10,13 @@
             <nav class="hide-on-sm">
                 <ul class="list-reset flex items-center m0 h-100">
                     <li>
-                        <router-link to="/commands" class="text-decoration-none px3 h3">Commands</router-link>
+                        <router-link to="/commands" class="text-decoration-none px3 h4">Commands</router-link>
                     </li>
                     <li>
-                        <router-link to="/faq" class="text-decoration-none px3 h3">Donate</router-link>
+                        <router-link to="/faq" class="text-decoration-none px3 h4">Donate</router-link>
                     </li>
                     <li>
-                        <router-link to="/about" class="text-decoration-none px3 h3">About</router-link>
+                        <router-link to="/about" class="text-decoration-none px3 h4">About</router-link>
                     </li>
                 </ul>
             </nav>
@@ -60,6 +60,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.navbar {
+    position: relative;
+    z-index: 99;
+}
 header {
     background-color: transparent;
     height: 64px;
@@ -77,7 +81,7 @@ header {
     }
 
     li > a {
-        color: $color-text-secondary;
+        color: clr(text);
         font-weight: 900;
         position: relative;
         transition: color 0.3s ease;
@@ -88,7 +92,7 @@ header {
             position: absolute;
             height: 4px;
             width: 0;
-            background-color: $color-brand-pink;
+            background-color: clr(brand, pink);
             bottom: -8px;
             left: 50%;
             transform: translateX(-50%);
@@ -97,7 +101,6 @@ header {
 
         &:hover,
         &:focus {
-            color: $color-text;
             &::after {
                 width: 30%;
             }

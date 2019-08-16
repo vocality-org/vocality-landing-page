@@ -4,19 +4,19 @@
         <div id="page-wrap">
             <Navbar :sidenavOpen="sidenavOpenState" @sidenavStateChange="(state) => this.sidenavOpenState = state"></Navbar>
             <router-view />
-            <Footer></Footer>
+            <!--<Footer></Footer>-->
         </div>
     </div>
 </template>
 
 <script>
-import Footer from '@/components/Footer.vue'
+// import Footer from '@/components/Footer.vue'
 import Navbar from '@/components/Navbar.vue'
 import Sidenav from '@/components/Sidenav.vue'
 
 export default {
     components: {
-        Footer,
+        // Footer,
         Navbar,
         Sidenav
     },
@@ -36,24 +36,19 @@ body {
     height: 100%;
     overflow-x: hidden;
     body {
-        color: $color-text;
-        background-color: rgb(73, 73, 73);
-        margin: 0;
+        color: clr('text');
+        background-color: clr(background);
     }
-}
-
-#app {
-    height: 100%;
 }
 
 #page-wrap {
     height: 100%;
-    background-color: $color-background;
+    background-color: clr(background);
 }
 
 a {
     cursor: pointer;
-    color: $color-text;
+    color: clr(text);
 }
 
 button {
@@ -63,6 +58,10 @@ button {
     font: inherit;
     color: inherit;
     background: none;
+}
+
+h1 {
+    font-weight: normal;
 }
 
 :focus {

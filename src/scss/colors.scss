@@ -1,0 +1,21 @@
+$palettes: (
+    text: (
+        default: #f2f2f2,
+        secondary: #a6a6a6,
+        dark: #252525,
+    ),
+    background: (
+        default: #121212,
+        secondary: #252525,
+        bright: #9c9c9c,
+    ),
+    brand: (
+        cyan: #29abe2,
+        blue: #0c003f,
+        pink: #ff3f60,
+    )
+);
+
+@function clr($p, $c: 'default') {
+    @return map-get( map-get($palettes, $p), $c );
+}

@@ -125,7 +125,7 @@ export default {
     top: 0;
     left: auto;
     right: 0;
-    background-color: $color-background-secondary;
+    background-color: clr(background, secondary);
     transition: width 0.3s ease;
     a {
         height: 48px;
@@ -133,7 +133,7 @@ export default {
         &:hover,
         &:focus
         {
-            background-color: $color-brand-pink;
+            background-color: clr(brand, pink);
         }
     }
 }

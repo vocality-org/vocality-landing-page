@@ -1,12 +1,12 @@
 <template>
-    <div class="index my0 mx-auto">
+    <div class="index">
         <section class="three">
             <div id="container" class="container">
 
             </div>
         </section>
-        <section class="header flex">
-            <div class="content">
+        <section class="header flex max-mid my0 mx-auto">
+            <div class="header-content">
                 <h1>Vocality</h1>
                 <p class="h3">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent
@@ -20,6 +20,21 @@
                     rel="noreferrer"
                     href="https://discordapp.com/api/oauth2/authorize?client_id=589595189631385602&permissions=3164224&scope=bot"
                 >Invite Vocality</a>
+            </div>
+        </section>
+        <section class="main flex">
+            <div class="main-content max-mid my0 mx-auto"></div>
+            <div class="grid-stripe-container">
+                <div class="background-grid">
+                    <div class="grid">
+                        <div class="stripe">
+                            <div class="pink"></div>
+                            <div class="blue"></div>
+                            <div class="cyan"></div>
+                        </div>
+                        <div class="below-stripe"></div>
+                    </div>
+                </div>
             </div>
         </section>
         <div style="height: 10000px; width: 10px; background-color: blue"></div>
@@ -81,11 +96,10 @@
                 if (this.logo) {
                     if (this.logo.rotation.y > 0.45) {
                         this.rotation = -1
-                    }
-                    else if (this.logo.rotation.y < -0.65) {
+                    } else if (this.logo.rotation.y < -0.65) {
                         this.rotation = 1
                     }
-                    this.logo.rotation.y += 0.001 * this.rotation;
+                    this.logo.rotation.y += 0.001 * this.rotation
                 }
                 this.renderer.render(this.scene, this.camera)
             },
@@ -114,7 +128,7 @@
 </script>
 
 <style lang="scss" scoped>
-.index {
+.max-mid {
     max-width: 1040px;
     position: relative;
 }
@@ -140,7 +154,7 @@
     position: relative;
     pointer-events: none;
     min-height: 100vh;
-    .content {
+    .header-content {
         flex-basis: 100%;
         @include mq(md) {
             flex-basis: 60%;
@@ -197,4 +211,61 @@
         }
     }
 }
+.main {
+    padding-top: 200px;
+    margin-top: 200px;
+    position: relative;
+    z-index: 2;
+    .grid-stripe-container {
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        pointer-events: none;
+        .background-grid {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            transform: skewY(-12deg);
+            .grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                width: 100%;
+                height: 100%;
+                grid-template-rows: 64px 1fr;
+                .stripe {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: 1fr;
+                    .pink {
+                        background-color: clr(brand, pink);
+                    }
+                    .blue {
+                        background-color: clr(brand, blue);
+                    }
+                    .cyan {
+                        background-color: clr(brand, cyan);
+                    }
+                }
+                .below-stripe {
+                    background-color: clr(background, secondary);
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: -80px;
+                    width: 100%;
+                    height: 80px;
+                    left: 0;
+                    background: linear-gradient(#00000000, #25252554);
+                }
+            }
+        }
+    }
+}
+
 </style>

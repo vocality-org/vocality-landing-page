@@ -1,11 +1,11 @@
 <template>
     <div class="index">
-        <section class="three">
-            <div id="container" class="container">
-
+        <section class="three z1 relative">
+            <div id="container" class="container fixed flex justify-end">
+                <!--canvas goes here-->
             </div>
         </section>
-        <section class="header flex max-mid my0 mx-auto">
+        <section class="header flex max-mid my0 mx-auto z1 relative">
             <div class="header-content">
                 <h1>Vocality</h1>
                 <p class="h3">
@@ -22,11 +22,11 @@
                 >Invite Vocality</a>
             </div>
         </section>
-        <section class="main flex">
+        <section class="main relative flex z2">
             <div class="main-content max-mid my0 mx-auto"></div>
-            <div class="grid-stripe-container">
-                <div class="background-grid">
-                    <div class="grid">
+            <div class="grid-stripe-container absolute z1 top-0 bottom-0 w-100">
+                <div class="background-grid h-100 w-100 flex flex-column items-center absolute">
+                    <div class="grid w-100 h-100">
                         <div class="stripe">
                             <div class="pink"></div>
                             <div class="blue"></div>
@@ -44,19 +44,22 @@
 <script>
     import { PerspectiveCamera, Scene, WebGLRenderer } from 'three'
     import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+    import updateOnSroll from 'uos'
 
     export default {
         name: 'index',
         data () {
             return {
-                ww: window.innerWidth,
-                wh: window.innerHeight,
                 camera: null,
                 scene: null,
                 renderer: null,
-                mesh: null,
                 logo: null,
-                rotation: -1
+                ww: window.innerWidth,
+                wh: window.innerHeight,
+                rotationState: -1,
+                isScrollingDown: true,
+                isScrollEnabled: true,
+                previousScrollPosition: 0
             }
         },
         methods: {
@@ -95,13 +98,37 @@
                 requestAnimationFrame(this.animate)
                 if (this.logo) {
                     if (this.logo.rotation.y > 0.45) {
-                        this.rotation = -1
+                        this.rotationState = -1
                     } else if (this.logo.rotation.y < -0.65) {
-                        this.rotation = 1
+                        this.rotationState = 1
                     }
-                    this.logo.rotation.y += 0.001 * this.rotation
+                    this.logo.rotation.y += 0.001 * this.rotationState
                 }
                 this.renderer.render(this.scene, this.camera)
+            },
+            animateOnScroll: function () {
+                updateOnSroll(0, this.wh * 1.6, position => {
+                    if (position === 1 && this.isScrollEnabled) {
+                        document.getElementById('container').style.transform = 'translateX(100vw)'
+                        this.isScrollEnabled = false;
+                        return
+                    } 
+                    if (position < 1 && !this.isScrollEnabled) {
+                        document.getElementById('container').style.transform = 'translateX(0px)'
+                        this.isScrollEnabled = true
+                        console.log('t');
+                        
+                    } 
+
+                    this.isScrollingDown = position >= this.previousScrollPosition
+                    this.logo.rotation.y += this.isScrollingDown ? 0.05 : (-1 * 0.05)
+
+                    if (position < 0.5) {
+                        this.logo.position.x = (-1 * position + 0.28)
+                    }
+
+                    this.previousScrollPosition = position
+                })
             },
             onResize: function () {
                 if (this.renderer && this.camera) {
@@ -116,6 +143,7 @@
         mounted () {
             this.init()
             this.animate()
+            this.animateOnScroll()
         },
         created: function () {
             window.addEventListener('resize', this.onResize)
@@ -133,25 +161,18 @@
     position: relative;
 }
 .three {
-    position: relative;
     max-width: 100%;
     overflow-x: hidden;
-    z-index: 1;
     .container {
-        position: fixed;
         right: 0;
         top: 0;
         width: 100%;
         height: 100vh;
         cursor: grab;
-        display: flex;
-        justify-content: flex-end;
     }
 }
 .header {
-    z-index: 1;
     padding: 120px 20px 0px;
-    position: relative;
     pointer-events: none;
     min-height: 100vh;
     .header-content {
@@ -214,28 +235,13 @@
 .main {
     padding-top: 200px;
     margin-top: 200px;
-    position: relative;
-    z-index: 2;
     .grid-stripe-container {
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-        top: 0;
-        bottom: 0;
         pointer-events: none;
         .background-grid {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: absolute;
-            width: 100%;
             transform: skewY(-12deg);
             .grid {
                 display: grid;
                 grid-template-columns: 1fr;
-                width: 100%;
-                height: 100%;
                 grid-template-rows: 64px 1fr;
                 .stripe {
                     display: grid;
@@ -243,12 +249,15 @@
                     grid-template-rows: 1fr;
                     .pink {
                         background-color: clr(brand, pink);
+                        border: 2px solid clr(brand, pink);
                     }
                     .blue {
                         background-color: clr(brand, blue);
+                        border: 2px solid clr(brand, blue);
                     }
                     .cyan {
                         background-color: clr(brand, cyan);
+                        border: 2px solid clr(brand, cyan);
                     }
                 }
                 .below-stripe {
@@ -257,11 +266,11 @@
                 &::after {
                     content: '';
                     position: absolute;
-                    top: -80px;
+                    top: -60px;
                     width: 100%;
-                    height: 80px;
+                    height: 60px;
                     left: 0;
-                    background: linear-gradient(#00000000, #25252554);
+                    background: linear-gradient(#00000000, #25252580);
                 }
             }
         }
@@ -269,3 +278,36 @@
 }
 
 </style>
+
+
+<!--
+onScrollAnimate3d: function () {
+                const scrollPosition = window.scrollY
+
+                if (this.isScrollEnabled && scrollPosition > this.wh * 1.5) {
+                    this.isScrollEnabled = false;
+
+                    return;
+                }
+
+                if (!this.isScrollEnabled && scrollPosition < this.wh * 1.5) {
+                    this.isScrollEnabled = true;
+                    document.getElementById('container').style.transform = 'translateX(0px)'
+                }
+
+                if (!this.isTicking && this.isScrollEnabled) {
+                    window.requestAnimationFrame(() => {
+                        this.isTicking = false
+                        console.log(this.previousScrollPosition, scrollPosition)
+                        if (this.previousScrollPosition < scrollPosition) {
+                            this.logo.position.x -= 0.01;
+                        } 
+                        else  {
+                            this.logo.position.x += 0.01;
+                        }
+                        this.previousScrollPosition = scrollPosition;
+                    })
+                    this.isTicking = true
+                }
+            }
+-->

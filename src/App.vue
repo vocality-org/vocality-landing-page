@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <Sidenav :width="300" :isOpen="sidenavOpenState" @closeSidenav="() => {this.sidenavOpenState = false}"></Sidenav>
+        <Sidenav :width="200" :isOpen="sidenavOpenState" @closeSidenav="() => {this.sidenavOpenState = false}"></Sidenav>
         <div id="page-wrap">
             <Navbar :sidenavOpen="sidenavOpenState" @sidenavStateChange="(state) => this.sidenavOpenState = state"></Navbar>
             <router-view />
@@ -33,6 +33,7 @@ export default {
 html,
 body {
     font-family: "Roboto", sans-serif;
+    -webkit-tap-highlight-color: transparent;
     overflow-x: hidden;
     body {
         color: clr('text');

@@ -75,7 +75,8 @@ header {
             margin: auto;
         }
         cursor: pointer;
-        &:hover {
+        &:hover,
+        &:focus {
             transform: scale(1.2);
         }
     }

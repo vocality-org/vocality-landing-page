@@ -8,7 +8,7 @@
         <section class="header flex max-mid my0 mx-auto z1 relative">
             <div class="header-content">
                 <h1>Vocality</h1>
-                <p class="h3">
+                <p class="h4">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent
                     libero. Sed cursus ante dapibus
                     diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
@@ -22,8 +22,28 @@
                 >Invite Vocality</a>
             </div>
         </section>
-        <section class="main relative flex z2">
-            <div class="main-content max-mid my0 mx-auto"></div>
+        <section class="main relative flex">
+            <div class="main-content max-mid my0 mx-auto w-100 z2 mt4">
+                <h2 class="h2">This is a section header</h2>
+                <div class="paragraph-grid mt4 pt3 h5">
+                    <div>
+                        <h3 class="h4">Paragraph header</h3>
+                        <p>Repellat neque sint enim accusamus molestiae. Quidem aut aut sit iusto harum et. Vero minus illum consequatur cumque. CoQuidem aut aut sit iusto harum et.CoQuidem aut aut sit iusto harum et.</p>
+                    </div>
+                    <div>
+                        <h3 class="h4">Paragraph header</h3>                    
+                        <p>Repudiandae atque voluptatem quis at sequi. CoQuidem aut aut sit iusto harum et. Vero minus illum consequatur cumque.CoQuidem aut aut sit iusto harum et.CoQuidem aut aut sit iusto harum et. CoQuidem aut aut sit iusto harum et.</p>
+                    </div>
+                    <div>
+                        <h3 class="h4">Paragraph header</h3>
+                        <p>Repellat neque sint enim accusamus molestiae. Quidem aut aut sit iusto harum et. Vero minus illum consequatur cumque. CoQuidem aut aut sit iusto harum et.</p>
+                    </div>
+                    <div>
+                        <h3 class="h4">Paragraph header</h3>
+                        <p>Repudiandae atque voluptatem quis at sequi. CoQuidem aut aut sit iusto harum et. Vero minus illum consequatur cumque. CoQuidem aut aut sit iusto harum et. CoQuidem aut aut sit iusto harum et.</p>
+                    </div>      
+                </div>
+            </div>
             <div class="grid-stripe-container absolute z1 top-0 bottom-0 w-100">
                 <div class="background-grid h-100 w-100 flex flex-column items-center absolute">
                     <div class="grid w-100 h-100">
@@ -37,11 +57,14 @@
                 </div>
             </div>
         </section>
-        <div style="height: 10000px; width: 10px; background-color: blue"></div>
+        <section class="second-content">
+
+        </section>
     </div>
 </template>
 
 <script>
+    import Footer from '@/components/Footer.vue';
     import { PerspectiveCamera, Scene, WebGLRenderer } from 'three'
     import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
     import updateOnSroll from 'uos'
@@ -107,18 +130,17 @@
                 this.renderer.render(this.scene, this.camera)
             },
             animateOnScroll: function () {
-                updateOnSroll(0, this.wh * 1.6, position => {
+                updateOnSroll(0, this.wh * 1.3, position => {
                     if (position === 1 && this.isScrollEnabled) {
                         document.getElementById('container').style.transform = 'translateX(100vw)'
-                        this.isScrollEnabled = false;
+                        this.isScrollEnabled = false
                         return
-                    } 
+                    }
+
                     if (position < 1 && !this.isScrollEnabled) {
                         document.getElementById('container').style.transform = 'translateX(0px)'
                         this.isScrollEnabled = true
-                        console.log('t');
-                        
-                    } 
+                    }
 
                     this.isScrollingDown = position >= this.previousScrollPosition
                     this.logo.rotation.y += this.isScrollingDown ? 0.05 : (-1 * 0.05)
@@ -150,6 +172,9 @@
         },
         destroyed: function () {
             window.removeEventListener('resize', this.onResize)
+        },
+        components: {
+            Footer
         }
     }
 
@@ -172,9 +197,12 @@
     }
 }
 .header {
-    padding: 120px 20px 0px;
+    padding: 20px 20px 0px;
     pointer-events: none;
     min-height: 100vh;
+    @include mq(sm) {
+        padding-top: 120px
+    }
     .header-content {
         flex-basis: 100%;
         @include mq(md) {
@@ -191,7 +219,10 @@
         p {
             max-width: 440px;
             pointer-events: auto;
-            line-height: 1.9rem;
+            @include mq(sm) {
+                font-size: 1.25rem;
+                line-height: 1.9rem;
+            }
         }
         .cta {
             height: 52px;
@@ -233,31 +264,47 @@
     }
 }
 .main {
-    padding-top: 200px;
+    padding: 200px 0;
     margin-top: 200px;
+    .main-content {
+        padding: 20px 20px 0;
+        margin: 100px auto 50px;
+        .paragraph-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 2rem 4rem; 
+            @include mq(sm) {
+                grid-gap: 4rem 8rem;
+            }
+            p {
+                max-width: 350px;
+            }
+        }
+    }
     .grid-stripe-container {
         pointer-events: none;
         .background-grid {
             transform: skewY(-12deg);
+            height: 130%;
             .grid {
+                $row-height: 64px;
                 display: grid;
                 grid-template-columns: 1fr;
-                grid-template-rows: 64px 1fr;
+                grid-template-rows: $row-height 1fr;
                 .stripe {
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
                     grid-template-rows: 1fr;
+                    height: $row-height + 16px;
                     .pink {
                         background-color: clr(brand, pink);
-                        border: 2px solid clr(brand, pink);
                     }
                     .blue {
                         background-color: clr(brand, blue);
-                        border: 2px solid clr(brand, blue);
                     }
                     .cyan {
                         background-color: clr(brand, cyan);
-                        border: 2px solid clr(brand, cyan);
                     }
                 }
                 .below-stripe {
@@ -266,9 +313,8 @@
                 &::after {
                     content: '';
                     position: absolute;
-                    top: -60px;
+                    top: $row-height * -1;
                     width: 100%;
-                    height: 60px;
                     left: 0;
                     background: linear-gradient(#00000000, #25252580);
                 }
@@ -276,38 +322,8 @@
         }
     }
 }
-
+.second-content {
+    z-index: 1;
+    position: relative;
+}
 </style>
-
-
-<!--
-onScrollAnimate3d: function () {
-                const scrollPosition = window.scrollY
-
-                if (this.isScrollEnabled && scrollPosition > this.wh * 1.5) {
-                    this.isScrollEnabled = false;
-
-                    return;
-                }
-
-                if (!this.isScrollEnabled && scrollPosition < this.wh * 1.5) {
-                    this.isScrollEnabled = true;
-                    document.getElementById('container').style.transform = 'translateX(0px)'
-                }
-
-                if (!this.isTicking && this.isScrollEnabled) {
-                    window.requestAnimationFrame(() => {
-                        this.isTicking = false
-                        console.log(this.previousScrollPosition, scrollPosition)
-                        if (this.previousScrollPosition < scrollPosition) {
-                            this.logo.position.x -= 0.01;
-                        } 
-                        else  {
-                            this.logo.position.x += 0.01;
-                        }
-                        this.previousScrollPosition = scrollPosition;
-                    })
-                    this.isTicking = true
-                }
-            }
--->

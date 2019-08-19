@@ -24,10 +24,10 @@
         </section>
         <section class="main relative flex">
             <div class="main-content max-mid my0 mx-auto w-100 z2 mt4">
-                <div class="grid">
+                <div class="grid flex flex-column">
                     <div>
                         <div class="sticky">
-                            <h2 class="h1">This is a section header</h2>
+                            <h2 class="h1 m0">This is a section header</h2>
                             <p class="h3">Sunt molestiae voluptas reprehenderit suscipit rerum beatae. Assumenda et et sint voluptatem. Sequi expedita nostrum quam recusandae quisquam alias. Molestiae quaerat perferendis sunt fuga et dignissimos. Deleniti delectus dolorum corporis velit occaecati qui blanditiis. Repudiandae alias voluptatem delectus laborum ratione qui sed aut.</p>
                             <router-link to="/commands" tag="a" class="commands-link h3 flex items-center">
                                 See full list of commands 
@@ -35,8 +35,8 @@
                             </router-link>
                         </div>
                     </div>
-                    <div class="scroll-side">
-                        <div class="dotted-line">
+                    <div class="scroll-side relative">
+                        <div class="dotted-line h-100 absolute top-0">
                             <svg preserveAspectRatio="xMidYMin slice" width="2px" height="100%" viewBox="0 0 2 995" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <path d="M1,1 L1,1001" stroke="#f2f2f280" stroke-width="2" stroke-dasharray="2 8"></path>
                             </svg>
@@ -177,8 +177,45 @@
                 </div>
             </div>
         </section>
-        <section class="second-content" style="height: 1500px;">
+        <section class="second-content">
+            <div class="banner">
+                <div class="cyan">
+                    <div class="flex justify-center items-center flex-column">
+                        <img src="@/assets/volume.svg" alt="volume control" height="114">
+                        <h4 class="h3 mt2 mb1">Settings</h4>
+                        <span class="text-center">Lorem ipsum. Itaque debitis aliquid ipsam eveniet.</span>
+                    </div>
+                </div>
+                <div class="blue">
+                    <div class="flex justify-center items-center flex-column">
+                        <img src="@/assets/clock.svg" alt="clock" height="114">
+                        <h4 class="h3 mt2 mb1">Settings</h4>
+                        <span class="text-center">Lorem ipsum. Itaque debitis aliquid ipsam eveniet.</span>
+                    </div>
+                </div>
+                <div class="pink">
+                    <div class="flex justify-center items-center flex-column">
+                        <img src="@/assets/key.svg" alt="key" height="114">
+                        <h4 class="h3 mt2 mb1">Settings</h4>
+                        <span class="text-center">Lorem ipsum. Itaque debitis aliquid ipsam eveniet.</span>
+                    </div>
+                </div>
+            </div>
         </section>
+        <section class="third-content">
+            <div class="donate z2 relative">
+                <div class="flex  flex-column justify-center items-center max-mid my0 mx-auto w-100">
+                    <h2 class="h1 m0">Enter the free gift card giveaway</h2>
+                    <a
+                    class="cta h3 bold text-decoration-none mt4 inline-block"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://discordapp.com/api/oauth2/authorize?client_id=589595189631385602&permissions=3164224&scope=bot"
+                    >Donate</a>
+                </div>
+            </div>
+        </section>
+        <Footer />
     </div>
 </template>
 
@@ -249,7 +286,7 @@
                 this.renderer.render(this.scene, this.camera)
             },
             animateOnScroll: function () {
-                updateOnSroll(0, this.wh * 1.3, position => {
+                updateOnSroll(0, this.wh * 1.5, position => {
                     if (position === 1 && this.isScrollEnabled) {
                         document.getElementById('container').style.transform = 'translateX(100vw)'
                         this.isScrollEnabled = false
@@ -343,44 +380,6 @@
                 line-height: 1.9rem;
             }
         }
-        .cta {
-            height: 52px;
-            line-height: 52px;
-            width: 240px;
-            text-align: center;
-            border-radius: 4px;
-            pointer-events: auto;
-            box-shadow: 0 4px 6px rgba(97, 97, 97, 0.1), 0 1px 3px rgba(190, 190, 190, 0.08);
-            background-image: linear-gradient(
-                90deg,
-                clr(brand, blue) 0%,
-                clr(brand, cyan) 50%,
-                clr(brand, pink) 100%
-            );
-            background-size: 400%;
-            animation-duration: 3s;
-            animation-name: changeBackgroundPos;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-            animation-play-state: paused;
-
-            &:hover,
-            &:focus {
-                animation-play-state: running;
-                transform: translateY(-1px);
-                box-shadow: 0 7px 14px rgba(97, 97, 97, 0.1), 0 3px 6px rgba(190, 190, 190, 0.08);
-            }
-
-            @keyframes changeBackgroundPos {
-                from {
-                    background-position: right;
-                }
-
-                to {
-                    background-position: left;
-                }
-            }
-        }
     }
 }
 .main {
@@ -390,8 +389,6 @@
         padding: 20px 20px 0;
         margin: 100px auto 50px;
         .grid {
-            display: flex;
-            flex-direction: column;
             @include mq(sm) {
                 display: grid;
                 grid-template-columns: auto auto;
@@ -401,9 +398,6 @@
             .sticky {
                 position: sticky;
                 top: 40px;
-                h2 {
-                    margin: 0;
-                }
                 p {
                     margin: 48px 0;
                     line-height: 1.8rem;
@@ -418,15 +412,11 @@
             }
             .scroll-side {
                 $icon-size: 32px;
-                position: relative;
                 margin-top: 64px;
                 @include mq(sm) {
                     margin-top: 0;
                 }
                 .dotted-line {
-                    height: 100%;
-                    position: absolute;
-                    top: 0;
                     left: $icon-size / 2;
                 }
                 .checklist {
@@ -525,12 +515,95 @@
 .second-content {
     z-index: 1;
     position: relative;
+    @include mq(sm) {
+        margin-top: 100px;
+    }
+    .banner {
+        display: flex;
+        flex-direction: column;
+        @include mq(sm) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        div {
+            position: relative;
+            height: 100vw;
+            @include mq(sm) {
+                height: 33vw;
+            }
+            span {
+                max-width: 200px;
+                color: clr(text, secondary);
+            }
+        }
+        .pink::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            height: 100%; width: 100%;
+            filter: brightness(0.4);
+            background-color: clr(brand, pink);
+        }
+        .blue::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            height: 100%; width: 100%;
+            filter: brightness(0.4);
+            background-color: clr(brand, blue);
+        }
+        .cyan::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            height: 100%; width: 100%;
+            filter: brightness(0.4);
+            background-color: clr(brand, cyan);
+        }
+    }
 }
-
-.col {
-    height: 1200px;
-    width: 400px;
-    background-color: grey;
+.third-content {
+    .donate {
+        background-color: clr(background);
+        padding: 200px 0;
+    }
 }
+.cta {
+    height: 52px;
+    line-height: 52px;
+    width: 240px;
+    text-align: center;
+    border-radius: 4px;
+    pointer-events: auto;
+    box-shadow: 0 4px 6px rgba(97, 97, 97, 0.1), 0 1px 3px rgba(190, 190, 190, 0.08);
+    background-image: linear-gradient(
+        90deg,
+        clr(brand, blue) 0%,
+        clr(brand, cyan) 50%,
+        clr(brand, pink) 100%
+    );
+    background-size: 400%;
+    animation-duration: 3s;
+    animation-name: changeBackgroundPos;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: paused;
 
+    &:hover,
+    &:focus {
+        animation-play-state: running;
+        transform: translateY(-1px);
+        box-shadow: 0 7px 14px rgba(97, 97, 97, 0.1), 0 3px 6px rgba(190, 190, 190, 0.08);
+    }
+
+    @keyframes changeBackgroundPos {
+        from {
+            background-position: right;
+        }
+
+        to {
+            background-position: left;
+        }
+    }
+}
 </style>

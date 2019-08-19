@@ -34,7 +34,6 @@ html,
 body {
     font-family: "Roboto", sans-serif;
     -webkit-tap-highlight-color: transparent;
-    overflow-x: hidden;
     body {
         color: clr('text');
         background-color: clr(background);
@@ -49,6 +48,7 @@ body {
 a {
     cursor: pointer;
     color: clr(text);
+    text-decoration: none;
 }
 
 button {

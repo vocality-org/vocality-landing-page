@@ -24,24 +24,144 @@
         </section>
         <section class="main relative flex">
             <div class="main-content max-mid my0 mx-auto w-100 z2 mt4">
-                <h2 class="h2">This is a section header</h2>
-                <div class="paragraph-grid mt4 pt3 h5">
+                <div class="grid">
                     <div>
-                        <h3 class="h4">Paragraph header</h3>
-                        <p>Repellat neque sint enim accusamus molestiae. Quidem aut aut sit iusto harum et. Vero minus illum consequatur cumque. CoQuidem aut aut sit iusto harum et.CoQuidem aut aut sit iusto harum et.</p>
+                        <div class="sticky">
+                            <h2 class="h1">This is a section header</h2>
+                            <p class="h3">Sunt molestiae voluptas reprehenderit suscipit rerum beatae. Assumenda et et sint voluptatem. Sequi expedita nostrum quam recusandae quisquam alias. Molestiae quaerat perferendis sunt fuga et dignissimos. Deleniti delectus dolorum corporis velit occaecati qui blanditiis. Repudiandae alias voluptatem delectus laborum ratione qui sed aut.</p>
+                            <router-link to="/commands" tag="a" class="commands-link h3 flex items-center">
+                                See full list of commands 
+                                <img src="@/assets/arrow-right.svg" alt="arrow pointing right" class="ml2">
+                            </router-link>
+                        </div>
                     </div>
-                    <div>
-                        <h3 class="h4">Paragraph header</h3>                    
-                        <p>Repudiandae atque voluptatem quis at sequi. CoQuidem aut aut sit iusto harum et. Vero minus illum consequatur cumque.CoQuidem aut aut sit iusto harum et.CoQuidem aut aut sit iusto harum et. CoQuidem aut aut sit iusto harum et.</p>
+                    <div class="scroll-side">
+                        <div class="dotted-line">
+                            <svg preserveAspectRatio="xMidYMin slice" width="2px" height="100%" viewBox="0 0 2 995" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path d="M1,1 L1,1001" stroke="#f2f2f280" stroke-width="2" stroke-dasharray="2 8"></path>
+                            </svg>
+                        </div>
+                        <section class="checklist">
+                            <div class="list-icon-container">
+                                <img class="list-icon" src="@/assets/youtube.svg" alt="youtube">
+                            </div>
+                            <div class="checklist-content">
+                                <h3 class="h3 m0">Youtube</h3>
+                                <ul class="list-style-none m0 p0">
+                                    <li class="checklist-item">
+                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        Something very nice
+                                    </li>
+                                    <li class="checklist-item">
+                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        Something nice
+                                    </li>
+                                    <li class="checklist-item">
+                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        Something very nice
+                                    </li>
+                                    <li class="checklist-item">
+                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        Something nice
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+
+                        <section class="checklist">
+                            <div class="list-icon-container">
+                                <img class="list-icon" src="@/assets/soundcloud.svg" alt="soundcloud">
+                            </div>
+                            <div class="checklist-content">
+                                <h3 class="h3 m0">SoundCloud</h3>
+                                <ul class="list-style-none m0 p0">
+                                    <li class="checklist-item">
+                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        Something nice
+                                    </li>
+                                    <li class="checklist-item">
+                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        Something very nice
+                                    </li>
+                                    <li class="checklist-item">
+                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        Something nice
+                                    </li>
+                                    <li class="checklist-item">
+                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        Something very nice
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+
+                        <section class="checklist">
+                            <div class="list-icon-container">
+                                <img class="list-icon" src="@/assets/spotify.svg" alt="spotify">
+                            </div>
+                            <div class="checklist-content">
+                                <h3 class="h3 m0">Spotify</h3>
+                                <ul class="list-style-none m0 p0">
+                                    <li class="checklist-item">
+                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        Something nice
+                                    </li>
+                                    <li class="checklist-item">
+                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        Something nice
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="checklist">
+                            <div class="list-icon-container">
+                                <img class="list-icon" src="@/assets/music.svg" alt="music in general">
+                            </div>
+                            <div class="checklist-content">
+                                <h3 class="h3 m0">Music and Playlists</h3>
+                                <ul class="list-style-none m0 p0">
+                                    <li class="checklist-item">
+                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        Something nice
+                                    </li>
+                                    <li class="checklist-item">
+                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        Something nice
+                                    </li>
+                                    <li class="checklist-item">
+                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        Something nice
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="checklist">
+                            <div class="list-icon-container hide-points">
+                                <img class="list-icon" src="@/assets/settings.svg" alt="bot settings">
+                            </div>
+                            <div class="checklist-content">
+                                <h3 class="h3 m0">Bot Settings</h3>
+                                <ul class="list-style-none m0 p0">
+                                    <li class="checklist-item">
+                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        Something nice
+                                    </li>
+                                    <li class="checklist-item">
+                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        Something nice
+                                    </li>
+                                    <li class="checklist-item">
+                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        Something nice
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
                     </div>
-                    <div>
-                        <h3 class="h4">Paragraph header</h3>
-                        <p>Repellat neque sint enim accusamus molestiae. Quidem aut aut sit iusto harum et. Vero minus illum consequatur cumque. CoQuidem aut aut sit iusto harum et.</p>
-                    </div>
-                    <div>
-                        <h3 class="h4">Paragraph header</h3>
-                        <p>Repudiandae atque voluptatem quis at sequi. CoQuidem aut aut sit iusto harum et. Vero minus illum consequatur cumque. CoQuidem aut aut sit iusto harum et. CoQuidem aut aut sit iusto harum et.</p>
-                    </div>      
                 </div>
             </div>
             <div class="grid-stripe-container absolute z1 top-0 bottom-0 w-100">
@@ -57,14 +177,13 @@
                 </div>
             </div>
         </section>
-        <section class="second-content">
-
+        <section class="second-content" style="height: 1500px;">
         </section>
     </div>
 </template>
 
 <script>
-    import Footer from '@/components/Footer.vue';
+    import Footer from '@/components/Footer.vue'
     import { PerspectiveCamera, Scene, WebGLRenderer } from 'three'
     import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
     import updateOnSroll from 'uos'
@@ -229,6 +348,7 @@
             line-height: 52px;
             width: 240px;
             text-align: center;
+            border-radius: 4px;
             pointer-events: auto;
             box-shadow: 0 4px 6px rgba(97, 97, 97, 0.1), 0 1px 3px rgba(190, 190, 190, 0.08);
             background-image: linear-gradient(
@@ -247,7 +367,7 @@
             &:hover,
             &:focus {
                 animation-play-state: running;
-                transform: translateY(-2px);
+                transform: translateY(-1px);
                 box-shadow: 0 7px 14px rgba(97, 97, 97, 0.1), 0 3px 6px rgba(190, 190, 190, 0.08);
             }
 
@@ -269,16 +389,96 @@
     .main-content {
         padding: 20px 20px 0;
         margin: 100px auto 50px;
-        .paragraph-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-gap: 2rem 4rem; 
+        .grid {
+            display: flex;
+            flex-direction: column;
             @include mq(sm) {
-                grid-gap: 4rem 8rem;
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-gap: 15%;
+                max-width: 1040px
             }
-            p {
-                max-width: 350px;
+            .sticky {
+                position: sticky;
+                top: 40px;
+                h2 {
+                    margin: 0;
+                }
+                p {
+                    margin: 48px 0;
+                    line-height: 1.8rem;
+                }
+                .commands-link {
+                    color: clr(brand, cyan);
+                    &:hover,
+                    &:focus {
+                        filter: grayscale(1) drop-shadow(1px 2px 3px #000c);
+                    }
+                }
+            }
+            .scroll-side {
+                $icon-size: 32px;
+                position: relative;
+                margin-top: 64px;
+                @include mq(sm) {
+                    margin-top: 0;
+                }
+                .dotted-line {
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: $icon-size / 2;
+                }
+                .checklist {
+                    display: flex;
+                    .hide-points {
+                        background-color: clr(background, secondary);
+                    }
+                    .list-icon-container{
+                        position: relative;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: $icon-size / 2;
+                            left: $icon-size / 2;
+                            width: $icon-size * 2;
+                            height: $icon-size * 2;
+                            transform: translate($icon-size * -1, $icon-size * -1);
+                            border-radius: 50%;
+                            background-color: clr(background, bright);
+                        }
+                    }
+                    .list-icon {
+                        position: relative;
+                        flex: 0 0 auto;
+                        width: $icon-size;
+                    }
+                    .checklist-content {
+                        padding-left: 25px;
+                        padding-bottom: 30px;
+                        @include mq(md) {
+                            padding-left: 50px;
+                        }
+                        h3 {
+                            line-height: $icon-size;
+                            font-size: 17px;
+                        }
+                        .checklist-item {
+                            font-size: 15px;
+                            line-height: 28px;
+                            margin: 12px 0;
+                            padding-left: $icon-size;
+                            position: relative;
+                            .checkmark-icon {
+                                position: absolute;
+                                left: 0;
+                                top: 4px;
+                                height: 18px;
+                                width: 18px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -326,4 +526,11 @@
     z-index: 1;
     position: relative;
 }
+
+.col {
+    height: 1200px;
+    width: 400px;
+    background-color: grey;
+}
+
 </style>

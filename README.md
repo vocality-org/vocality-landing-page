@@ -6,5 +6,5 @@ Cloning the repository
 Installing dependencies
 > npm install
 
-Starting local development server at `localhost:5000`
+Starting local development server at `localhost:8080`
 > npm start

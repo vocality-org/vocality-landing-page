@@ -62,18 +62,18 @@ footer {
         max-width: 1040px;
         padding: 60px 20px;
         display: grid;
-        grid-template-areas: 
+        grid-template-areas:
         'logo bot . . .'
         'logo resources . . .'
         'logo team . . . ';
         grid-gap: 32px;
         @include mq(sm) {
-            grid-template-areas: 
+            grid-template-areas:
                 'logo bot resources . .'
                 'logo team . . .';
         }
         @include mq(md) {
-            grid-template-areas: 
+            grid-template-areas:
                 'logo bot resources team .';
         }
     }

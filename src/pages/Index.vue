@@ -1,21 +1,21 @@
 <template>
     <div class="index">
         <section class="three z1 relative">
-            <div id="container" class="container fixed flex justify-end">
+            <div ref="container" id="container" class="container fixed flex justify-end">
                 <!--canvas goes here-->
             </div>
         </section>
         <section class="header flex max-mid my0 mx-auto z1 relative">
             <div class="header-content">
-                <h1>Vocality</h1>
-                <p class="h4">
+                <h1 class="no-events-on-drag">Vocality</h1>
+                <p class="h4 no-events-on-drag">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent
                     libero. Sed cursus ante dapibus
                     diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
                     Praesent mauris.
                 </p>
                 <a
-                    class="cta h3 bold text-decoration-none mt4 inline-block"
+                    class="cta h3 bold text-decoration-none mt4 inline-block no-events-on-drag"
                     target="_blank"
                     rel="noreferrer"
                     href="https://discordapp.com/api/oauth2/authorize?client_id=589595189631385602&permissions=3164224&scope=bot"
@@ -30,7 +30,7 @@
                             <h2 class="h1 m0">This is a section header</h2>
                             <p class="h3">Sunt molestiae voluptas reprehenderit suscipit rerum beatae. Assumenda et et sint voluptatem. Sequi expedita nostrum quam recusandae quisquam alias. Molestiae quaerat perferendis sunt fuga et dignissimos. Deleniti delectus dolorum corporis velit occaecati qui blanditiis. Repudiandae alias voluptatem delectus laborum ratione qui sed aut.</p>
                             <router-link to="/commands" tag="a" class="commands-link h3 flex items-center">
-                                See full list of commands 
+                                See full list of commands
                                 <img src="@/assets/arrow-right.svg" alt="arrow pointing right" class="ml2">
                             </router-link>
                         </div>
@@ -45,7 +45,7 @@
                             <div class="list-icon-container">
                                 <img class="list-icon" src="@/assets/youtube.svg" alt="youtube">
                             </div>
-                            <div class="checklist-content">
+                            <div class="checklist-content pb3">
                                 <h3 class="h3 m0">Youtube</h3>
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
@@ -68,12 +68,11 @@
                             </div>
                         </section>
 
-
                         <section class="checklist">
                             <div class="list-icon-container">
                                 <img class="list-icon" src="@/assets/soundcloud.svg" alt="soundcloud">
                             </div>
-                            <div class="checklist-content">
+                            <div class="checklist-content pb3">
                                 <h3 class="h3 m0">SoundCloud</h3>
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
@@ -96,12 +95,11 @@
                             </div>
                         </section>
 
-
                         <section class="checklist">
                             <div class="list-icon-container">
                                 <img class="list-icon" src="@/assets/spotify.svg" alt="spotify">
                             </div>
-                            <div class="checklist-content">
+                            <div class="checklist-content pb3">
                                 <h3 class="h3 m0">Spotify</h3>
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
@@ -120,7 +118,7 @@
                             <div class="list-icon-container">
                                 <img class="list-icon" src="@/assets/music.svg" alt="music in general">
                             </div>
-                            <div class="checklist-content">
+                            <div class="checklist-content pb3">
                                 <h3 class="h3 m0">Music and Playlists</h3>
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
@@ -221,7 +219,7 @@
 
 <script>
     import Footer from '@/components/Footer.vue'
-    import { PerspectiveCamera, Scene, WebGLRenderer } from 'three'
+    import { PerspectiveCamera, Scene, AmbientLight, WebGLRenderer, Euler, Quaternion, AmbientLightProbe } from 'three'
     import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
     import updateOnSroll from 'uos'
 
@@ -238,7 +236,12 @@
                 rotationState: -1,
                 isScrollingDown: true,
                 isScrollEnabled: true,
-                previousScrollPosition: 0
+                previousScrollPosition: 0,
+                isGrabbing: false,
+                previousMousePosition: {
+                    x: 0,
+                    y: 0
+                }
             }
         },
         methods: {
@@ -251,12 +254,15 @@
 
                 this.scene = new Scene()
 
+                const light = new AmbientLight('#fff', 1)
+                this.scene.add(light)
+
                 new GLTFLoader().load(
-                    ('vocality-logo.glb'),
+                    ('vocality-logo-3d.glb'),
                     (gltf) => {
                         this.logo = gltf.scene
                         this.logo.scale.set(4.5, 4.5, 4.5)
-                        this.logo.position.set(0.28, 0.05, 0)
+                        this.logo.position.set(0.3, 0.24, 0)
                         this.scene.add(this.logo)
                     },
                     (xhr) => {
@@ -308,6 +314,9 @@
                     this.previousScrollPosition = position
                 })
             },
+            animateToInit: function () {
+                // this.logo.rotation.set(0, 0, 0)
+            },
             onResize: function () {
                 if (this.renderer && this.camera) {
                     const ww = window.innerWidth
@@ -316,6 +325,50 @@
                     this.camera.aspect = ww / wh
                     this.camera.updateProjectionMatrix()
                 }
+            },
+            onCanvasMouseDown: function () {
+                this.isGrabbing = true
+                this.$refs.container.style.cursor = 'grabbing'
+                const list = document.getElementsByClassName('no-events-on-drag')
+                for (let element of list) {
+                    element.style.pointerEvents = 'none'
+                }
+            },
+            onCanvasMouseUp: function () {
+                this.isGrabbing = false
+                this.$refs.container.style.cursor = 'grab'
+                this.animateToInit()
+                const list = document.getElementsByClassName('no-events-on-drag')
+                for (let element of list) {
+                    element.style.pointerEvents = 'auto'
+                }
+            },
+            onCanvasMouseMove: function (e) {
+                const deltaMove = {
+                    x: e.offsetX - this.previousMousePosition.x,
+                    y: e.offsetY - this.previousMousePosition.y
+                }
+
+                if (this.isGrabbing) {
+                    const deltaRotationQuaternion = new Quaternion()
+                        .setFromEuler(new Euler(
+                            this.toRadians(deltaMove.y * 0.1),
+                            this.toRadians(deltaMove.x * 0.1),
+                            0
+                        ))
+                    this.logo.quaternion.multiplyQuaternions(deltaRotationQuaternion, this.logo.quaternion)
+                }
+
+                this.previousMousePosition = {
+                    x: e.offsetX,
+                    y: e.offsetY
+                }
+            },
+            onMouseLeave: function () {
+                this.isGrabbing = false
+            },
+            toRadians: function (angle) {
+                return angle * (Math.PI / 180)
             }
         },
         mounted () {
@@ -325,9 +378,19 @@
         },
         created: function () {
             window.addEventListener('resize', this.onResize)
+            this.$nextTick(() => {
+                this.$refs.container.addEventListener('mousedown', this.onCanvasMouseDown)
+                this.$refs.container.addEventListener('mouseup', this.onCanvasMouseUp)
+                this.$refs.container.addEventListener('mousemove', this.onCanvasMouseMove)
+                window.addEventListener('mouseout', this.onMouseLeave)
+            })
         },
         destroyed: function () {
             window.removeEventListener('resize', this.onResize)
+            this.$refs.container.removeEventListener('mousedown', this.onCanvasMouseDown)
+            this.$refs.container.removeEventListener('mouseup', this.onCanvasMouseUp)
+            this.$refs.container.removeEventListener('mousemove', this.onCanvasMouseMove)
+            window.removeEventListener('mouseout', this.onMouseLeave)
         },
         components: {
             Footer
@@ -445,7 +508,6 @@
                     }
                     .checklist-content {
                         padding-left: 25px;
-                        padding-bottom: 30px;
                         @include mq(md) {
                             padding-left: 50px;
                         }

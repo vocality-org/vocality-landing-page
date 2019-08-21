@@ -32,16 +32,15 @@
         </section>
         <Footer class="z1 relative mt4 pt4"></Footer>
             
-        <!--svg  class="bg-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 2524"
-            height="100%" width="100%" fill="none" preserveAspectRatio="none">
+        <svg  class="bg-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 2524"
+            height="180vh" width="100%" fill="none" preserveAspectRatio="none">
             <rect width="727.426" height="4670.24" fill="#FF3F60"
                 transform="matrix(-0.311873 -0.950124 0.936184 -0.35151 -950.606 3105.51)" />
             <rect width="727.426" height="4670.24" fill="#0C003F"
                 transform="matrix(-0.311873 -0.950124 0.936184 -0.35151 -1155.87 2407.65)" />
             <rect width="727.426" height="4670.24" fill="#29ABE2"
                 transform="matrix(-0.311873 -0.950124 0.936184 -0.35151 -1361.14 1709.78)" />  
-        </svg-->
-
+        </svg>
     </div>
 
 </template>
@@ -114,12 +113,10 @@ export default {
 
 <style lang="scss" scoped>
 .bg-svg {
-    position: absolute;
+    position: fixed;
     top: 0;
 }
-.commands {
-    background-image: url('../assets/bg-vec.svg');
-}
+
 .content {
     z-index: 1;
     .search {

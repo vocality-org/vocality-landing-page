@@ -22,7 +22,7 @@
 <script>
 export default {
     name: 'command',
-    data() {
+    data () {
         return {
             args: this.arguments,
             isExpanded: false
@@ -54,7 +54,7 @@ export default {
     },
     methods: {
         toggleExpansion: function () {
-            this.isExpanded = !this.isExpanded;
+            this.isExpanded = !this.isExpanded
             if (this.isExpanded) {
                 this.$refs.content.style.maxHeight = this.$refs.content.scrollHeight + 'px'
             } else {

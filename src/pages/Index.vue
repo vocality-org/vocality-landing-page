@@ -201,7 +201,7 @@
             </div>
         </section>
         <section class="third-content">
-            <div class="donate z2 relative">
+            <div class="donate z2 relative text-center">
                 <div class="flex  flex-column justify-center items-center max-mid my0 mx-auto w-100">
                     <h2 class="h1 m0">Enter the free gift card giveaway</h2>
                     <a
@@ -385,7 +385,7 @@
                 window.addEventListener('mouseout', this.onMouseLeave)
             })
         },
-        destroyed: function () {
+        beforeDestroy: function () {
             window.removeEventListener('resize', this.onResize)
             this.$refs.container.removeEventListener('mousedown', this.onCanvasMouseDown)
             this.$refs.container.removeEventListener('mouseup', this.onCanvasMouseUp)
@@ -400,10 +400,6 @@
 </script>
 
 <style lang="scss" scoped>
-.max-mid {
-    max-width: 1040px;
-    position: relative;
-}
 .three {
     max-width: 100%;
     overflow-x: hidden;
@@ -627,7 +623,7 @@
 .third-content {
     .donate {
         background-color: clr(background);
-        padding: 200px 0;
+        padding: 200px 20px;
     }
 }
 .cta {

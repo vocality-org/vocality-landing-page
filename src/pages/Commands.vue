@@ -1,13 +1,21 @@
 <template>
     <div class="commands">
-        <div class="content max-mid mx-auto px2" style="height: 200vh">
+        <section class="content max-mid mx-auto px2" style="height: 200vh">
             <div class="search flex justify-center">
                 <img ref="searchIcon" src="@/assets/search.svg" alt="search" class="search-icon">
                 <input ref="searchInput" type="search" placeholder="Search Commands..." name="search" contenteditable="true" autocomplete="off"
                     maxlength="48" id="search-field" class="border-none">
                 <span ref="searchHelperSpan" id="search-field-helper"></span>
             </div>
-        </div>
+
+            <div class="container">
+                <div class="tabs mx-auto flex justify-center text-center absolute w-100">
+                    <button :class="{'active': activeTag === 0}" @click="() => {activeTag = 0}" class="mx3 tab">Music</button>
+                    <button :class="{'active': activeTag === 1}" @click="() => {activeTag = 1}" class="mx3 tab">All</button>
+                    <button :class="{'active': activeTag === 2}" @click="() => {activeTag = 2}" class="mx3 tab">General</button>
+                </div>
+            </div>
+        </section>
 
         <svg  class="bg-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 2524"
             height="100%" width="100%" fill="none" preserveAspectRatio="none">
@@ -25,7 +33,9 @@
 export default {
     name: 'commands',
     data () {
-        return {}
+        return {
+            activeTag: 1
+        }
     },
     methods: {
         initSvg: function () {
@@ -87,6 +97,7 @@ export default {
             margin: auto 8px;
         }
         input, span {
+            text-shadow: 2px 2px 4px #727272ba;
             font-size: 24px;
             line-height: 24px;
             white-space: pre;
@@ -104,13 +115,51 @@ export default {
             user-select: none;
         }
         @include mq(sm) {
-            padding: 100px 0 100px;
+            padding: 100px 0 120px;
             .search-icon {
                 height: 36px;
             }
             input, span {
                 font-size: 36px;
                 line-height: 36px;
+            }
+        }
+    }
+    .container {
+        background-color: clr(background, secondary);
+        height: 500px;
+        .tabs {
+            $tab-height: 40px;
+            height: $tab-height;
+            line-height: $tab-height;
+            margin-top: ($tab-height / 2) * (-1);
+            .tab {
+                position: relative;
+                cursor: pointer;
+                width: 130px;
+                background-color: clr(background, secondary);
+                border-radius: $tab-height/2;
+                overflow: hidden;
+                &:hover,
+                &:focus {
+                    background-color: clr(background, bright);
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    box-sizing: border-box;
+                    top: 0; left: 0;
+                    width: 130px; height: $tab-height;
+                    border-radius: $tab-height/2;
+                    border: 4px solid clr(brand, cyan);
+                    transform: scale(1.3);     
+                    transition: transform 0.2s ease;
+                }
+            }
+            .active {
+                &::after {
+                    transform: scale(1);
+                }
             }
         }
     }

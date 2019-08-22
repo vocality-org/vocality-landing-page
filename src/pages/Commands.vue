@@ -8,10 +8,10 @@
                 <span ref="searchHelperSpan" id="search-field-helper"></span>
             </div>
             <div class="container">
-                <div class="tabs mx-auto flex justify-center text-center absolute w-100">
-                    <button :class="{'active': activeTag === 'music'}" @click="() => {activeTag = 'music'}" class="mx3 tab">Music</button>
-                    <button :class="{'active': activeTag === 'all'}" @click="() => {activeTag = 'all'}" class="mx3 tab">All</button>
-                    <button :class="{'active': activeTag === 'general'}" @click="() => {activeTag = 'general'}" class="mx3 tab">General</button>
+                <div class="tabs mx-auto flex justify-center text-center w-100">
+                    <button :class="{'active': activeTag === 'music'}" @click="() => {activeTag = 'music'}" class="px3 tab">Music</button>
+                    <button :class="{'active': activeTag === 'all'}" @click="() => {activeTag = 'all'}" class="px3 tab">All</button>
+                    <button :class="{'active': activeTag === 'general'}" @click="() => {activeTag = 'general'}" class="px3 tab">General</button>
                 </div>
                 <div class="pt3">
                     <Command v-for="c in filteredList" v-bind:key="c.name" v-bind="c"></Command>
@@ -91,7 +91,7 @@ export default {
                     ],
                     description: 'Vitae magnam autem ut facere nihil consequuntur et quia. Nihil ut ut sit.',
                     tags: [
-                        'music',
+                        'music'
                     ],
                     imageUrl: 'https://i.imgur.com/7Y19cDG.png'
                 },
@@ -102,7 +102,7 @@ export default {
                     ],
                     description: 'Vitae magnam autem ut facere nihil consequuntur et quia. Nihil ut ut sit.',
                     tags: [
-                        'music2',
+                        'music2'
                     ],
                     imageUrl: 'https://i.imgur.com/7Y19cDG.png'
                 },
@@ -110,7 +110,7 @@ export default {
                     name: 'help2',
                     description: 'Vitae magnam autem ut facere nihil consequuntur et quia. Nihil ut ut sit.',
                     tags: [
-                        'music',
+                        'music'
                     ],
                     imageUrl: 'https://i.imgur.com/7Y19cDG.png'
                 },
@@ -118,7 +118,7 @@ export default {
                     name: 'stop2',
                     description: 'Vitae magnam autem ut facere nihil consequuntur et quia. Nihil ut ut sit.',
                     tags: [
-                        'music',
+                        'music'
                     ],
                     imageUrl: 'https://i.imgur.com/7Y19cDG.png'
                 }
@@ -168,7 +168,7 @@ export default {
                 return c.name.indexOf(this.searchValue.trim().toLowerCase()) > -1
             })
             .filter(c => {
-                if (this.activeTag === 'all') { return true; }
+                if (this.activeTag === 'all') { return true }
                 return c.tags.includes(this.activeTag)
             })
         }
@@ -230,20 +230,17 @@ export default {
             $tab-height: 40px;
             height: $tab-height;
             line-height: $tab-height;
-            margin-top: ($tab-height / 2) * (-1);
             .tab {
                 position: relative;
                 cursor: pointer;
                 width: 130px;
                 background-color: clr(background, secondary);
-                border-radius: $tab-height/2;
                 overflow: hidden;
                 &:hover,
                 &:focus {
                     background-color: clr(background, bright);
                 }
                 &::after {
-                    content: '';
                     position: absolute;
                     box-sizing: border-box;
                     top: 0; left: 0;
@@ -261,8 +258,20 @@ export default {
                 }
             }
             .active {
+                background-color: clr(background, bright);
                 &::after {
                     transform: scale(1);
+                }
+            }
+            @include mq(sm) {
+                position: absolute;
+                margin-top: ($tab-height / 2) * (-1);
+                .tab {
+                    border-radius: $tab-height/2;
+                    &::after { content: ''; }
+                }
+                .active {
+                    background-color: clr(background, secondary);
                 }
             }
         }

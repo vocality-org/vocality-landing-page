@@ -94,7 +94,7 @@ export default {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease;
-        background-color: clr(background);
+        background-color: #191919;
         .tag {
             height: 32px;
             line-height: 32px;

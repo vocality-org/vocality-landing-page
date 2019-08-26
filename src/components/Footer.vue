@@ -15,7 +15,7 @@
                             <router-link to="/donate">Donate</router-link>
                         </li>
                         <li class="pt1">
-                            <router-link to="/commands">About</router-link>
+                            <router-link to="/about">About</router-link>
                         </li>
                     </ul>
                 </div>
@@ -23,10 +23,10 @@
                     <h4 class="h4 m0">Resources</h4>
                     <ul class="list-reset">
                         <li class="pt1">
-                            <router-link to="/commands">Contact</router-link>
+                            <router-link to="/contact">Contact</router-link>
                         </li>
                         <li class="pt1">
-                            <router-link to="/commands">FAQ</router-link>
+                            <router-link to="/faq">FAQ</router-link>
                         </li>
                         <li class="pt1">
                             <router-link to="/commands">Support</router-link>
@@ -37,7 +37,7 @@
                     <h4 class="h4 m0">Team</h4>
                     <ul class="list-reset">
                         <li class="pt1">
-                            <router-link to="/commands">Members</router-link>
+                            <router-link to="/members">Members</router-link>
                         </li>
                     </ul>
                 </div>

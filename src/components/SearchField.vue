@@ -2,11 +2,11 @@
     <div class="search">
         <div class="search flex justify-center">
             <img ref="searchIcon" src="@/assets/search.svg" alt="search" class="search-icon">
-            <input ref="searchInput" :placeholder="placeholder"
+            <input ref="searchInput" :placeholder="placeholder" :style="[overrideStyle]"
                 :value="value" @input="updateAndEmit"
                 type="search" name="search" contenteditable="true" autocomplete="off"
                 maxlength="48" class="border-none">
-            <span ref="searchHelperSpan"></span>
+            <span ref="searchHelperSpan" :style="[overrideStyle]"></span>
         </div>
     </div>
 </template>
@@ -22,6 +22,15 @@ export default {
         placeholder: {
             type: String,
             default: ''
+        },
+        overrideStyle: {
+            type: Object,
+            default: function () {
+                return {
+                    fontSize: '24px',
+                    lineHeight: '24px'
+                }
+            }
         }
     },
     methods: {
@@ -61,19 +70,15 @@ export default {
 <style lang="scss" scoped>
 .search {
     height: 116px;
-    padding: 200px 0 100px;
     .search-icon {
         height: 24px;
-        margin: auto 8px;
+        margin: auto 8px auto 0;
     }
     input, span {
         text-shadow: 2px 2px 4px #727272ba;
-        font-size: 24px;
-        line-height: 24px;
         white-space: pre;
         background-color:  transparent;
         color: clr(text);
-
         &::placeholder {
             color: clr(text, secondary);
         }
@@ -85,13 +90,8 @@ export default {
         user-select: none;
     }
     @include mq(sm) {
-        padding: 100px 0 120px;
         .search-icon {
             height: 36px;
-        }
-        input, span {
-            font-size: 36px;
-            line-height: 36px;
         }
     }
 }

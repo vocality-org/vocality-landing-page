@@ -1,7 +1,7 @@
 <template>
     <div class="commands">
         <section class="content max-mid mx-auto">
-            <SearchField v-model="searchValue" placeholder="Search Commands..." class="mb4"/>
+            <SearchField v-model="searchValue" placeholder="Search Commands..." class="search-field" :overrideStyle="searchStyle"/>
             <div class="container">
                 <div class="tabs mx-auto flex justify-center text-center w-100">
                     <button :class="{'active': activeTag === 'music'}" @click="() => {activeTag = 'music'}" class="px3 tab">Music</button>
@@ -41,6 +41,10 @@ export default {
         return {
             activeTag: 'all',
             searchValue: '',
+            searchStyle: {
+                fontSize: '32px',
+                lineHeight: '32px'
+            },
             commands: [
                 {
                     name: 'play',
@@ -149,6 +153,12 @@ export default {
 
 .content {
     z-index: 1;
+    .search-field {
+        padding: 200px 0 100px;
+        @include mq(sm) {
+            padding: 100px 0 120px;
+        }
+    }
     .container {
         background-color: clr(background, secondary);
         .tabs {

@@ -13,10 +13,10 @@
                         <router-link to="/commands" class="text-decoration-none px3 h4">Commands</router-link>
                     </li>
                     <li>
-                        <router-link to="/faq" class="text-decoration-none px3 h4">Donate</router-link>
+                        <router-link to="/support" class="text-decoration-none px3 h4">Support</router-link>
                     </li>
                     <li>
-                        <router-link to="/about" class="text-decoration-none px3 h4">About</router-link>
+                        <router-link to="/donate" class="text-decoration-none px3 h4">Donate</router-link>
                     </li>
                 </ul>
             </nav>

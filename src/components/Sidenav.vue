@@ -3,13 +3,13 @@
         <nav>
             <ul class="list-reset flex-column">
                 <li>
-                    <a href="commands" class="text-decoration-none block h-100 pl2 h3">Commands</a>
+                    <router-link to="/commands" class="text-decoration-none block h-100 pl2 h3">Commands</router-link>
                 </li>
                 <li>
-                    <a href="faq" class="text-decoration-none block h-100 pl2 h3">FAQ</a>
+                    <router-link to="/support" class="text-decoration-none block h-100 pl2 h3">Support</router-link>
                 </li>
                 <li>
-                    <a href="about" class="text-decoration-none block h-100 pl2 h3">About</a>
+                    <router-link to="/donate" class="text-decoration-none block h-100 pl2 h3">Donate</router-link>
                 </li>
             </ul>
         </nav>

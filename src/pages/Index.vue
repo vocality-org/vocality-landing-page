@@ -177,7 +177,7 @@
         </section>
         <section class="second-content">
             <div class="banner">
-                <div class="cyan">
+                <div class="pink">
                     <div class="flex justify-center items-center flex-column">
                         <img src="@/assets/volume.svg" alt="volume control" height="114">
                         <h4 class="h3 mt2 mb1">Settings</h4>
@@ -191,7 +191,7 @@
                         <span class="text-center">Lorem ipsum. Itaque debitis aliquid ipsam eveniet.</span>
                     </div>
                 </div>
-                <div class="pink">
+                <div class="cyan">
                     <div class="flex justify-center items-center flex-column">
                         <img src="@/assets/key.svg" alt="key" height="114">
                         <h4 class="h3 mt2 mb1">Settings</h4>
@@ -204,12 +204,9 @@
             <div class="donate z2 relative text-center">
                 <div class="flex  flex-column justify-center items-center max-mid my0 mx-auto w-100">
                     <h2 class="h1 m0">Enter the free gift card giveaway</h2>
-                    <a
-                    class="cta h3 bold text-decoration-none mt4 inline-block"
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://discordapp.com/api/oauth2/authorize?client_id=589595189631385602&permissions=3164224&scope=bot"
-                    >Donate</a>
+                    <router-link to="/donate" class="cta h3 bold mt4">
+                        Donate
+                    </router-link>
                 </div>
             </div>
         </section>
@@ -219,7 +216,7 @@
 
 <script>
     import Footer from '@/components/Footer.vue'
-    import { PerspectiveCamera, Scene, AmbientLight, WebGLRenderer, Euler, Quaternion, AmbientLightProbe } from 'three'
+    import { PerspectiveCamera, Scene, AmbientLight, WebGLRenderer, Euler, Quaternion } from 'three'
     import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
     import updateOnSroll from 'uos'
 
@@ -624,44 +621,6 @@
     .donate {
         background-color: clr(background);
         padding: 200px 20px;
-    }
-}
-.cta {
-    height: 52px;
-    line-height: 52px;
-    width: 240px;
-    text-align: center;
-    border-radius: 4px;
-    pointer-events: auto;
-    box-shadow: 0 4px 6px rgba(97, 97, 97, 0.1), 0 1px 3px rgba(190, 190, 190, 0.08);
-    background-image: linear-gradient(
-        90deg,
-        clr(brand, blue) 0%,
-        clr(brand, cyan) 50%,
-        clr(brand, pink) 100%
-    );
-    background-size: 400%;
-    animation-duration: 3s;
-    animation-name: changeBackgroundPos;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-play-state: paused;
-
-    &:hover,
-    &:focus {
-        animation-play-state: running;
-        transform: translateY(-1px);
-        box-shadow: 0 7px 14px rgba(97, 97, 97, 0.1), 0 3px 6px rgba(190, 190, 190, 0.08);
-    }
-
-    @keyframes changeBackgroundPos {
-        from {
-            background-position: right;
-        }
-
-        to {
-            background-position: left;
-        }
     }
 }
 </style>

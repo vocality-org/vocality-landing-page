@@ -12,7 +12,7 @@
                             <router-link to="/commands">Commands</router-link>
                         </li>
                         <li class="pt1">
-                            <router-link to="/commands">Premium</router-link>
+                            <router-link to="/donate">Donate</router-link>
                         </li>
                         <li class="pt1">
                             <router-link to="/commands">About</router-link>
@@ -47,9 +47,6 @@
 </template>
 
 <script>
-/**         <div class="flex justify-center" style="padding-bottom: 48px">
-                <img src="@/assets/logo.svg" width="42" height="42" alt="vocality-logo">
-            </div> */
 </script>
 
 <style scoped lang="scss">

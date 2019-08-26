@@ -34,6 +34,13 @@ export default new Router({
             component: function () {
                 return import('./pages/Faq.vue')
             }
+        },
+        {
+            path: '/contact',
+            name: 'contact',
+            component: function () {
+                return import('./pages/Contact.vue')
+            }
         }
     ],
     scrollBehavior () {

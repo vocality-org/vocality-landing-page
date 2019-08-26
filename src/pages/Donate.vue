@@ -50,8 +50,8 @@
                 </div>
         </section>
         <section class="other-inqs">
-            <h2 class="h1 m0 mb3">For other Inqueries</h2>
-            <router-link to="/contect" class="cta h3 bold py1 px3">
+            <h2 class="h1 m0 mb3">For other Inquiries</h2>
+            <router-link to="/contact" class="cta h3 bold py1 px3">
                 Contact Us
             </router-link>
         </section>
@@ -144,11 +144,7 @@ export default {
         box-shadow: 3px 3px 6px 2px rgba(0, 0, 0, 0.2);
     }
 }
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
+
 .slide-up-enter-active, .slide-up-leave-active {
     transition: transform .3s ease opacity .2s ease;
 }

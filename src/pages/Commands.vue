@@ -1,12 +1,7 @@
 <template>
     <div class="commands">
         <section class="content max-mid mx-auto">
-            <div class="search flex justify-center">
-                <img ref="searchIcon" src="@/assets/search.svg" alt="search" class="search-icon">
-                <input ref="searchInput" v-model="searchValue" type="search" placeholder="Search Commands..." name="search" contenteditable="true" autocomplete="off"
-                    maxlength="48" id="search-field" class="border-none">
-                <span ref="searchHelperSpan" id="search-field-helper"></span>
-            </div>
+            <SearchField v-model="searchValue" placeholder="Search Commands..." class="mb4"/>
             <div class="container">
                 <div class="tabs mx-auto flex justify-center text-center w-100">
                     <button :class="{'active': activeTag === 'music'}" @click="() => {activeTag = 'music'}" class="px3 tab">Music</button>
@@ -38,6 +33,7 @@
 <script>
 import Command from '@/components/Command.vue'
 import Footer from '@/components/Footer.vue'
+import SearchField from '@/components/SearchField.vue'
 
 export default {
     name: 'commands',
@@ -125,42 +121,6 @@ export default {
             ]
         }
     },
-    methods: {
-        initInput: function () {
-            this.$refs.searchInput.focus()
-            this.resizeInputForText('')
-        },
-        resizeInputForText: function (text) {
-            if (!text.trim()) {
-                text = this.$refs.searchInput.getAttribute('placeholder').trim()
-                this.$refs.searchIcon.style.display = 'block'
-            } else {
-                this.$refs.searchIcon.style.display = 'none'
-            }
-            this.$refs.searchHelperSpan.innerHTML = text
-            this.$refs.searchInput.style.width = window.getComputedStyle(this.$refs.searchHelperSpan).width
-        }
-    },
-    mounted: function () {
-        this.initInput()
-    },
-    created: function () {
-        this.$nextTick(() => {
-            // listen on keydown of all characters
-            this.$refs.searchInput.addEventListener('keypress', (char) => {
-                if (char.which && char.charCode) {
-                    const newChar = String.fromCharCode(char.keyCode | char.charCode)
-                    this.resizeInputForText(this.$refs.searchInput.value + newChar)
-                }
-            })
-            // listen to keyup and react to backspace and del
-            this.$refs.searchInput.addEventListener('keyup', (char) => {
-                if (char.keyCode === 8 || char.keyCode === 46) {
-                    this.resizeInputForText(this.$refs.searchInput.value)
-                }
-            })
-        })
-    },
     computed: {
         filteredList () {
             return this.commands
@@ -175,7 +135,8 @@ export default {
     },
     components: {
         Command,
-        Footer
+        Footer,
+        SearchField
     }
 }
 </script>
@@ -188,42 +149,6 @@ export default {
 
 .content {
     z-index: 1;
-    .search {
-        height: 116px;
-        padding: 200px 0 100px;
-        .search-icon {
-            height: 24px;
-            margin: auto 8px;
-        }
-        input, span {
-            text-shadow: 2px 2px 4px #727272ba;
-            font-size: 24px;
-            line-height: 24px;
-            white-space: pre;
-            background-color:  transparent;
-            color: clr(text);
-
-            &::placeholder {
-                color: clr(text, secondary);
-            }
-        }
-        span {
-            visibility: hidden;
-            position: absolute;
-            z-index: -1;
-            user-select: none;
-        }
-        @include mq(sm) {
-            padding: 100px 0 120px;
-            .search-icon {
-                height: 36px;
-            }
-            input, span {
-                font-size: 36px;
-                line-height: 36px;
-            }
-        }
-    }
     .container {
         background-color: clr(background, secondary);
         .tabs {
@@ -277,13 +202,4 @@ export default {
         }
     }
 }
-/* clears the 'X' from Internet Explorer */
-input[type=search]::-ms-clear {  display: none; width: 0; height: 0; }
-input[type=search]::-ms-reveal {  display: none; width: 0; height: 0; }
-
-/* clears the 'X' from Chrome */
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration { display: none; }
 </style>

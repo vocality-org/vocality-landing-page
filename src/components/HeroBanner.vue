@@ -37,7 +37,7 @@ $navbar-height: 80px;
         font-size: 5vw;
         text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
         font-weight: bold;
-        letter-spacing: 20px;
+        letter-spacing: 18px;
     }
     &::after {
         content: '';

@@ -63,8 +63,4 @@ button {
 h1 {
     font-weight: normal;
 }
-
-:focus {
-    outline: none;
-}
 </style>

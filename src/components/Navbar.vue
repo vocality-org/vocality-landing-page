@@ -13,7 +13,7 @@
                         <router-link to="/commands" class="text-decoration-none px3 h4">Commands</router-link>
                     </li>
                     <li>
-                        <router-link to="/support" class="text-decoration-none px3 h4">Support</router-link>
+                        <router-link to="/faq" class="text-decoration-none px3 h4">FAQ</router-link>
                     </li>
                     <li>
                         <router-link to="/donate" class="text-decoration-none px3 h4">Donate</router-link>

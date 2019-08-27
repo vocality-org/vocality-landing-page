@@ -33,6 +33,7 @@ $navbar-height: 80px;
     height: $banner-height;
     line-height: $banner-height - $navbar-height;
     padding-top: $navbar-height;
+    box-shadow: 3px 0 10px 4px rgba(0, 0, 0, 0.2);
     h1 {
         font-size: 5vw;
         text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);

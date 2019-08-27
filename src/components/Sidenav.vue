@@ -6,7 +6,7 @@
                     <router-link to="/commands" class="text-decoration-none block h-100 pl2 h3">Commands</router-link>
                 </li>
                 <li>
-                    <router-link to="/support" class="text-decoration-none block h-100 pl2 h3">Support</router-link>
+                    <router-link to="/faq" class="text-decoration-none block h-100 pl2 h3">FAQ</router-link>
                 </li>
                 <li>
                     <router-link to="/donate" class="text-decoration-none block h-100 pl2 h3">Donate</router-link>

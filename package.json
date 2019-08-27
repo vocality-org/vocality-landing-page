@@ -10,11 +10,13 @@
     },
     "dependencies": {
         "basscss": "^8.0.2",
+        "leaflet": "^1.5.1",
         "normalize.css": "^8.0.1",
         "three": "^0.107.0",
         "uos": "^1.2.0",
         "vue": "^2.6.10",
-        "vue-router": "^3.0.3"
+        "vue-router": "^3.0.3",
+        "vue2-leaflet": "^2.2.1"
     },
     "devDependencies": {
         "@vue/cli-plugin-eslint": "^3.10.0",

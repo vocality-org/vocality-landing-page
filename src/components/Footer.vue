@@ -51,6 +51,7 @@
 
 <style scoped lang="scss">
 footer {
+    text-align: left;
     background-color: clr(background, secondary);
     box-shadow: 0 -2px 20px 2px #00000060;
     // margin-top: 128px;

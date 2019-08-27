@@ -338,7 +338,7 @@ export default {
     100% {
         transform: translateX(1000px);
         opacity: 0;
-        height: 0;
+        height: 24px;
     }
 }
 .footer {

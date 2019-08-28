@@ -1,7 +1,7 @@
 <template>
     <div class="search">
         <div class="search flex justify-center">
-            <img ref="searchIcon" src="@/assets/search.svg" alt="search" class="search-icon">
+            <img ref="searchIcon" src="@/assets/icons/search.svg" alt="search" class="search-icon">
             <input ref="searchInput" :placeholder="placeholder" :style="[overrideStyle]"
                 :value="value" @input="updateAndEmit"
                 type="search" name="search" contenteditable="true" autocomplete="off"

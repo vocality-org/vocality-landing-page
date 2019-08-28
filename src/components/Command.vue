@@ -4,7 +4,7 @@
             <h1 class="command-name my0 mr2 h2">?{{name}}</h1>
             <h2 v-for="a in args" class="command-args my0 h3" :key="a">[{{ a }}]</h2>
             <div class="flex-auto"></div>
-            <img :class="{ 'expanded-icon': isExpanded }" class="icon" src="@/assets/expand.svg" alt="toggle panel">
+            <img :class="{ 'expanded-icon': isExpanded }" class="icon" src="@/assets/icons/expand.svg" alt="toggle panel">
         </div>
         <div ref="content" class="content px2">
             <h3 class="h4 mb2 mt2">Description</h3>

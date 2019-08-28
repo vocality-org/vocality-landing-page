@@ -5,15 +5,15 @@
             <div class="container flex justify-center items-center flex-column">
                 <div class="data items-center">
                     <a href="https://www.google.com/maps/" target="__blank" class="icon-container flex justify-center items-center">
-                        <img src="@/assets/location.svg" alt="location" height="42">
+                        <img src="@/assets/icons/location.svg" alt="location" height="42">
                     </a>
                     <div class="flex items-center">1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA</div>
                     <a href="tel:+1 650-253-000" target="__blank" class="icon-container flex justify-center items-center">
-                        <img src="@/assets/phone.svg" alt="phone" height="42">
+                        <img src="@/assets/icons/phone.svg" alt="phone" height="42">
                     </a>
                     <div class="flex items-center">+1 650-253-000</div>
                     <a href="mailto:my-mail@email.com" target="__blank" class="icon-container flex justify-center items-center">
-                        <img src="@/assets/email.svg" alt="email" height="42">
+                        <img src="@/assets/icons/email.svg" alt="email" height="42">
                     </a>
                     <div class="flex items-center">my-mail@gmail.com</div>
                 </div>
@@ -39,13 +39,13 @@
         </section>
         <section class="social-media flex flex-column justify-center items-center">
             <a href="https://www.facebook.com/" target="__blank" class="icon-container flex justify-center items-center">
-                <img src="@/assets/facebook.svg" alt="facebook" height="64">
+                <img src="@/assets/icons/facebook.svg" alt="facebook" height="64">
             </a>
             <a href="https://www.instagram.com/" target="__blank" class="icon-container flex justify-center items-center">
-                <img src="@/assets/instagram.svg" alt="instagran" height="64">
+                <img src="@/assets/icons/instagram.svg" alt="instagran" height="64">
             </a>
             <a href="https://www.twitter.com/" target="__blank" class="icon-container flex justify-center items-center">
-                <img src="@/assets/twitter.svg" alt="twitter" height="64">
+                <img src="@/assets/icons/twitter.svg" alt="twitter" height="64">
             </a>
         </section>
         <section class="message mx-auto max-mid">
@@ -70,7 +70,7 @@
             <div v-if="messageSubmitted" class="afterSubmit text-center mt2">
                 <div @click="requestForm" class="submit-request h3 flex items-center justify-center">
                     Submit again
-                    <img src="@/assets/arrow-right.svg" alt="arrow pointing right" class="ml2">
+                    <img src="@/assets/icons/arrow-right.svg" alt="arrow pointing right" class="ml2">
                 </div>
             </div>
         </section>
@@ -150,9 +150,9 @@ export default {
     created () {
         delete Icon.Default.prototype._getIconUrl
         Icon.Default.mergeOptions({
-            iconUrl: require('@/assets/logo.svg'),
+            iconUrl: require('@/assets/icons/logo.svg'),
             iconSize: [42, 42],
-            shadowUrl: require('@/assets/leaflet-shadow.svg'),
+            shadowUrl: require('@/assets/icons/leaflet-shadow.svg'),
             shadowAnchor: [4, 38]
         })
     }

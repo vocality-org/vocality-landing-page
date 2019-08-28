@@ -31,7 +31,7 @@
                             <p class="h3">Sunt molestiae voluptas reprehenderit suscipit rerum beatae. Assumenda et et sint voluptatem. Sequi expedita nostrum quam recusandae quisquam alias. Molestiae quaerat perferendis sunt fuga et dignissimos. Deleniti delectus dolorum corporis velit occaecati qui blanditiis. Repudiandae alias voluptatem delectus laborum ratione qui sed aut.</p>
                             <router-link to="/commands" tag="a" class="commands-link h3 flex items-center">
                                 See full list of commands
-                                <img src="@/assets/arrow-right.svg" alt="arrow pointing right" class="ml2">
+                                <img src="@/assets/icons/arrow-right.svg" alt="arrow pointing right" class="ml2">
                             </router-link>
                         </div>
                     </div>
@@ -43,25 +43,25 @@
                         </div>
                         <section class="checklist">
                             <div class="list-icon-container">
-                                <img class="list-icon" src="@/assets/youtube.svg" alt="youtube">
+                                <img class="list-icon" src="@/assets/icons/youtube.svg" alt="youtube">
                             </div>
                             <div class="checklist-content pb3">
                                 <h3 class="h3 m0">Youtube</h3>
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
-                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
                                         Something very nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
                                         Something nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
                                         Something very nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
                                         Something nice
                                     </li>
                                 </ul>
@@ -70,25 +70,25 @@
 
                         <section class="checklist">
                             <div class="list-icon-container">
-                                <img class="list-icon" src="@/assets/soundcloud.svg" alt="soundcloud">
+                                <img class="list-icon" src="@/assets/icons/soundcloud.svg" alt="soundcloud">
                             </div>
                             <div class="checklist-content pb3">
                                 <h3 class="h3 m0">SoundCloud</h3>
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
-                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
                                         Something nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
                                         Something very nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
                                         Something nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
                                         Something very nice
                                     </li>
                                 </ul>
@@ -97,17 +97,17 @@
 
                         <section class="checklist">
                             <div class="list-icon-container">
-                                <img class="list-icon" src="@/assets/spotify.svg" alt="spotify">
+                                <img class="list-icon" src="@/assets/icons/spotify.svg" alt="spotify">
                             </div>
                             <div class="checklist-content pb3">
                                 <h3 class="h3 m0">Spotify</h3>
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
-                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
                                         Something nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
                                         Something nice
                                     </li>
                                 </ul>
@@ -116,21 +116,21 @@
 
                         <section class="checklist">
                             <div class="list-icon-container">
-                                <img class="list-icon" src="@/assets/music.svg" alt="music in general">
+                                <img class="list-icon" src="@/assets/icons/music.svg" alt="music in general">
                             </div>
                             <div class="checklist-content pb3">
                                 <h3 class="h3 m0">Music and Playlists</h3>
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
-                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
                                         Something nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
                                         Something nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
                                         Something nice
                                     </li>
                                 </ul>
@@ -139,21 +139,21 @@
 
                         <section class="checklist">
                             <div class="list-icon-container hide-points">
-                                <img class="list-icon" src="@/assets/settings.svg" alt="bot settings">
+                                <img class="list-icon" src="@/assets/icons/settings.svg" alt="bot settings">
                             </div>
                             <div class="checklist-content">
                                 <h3 class="h3 m0">Bot Settings</h3>
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
-                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
                                         Something nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
                                         Something nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
                                         Something nice
                                     </li>
                                 </ul>
@@ -179,21 +179,21 @@
             <div class="banner">
                 <div class="pink">
                     <div class="flex justify-center items-center flex-column">
-                        <img src="@/assets/volume.svg" alt="volume control" height="114">
+                        <img src="@/assets/icons/volume.svg" alt="volume control" height="114">
                         <h4 class="h3 mt2 mb1">Settings</h4>
                         <span class="text-center">Lorem ipsum. Itaque debitis aliquid ipsam eveniet.</span>
                     </div>
                 </div>
                 <div class="blue">
                     <div class="flex justify-center items-center flex-column">
-                        <img src="@/assets/clock.svg" alt="clock" height="114">
+                        <img src="@/assets/icons/clock.svg" alt="clock" height="114">
                         <h4 class="h3 mt2 mb1">Settings</h4>
                         <span class="text-center">Lorem ipsum. Itaque debitis aliquid ipsam eveniet.</span>
                     </div>
                 </div>
                 <div class="cyan">
                     <div class="flex justify-center items-center flex-column">
-                        <img src="@/assets/key.svg" alt="key" height="114">
+                        <img src="@/assets/icons/key.svg" alt="key" height="114">
                         <h4 class="h3 mt2 mb1">Settings</h4>
                         <span class="text-center">Lorem ipsum. Itaque debitis aliquid ipsam eveniet.</span>
                     </div>
@@ -291,13 +291,13 @@
             animateOnScroll: function () {
                 updateOnSroll(0, this.wh * 1.5, position => {
                     if (position === 1 && this.isScrollEnabled) {
-                        document.getElementById('container').style.transform = 'translateX(100vw)'
+                        this.$refs.container.style.transform = 'translateX(100vw)'
                         this.isScrollEnabled = false
                         return
                     }
 
                     if (position < 1 && !this.isScrollEnabled) {
-                        document.getElementById('container').style.transform = 'translateX(0px)'
+                        this.$refs.container.style.transform = 'translateX(0px)'
                         this.isScrollEnabled = true
                     }
 

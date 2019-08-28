@@ -46,7 +46,7 @@ $navbar-height: 80px;
         top: -72px; left: -45px;
         opacity: 0.3;
         width: 200%; height: 72px + $banner-height + $navbar-height;
-        background-image: url('../assets/banner-bg.svg')
+        background-image: url('../assets/icons/banner-bg.svg')
     }
 }
 .cyan {

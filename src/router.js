@@ -41,6 +41,13 @@ export default new Router({
             component: function () {
                 return import('./pages/Contact.vue')
             }
+        },
+        {
+            path: '/members',
+            name: 'members',
+            component: function () {
+                return import('./pages/Members.vue')
+            }
         }
     ],
     scrollBehavior () {

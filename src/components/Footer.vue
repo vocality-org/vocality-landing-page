@@ -3,7 +3,7 @@
         <footer>
             <nav class="mx-auto">
                 <div class="logo flex items-center">
-                    <img src="@/assets/logo.svg" height="128" alt="logo">
+                    <img src="@/assets/icons/logo.svg" height="128" alt="logo">
                 </div>
                 <div class="bot pt2">
                     <h4 class="h4 m0">Bot</h4>

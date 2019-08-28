@@ -3,7 +3,7 @@
         <header class="flex py1 px2">
             <div class="icon flex">
                 <router-link to="/" class="flex">
-                    <img src="@/assets/logo.svg" alt="vocality-logo">
+                    <img src="@/assets/icons/logo.svg" alt="vocality-logo">
                 </router-link>
             </div>
             <div class="flex-auto"></div>
@@ -24,12 +24,12 @@
                 <transition name="fade">
                     <div key=1 v-if="!sidenavOpen" class="flex h-100 absolute" style="right: 0">
                         <button class="icon" @click="openSidenavClick">
-                            <img src="@/assets/menu.svg" alt="Open the menu" class="sidenav-button">
+                            <img src="@/assets/icons/menu.svg" alt="Open the menu" class="sidenav-button">
                         </button>
                     </div>
                     <div key=2 v-else class="flex h-100 absolute" style="right: 0">
                         <button class="icon" @click="closeSidenavClick">
-                            <img src="@/assets/close.svg" alt="Close the menu" class="sidenav-button">
+                            <img src="@/assets/icons/close.svg" alt="Close the menu" class="sidenav-button">
                         </button>
                     </div>
                 </transition>

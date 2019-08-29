@@ -1,68 +1,75 @@
 <template>
     <div class="command panel">
-        <div class="header flex items-baseline p2" @click="() => { toggleExpansion() }">
-            <h1 class="command-name my0 mr2 h2">?{{name}}</h1>
+        <div
+            class="header flex items-baseline p2"
+            @click="
+                () => {
+                    toggleExpansion();
+                }
+            "
+        >
+            <h1 class="command-name my0 mr2 h2">?{{ name }}</h1>
             <h2 v-for="a in args" class="command-args my0 h3" :key="a">[{{ a }}]</h2>
             <div class="flex-auto"></div>
-            <img :class="{ 'expanded-icon': isExpanded }" class="icon" src="@/assets/icons/expand.svg" alt="toggle panel">
+            <img :class="{ 'expanded-icon': isExpanded }" class="icon" src="@/assets/icons/expand.svg" alt="toggle panel" />
         </div>
         <div ref="content" class="content px2">
             <h3 class="h4 mb2 mt2">Description</h3>
-            <span class="description h5">{{description}}</span>
+            <span class="description h5">{{ description }}</span>
             <h3 class="h4 mb2 mt3">Tags</h3>
             <div class="tags flex">
                 <div v-for="t in tags" class="tag mx2 text-center" :key="t">{{ t }}</div>
             </div>
             <h3 class="h4 mb2 mt3">Example</h3>
-            <img :src="imageUrl" width="400" alt="example image">
+            <img :src="imageUrl" width="400" alt="example image" />
         </div>
-    </div>
-</template>>
+    </div> </template
+>>
 
 <script>
 export default {
     name: 'command',
-    data () {
+    data() {
         return {
             args: this.arguments,
-            isExpanded: false
-        }
+            isExpanded: false,
+        };
     },
     props: {
         name: {
             type: String,
-            required: true
+            required: true,
         },
         arguments: {
             type: Array,
-            default: function () {
-                return []
-            }
+            default: function() {
+                return [];
+            },
         },
         description: {
-            type: String
+            type: String,
         },
         tags: {
             type: Array,
-            default: function () {
-                return []
-            }
+            default: function() {
+                return [];
+            },
         },
         imageUrl: {
-            type: String
-        }
+            type: String,
+        },
     },
     methods: {
-        toggleExpansion: function () {
-            this.isExpanded = !this.isExpanded
+        toggleExpansion: function() {
+            this.isExpanded = !this.isExpanded;
             if (this.isExpanded) {
-                this.$refs.content.style.maxHeight = this.$refs.content.scrollHeight + 'px'
+                this.$refs.content.style.maxHeight = this.$refs.content.scrollHeight + 'px';
             } else {
-                this.$refs.content.style.maxHeight = null
+                this.$refs.content.style.maxHeight = null;
             }
-        }
-    }
-}
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>

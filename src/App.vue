@@ -1,8 +1,16 @@
 <template>
     <div id="app">
-        <Sidenav :width="200" :isOpen="sidenavOpenState" @closeSidenav="() => {this.sidenavOpenState = false}"></Sidenav>
+        <Sidenav
+            :width="200"
+            :isOpen="sidenavOpenState"
+            @closeSidenav="
+                () => {
+                    this.sidenavOpenState = false;
+                }
+            "
+        ></Sidenav>
         <div id="page-wrap">
-            <Navbar :sidenavOpen="sidenavOpenState" @sidenavStateChange="(state) => this.sidenavOpenState = state"></Navbar>
+            <Navbar :sidenavOpen="sidenavOpenState" @sidenavStateChange="state => (this.sidenavOpenState = state)"></Navbar>
             <router-view />
             <!--<Footer></Footer>-->
         </div>
@@ -11,28 +19,27 @@
 
 <script>
 // import Footer from '@/components/Footer.vue'
-import Navbar from '@/components/Navbar.vue'
-import Sidenav from '@/components/Sidenav.vue'
+import Navbar from '@/components/Navbar.vue';
+import Sidenav from '@/components/Sidenav.vue';
 
 export default {
     components: {
         // Footer,
         Navbar,
-        Sidenav
+        Sidenav,
     },
-    data () {
+    data() {
         return {
-            sidenavOpenState: false
-        }
-    }
-}
-
+            sidenavOpenState: false,
+        };
+    },
+};
 </script>
 
 <style lang="scss">
 html,
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     -webkit-tap-highlight-color: transparent;
     body {
         color: clr('text');

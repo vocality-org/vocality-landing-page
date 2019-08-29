@@ -3,7 +3,7 @@
         <footer>
             <nav class="mx-auto">
                 <div class="logo flex items-center">
-                    <img src="@/assets/icons/logo.svg" height="128" alt="logo">
+                    <img src="@/assets/icons/logo.svg" height="128" alt="logo" />
                 </div>
                 <div class="bot pt2">
                     <h4 class="h4 m0">Bot</h4>
@@ -46,8 +46,7 @@
     </div>
 </template>
 
-<script>
-</script>
+<script></script>
 
 <style scoped lang="scss">
 footer {
@@ -61,9 +60,9 @@ footer {
         padding: 60px 20px;
         display: grid;
         grid-template-areas:
-        'logo bot . . .'
-        'logo resources . . .'
-        'logo team . . . ';
+            'logo bot . . .'
+            'logo resources . . .'
+            'logo team . . . ';
         grid-gap: 32px;
         @include mq(sm) {
             grid-template-areas:
@@ -71,8 +70,7 @@ footer {
                 'logo team . . .';
         }
         @include mq(md) {
-            grid-template-areas:
-                'logo bot resources team .';
+            grid-template-areas: 'logo bot resources team .';
         }
     }
 

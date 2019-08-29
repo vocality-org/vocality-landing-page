@@ -9,17 +9,16 @@
             <div class="header-content">
                 <h1 class="no-events-on-drag">Vocality</h1>
                 <p class="h4 no-events-on-drag">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent
-                    libero. Sed cursus ante dapibus
-                    diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
-                    Praesent mauris.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante
+                    dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
                 </p>
                 <a
                     class="cta h3 bold text-decoration-none mt4 inline-block no-events-on-drag"
                     target="_blank"
                     rel="noreferrer"
                     href="https://discordapp.com/api/oauth2/authorize?client_id=589595189631385602&permissions=3164224&scope=bot"
-                >Invite Vocality</a>
+                    >Invite Vocality</a
+                >
             </div>
         </section>
         <section class="main relative flex">
@@ -28,40 +27,53 @@
                     <div>
                         <div class="sticky">
                             <h2 class="h1 m0">This is a section header</h2>
-                            <p class="h3">Sunt molestiae voluptas reprehenderit suscipit rerum beatae. Assumenda et et sint voluptatem. Sequi expedita nostrum quam recusandae quisquam alias. Molestiae quaerat perferendis sunt fuga et dignissimos. Deleniti delectus dolorum corporis velit occaecati qui blanditiis. Repudiandae alias voluptatem delectus laborum ratione qui sed aut.</p>
+                            <p class="h3">
+                                Sunt molestiae voluptas reprehenderit suscipit rerum beatae. Assumenda et et sint voluptatem.
+                                Sequi expedita nostrum quam recusandae quisquam alias. Molestiae quaerat perferendis sunt fuga et
+                                dignissimos. Deleniti delectus dolorum corporis velit occaecati qui blanditiis. Repudiandae alias
+                                voluptatem delectus laborum ratione qui sed aut.
+                            </p>
                             <router-link to="/commands" tag="a" class="commands-link h3 flex items-center">
                                 See full list of commands
-                                <img src="@/assets/icons/arrow-right.svg" alt="arrow pointing right" class="ml2">
+                                <img src="@/assets/icons/arrow-right.svg" alt="arrow pointing right" class="ml2" />
                             </router-link>
                         </div>
                     </div>
                     <div class="scroll-side relative">
                         <div class="dotted-line h-100 absolute top-0">
-                            <svg preserveAspectRatio="xMidYMin slice" width="2px" height="100%" viewBox="0 0 2 995" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <svg
+                                preserveAspectRatio="xMidYMin slice"
+                                width="2px"
+                                height="100%"
+                                viewBox="0 0 2 995"
+                                version="1.1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                            >
                                 <path d="M1,1 L1,1001" stroke="#f2f2f280" stroke-width="2" stroke-dasharray="2 8"></path>
                             </svg>
                         </div>
                         <section class="checklist">
                             <div class="list-icon-container">
-                                <img class="list-icon" src="@/assets/icons/youtube.svg" alt="youtube">
+                                <img class="list-icon" src="@/assets/icons/youtube.svg" alt="youtube" />
                             </div>
                             <div class="checklist-content pb3">
                                 <h3 class="h3 m0">Youtube</h3>
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
                                         Something very nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
                                         Something nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
                                         Something very nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
                                         Something nice
                                     </li>
                                 </ul>
@@ -70,25 +82,25 @@
 
                         <section class="checklist">
                             <div class="list-icon-container">
-                                <img class="list-icon" src="@/assets/icons/soundcloud.svg" alt="soundcloud">
+                                <img class="list-icon" src="@/assets/icons/soundcloud.svg" alt="soundcloud" />
                             </div>
                             <div class="checklist-content pb3">
                                 <h3 class="h3 m0">SoundCloud</h3>
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
                                         Something nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
                                         Something very nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
                                         Something nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
                                         Something very nice
                                     </li>
                                 </ul>
@@ -97,17 +109,17 @@
 
                         <section class="checklist">
                             <div class="list-icon-container">
-                                <img class="list-icon" src="@/assets/icons/spotify.svg" alt="spotify">
+                                <img class="list-icon" src="@/assets/icons/spotify.svg" alt="spotify" />
                             </div>
                             <div class="checklist-content pb3">
                                 <h3 class="h3 m0">Spotify</h3>
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
                                         Something nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
                                         Something nice
                                     </li>
                                 </ul>
@@ -116,21 +128,21 @@
 
                         <section class="checklist">
                             <div class="list-icon-container">
-                                <img class="list-icon" src="@/assets/icons/music.svg" alt="music in general">
+                                <img class="list-icon" src="@/assets/icons/music.svg" alt="music in general" />
                             </div>
                             <div class="checklist-content pb3">
                                 <h3 class="h3 m0">Music and Playlists</h3>
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
                                         Something nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
                                         Something nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
                                         Something nice
                                     </li>
                                 </ul>
@@ -139,21 +151,21 @@
 
                         <section class="checklist">
                             <div class="list-icon-container hide-points">
-                                <img class="list-icon" src="@/assets/icons/settings.svg" alt="bot settings">
+                                <img class="list-icon" src="@/assets/icons/settings.svg" alt="bot settings" />
                             </div>
                             <div class="checklist-content">
                                 <h3 class="h3 m0">Bot Settings</h3>
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
                                         Something nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
                                         Something nice
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon">
+                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
                                         Something nice
                                     </li>
                                 </ul>
@@ -179,21 +191,21 @@
             <div class="banner">
                 <div class="pink">
                     <div class="flex justify-center items-center flex-column">
-                        <img src="@/assets/icons/volume.svg" alt="volume control" height="114">
+                        <img src="@/assets/icons/volume.svg" alt="volume control" height="114" />
                         <h4 class="h3 mt2 mb1">Settings</h4>
                         <span class="text-center">Lorem ipsum. Itaque debitis aliquid ipsam eveniet.</span>
                     </div>
                 </div>
                 <div class="blue">
                     <div class="flex justify-center items-center flex-column">
-                        <img src="@/assets/icons/clock.svg" alt="clock" height="114">
+                        <img src="@/assets/icons/clock.svg" alt="clock" height="114" />
                         <h4 class="h3 mt2 mb1">Settings</h4>
                         <span class="text-center">Lorem ipsum. Itaque debitis aliquid ipsam eveniet.</span>
                     </div>
                 </div>
                 <div class="cyan">
                     <div class="flex justify-center items-center flex-column">
-                        <img src="@/assets/icons/key.svg" alt="key" height="114">
+                        <img src="@/assets/icons/key.svg" alt="key" height="114" />
                         <h4 class="h3 mt2 mb1">Settings</h4>
                         <span class="text-center">Lorem ipsum. Itaque debitis aliquid ipsam eveniet.</span>
                     </div>
@@ -215,185 +227,181 @@
 </template>
 
 <script>
-    import Footer from '@/components/Footer.vue'
-    import { PerspectiveCamera, Scene, AmbientLight, WebGLRenderer, Euler, Quaternion } from 'three'
-    import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-    import updateOnSroll from 'uos'
+import Footer from '@/components/Footer.vue';
+import { PerspectiveCamera, Scene, AmbientLight, WebGLRenderer, Euler, Quaternion } from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import updateOnSroll from 'uos';
 
-    export default {
-        name: 'index',
-        data () {
-            return {
-                camera: null,
-                scene: null,
-                renderer: null,
-                logo: null,
-                ww: window.innerWidth,
-                wh: window.innerHeight,
-                rotationState: -1,
-                isScrollingDown: true,
-                isScrollEnabled: true,
-                previousScrollPosition: 0,
-                isGrabbing: false,
-                previousMousePosition: {
-                    x: 0,
-                    y: 0
+export default {
+    name: 'index',
+    data() {
+        return {
+            camera: null,
+            scene: null,
+            renderer: null,
+            logo: null,
+            ww: window.innerWidth,
+            wh: window.innerHeight,
+            rotationState: -1,
+            isScrollingDown: true,
+            isScrollEnabled: true,
+            previousScrollPosition: 0,
+            isGrabbing: false,
+            previousMousePosition: {
+                x: 0,
+                y: 0,
+            },
+        };
+    },
+    methods: {
+        init: function() {
+            let container = document.getElementById('container');
+
+            this.camera = new PerspectiveCamera(50, this.ww / this.wh);
+            this.camera.position.z = 0.75;
+            this.camera.position.y = 0.3;
+
+            this.scene = new Scene();
+
+            const light = new AmbientLight('#fff', 1);
+            this.scene.add(light);
+
+            new GLTFLoader().load(
+                'vocality-logo-3d.glb',
+                gltf => {
+                    this.logo = gltf.scene;
+                    this.logo.scale.set(4.5, 4.5, 4.5);
+                    this.logo.position.set(0.3, 0.24, 0);
+                    this.scene.add(this.logo);
+                },
+                xhr => {
+                    console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
+                },
+                error => {
+                    console.log(error);
+                },
+            );
+
+            this.renderer = new WebGLRenderer({ antialias: true });
+            this.renderer.setClearColor('#121212', 1);
+            this.renderer.gammaOutput = true;
+            this.renderer.setSize(this.ww, this.wh);
+            container.appendChild(this.renderer.domElement);
+        },
+        animate: function() {
+            requestAnimationFrame(this.animate);
+            if (this.logo) {
+                if (this.logo.rotation.y > 0.45) {
+                    this.rotationState = -1;
+                } else if (this.logo.rotation.y < -0.65) {
+                    this.rotationState = 1;
                 }
+                this.logo.rotation.y += 0.001 * this.rotationState;
+            }
+            this.renderer.render(this.scene, this.camera);
+        },
+        animateOnScroll: function() {
+            updateOnSroll(0, this.wh * 1.5, position => {
+                if (position === 1 && this.isScrollEnabled) {
+                    this.$refs.container.style.transform = 'translateX(100vw)';
+                    this.isScrollEnabled = false;
+                    return;
+                }
+
+                if (position < 1 && !this.isScrollEnabled) {
+                    this.$refs.container.style.transform = 'translateX(0px)';
+                    this.isScrollEnabled = true;
+                }
+
+                this.isScrollingDown = position >= this.previousScrollPosition;
+                this.logo.rotation.y += this.isScrollingDown ? 0.05 : -1 * 0.05;
+
+                if (position < 0.5) {
+                    this.logo.position.x = -1 * position + 0.28;
+                }
+
+                this.previousScrollPosition = position;
+            });
+        },
+        animateToInit: function() {
+            // this.logo.rotation.set(0, 0, 0)
+        },
+        onResize: function() {
+            if (this.renderer && this.camera) {
+                const ww = window.innerWidth;
+                const wh = window.innerHeight;
+                this.renderer.setSize(ww, wh);
+                this.camera.aspect = ww / wh;
+                this.camera.updateProjectionMatrix();
             }
         },
-        methods: {
-            init: function () {
-                let container = document.getElementById('container')
-
-                this.camera = new PerspectiveCamera(50, this.ww / this.wh)
-                this.camera.position.z = 0.75
-                this.camera.position.y = 0.3
-
-                this.scene = new Scene()
-
-                const light = new AmbientLight('#fff', 1)
-                this.scene.add(light)
-
-                new GLTFLoader().load(
-                    ('vocality-logo-3d.glb'),
-                    (gltf) => {
-                        this.logo = gltf.scene
-                        this.logo.scale.set(4.5, 4.5, 4.5)
-                        this.logo.position.set(0.3, 0.24, 0)
-                        this.scene.add(this.logo)
-                    },
-                    (xhr) => {
-                        console.log((xhr.loaded / xhr.total * 100) + '% loaded')
-                    },
-                    (error) => {
-                        console.log(error)
-                    }
-                )
-
-                this.renderer = new WebGLRenderer({ antialias: true })
-                this.renderer.setClearColor('#121212', 1)
-                this.renderer.gammaOutput = true
-                this.renderer.setSize(this.ww, this.wh)
-                container.appendChild(this.renderer.domElement)
-            },
-            animate: function () {
-                requestAnimationFrame(this.animate)
-                if (this.logo) {
-                    if (this.logo.rotation.y > 0.45) {
-                        this.rotationState = -1
-                    } else if (this.logo.rotation.y < -0.65) {
-                        this.rotationState = 1
-                    }
-                    this.logo.rotation.y += 0.001 * this.rotationState
-                }
-                this.renderer.render(this.scene, this.camera)
-            },
-            animateOnScroll: function () {
-                updateOnSroll(0, this.wh * 1.5, position => {
-                    if (position === 1 && this.isScrollEnabled) {
-                        this.$refs.container.style.transform = 'translateX(100vw)'
-                        this.isScrollEnabled = false
-                        return
-                    }
-
-                    if (position < 1 && !this.isScrollEnabled) {
-                        this.$refs.container.style.transform = 'translateX(0px)'
-                        this.isScrollEnabled = true
-                    }
-
-                    this.isScrollingDown = position >= this.previousScrollPosition
-                    this.logo.rotation.y += this.isScrollingDown ? 0.05 : (-1 * 0.05)
-
-                    if (position < 0.5) {
-                        this.logo.position.x = (-1 * position + 0.28)
-                    }
-
-                    this.previousScrollPosition = position
-                })
-            },
-            animateToInit: function () {
-                // this.logo.rotation.set(0, 0, 0)
-            },
-            onResize: function () {
-                if (this.renderer && this.camera) {
-                    const ww = window.innerWidth
-                    const wh = window.innerHeight
-                    this.renderer.setSize(ww, wh)
-                    this.camera.aspect = ww / wh
-                    this.camera.updateProjectionMatrix()
-                }
-            },
-            onCanvasMouseDown: function () {
-                this.isGrabbing = true
-                this.$refs.container.style.cursor = 'grabbing'
-                const list = document.getElementsByClassName('no-events-on-drag')
-                for (let element of list) {
-                    element.style.pointerEvents = 'none'
-                }
-            },
-            onCanvasMouseUp: function () {
-                this.isGrabbing = false
-                this.$refs.container.style.cursor = 'grab'
-                this.animateToInit()
-                const list = document.getElementsByClassName('no-events-on-drag')
-                for (let element of list) {
-                    element.style.pointerEvents = 'auto'
-                }
-            },
-            onCanvasMouseMove: function (e) {
-                const deltaMove = {
-                    x: e.offsetX - this.previousMousePosition.x,
-                    y: e.offsetY - this.previousMousePosition.y
-                }
-
-                if (this.isGrabbing) {
-                    const deltaRotationQuaternion = new Quaternion()
-                        .setFromEuler(new Euler(
-                            this.toRadians(deltaMove.y * 0.1),
-                            this.toRadians(deltaMove.x * 0.1),
-                            0
-                        ))
-                    this.logo.quaternion.multiplyQuaternions(deltaRotationQuaternion, this.logo.quaternion)
-                }
-
-                this.previousMousePosition = {
-                    x: e.offsetX,
-                    y: e.offsetY
-                }
-            },
-            onMouseLeave: function () {
-                this.isGrabbing = false
-            },
-            toRadians: function (angle) {
-                return angle * (Math.PI / 180)
+        onCanvasMouseDown: function() {
+            this.isGrabbing = true;
+            this.$refs.container.style.cursor = 'grabbing';
+            const list = document.getElementsByClassName('no-events-on-drag');
+            for (let element of list) {
+                element.style.pointerEvents = 'none';
             }
         },
-        mounted () {
-            this.init()
-            this.animate()
-            this.animateOnScroll()
+        onCanvasMouseUp: function() {
+            this.isGrabbing = false;
+            this.$refs.container.style.cursor = 'grab';
+            this.animateToInit();
+            const list = document.getElementsByClassName('no-events-on-drag');
+            for (let element of list) {
+                element.style.pointerEvents = 'auto';
+            }
         },
-        created: function () {
-            window.addEventListener('resize', this.onResize)
-            this.$nextTick(() => {
-                this.$refs.container.addEventListener('mousedown', this.onCanvasMouseDown)
-                this.$refs.container.addEventListener('mouseup', this.onCanvasMouseUp)
-                this.$refs.container.addEventListener('mousemove', this.onCanvasMouseMove)
-                window.addEventListener('mouseout', this.onMouseLeave)
-            })
-        },
-        beforeDestroy: function () {
-            window.removeEventListener('resize', this.onResize)
-            this.$refs.container.removeEventListener('mousedown', this.onCanvasMouseDown)
-            this.$refs.container.removeEventListener('mouseup', this.onCanvasMouseUp)
-            this.$refs.container.removeEventListener('mousemove', this.onCanvasMouseMove)
-            window.removeEventListener('mouseout', this.onMouseLeave)
-        },
-        components: {
-            Footer
-        }
-    }
+        onCanvasMouseMove: function(e) {
+            const deltaMove = {
+                x: e.offsetX - this.previousMousePosition.x,
+                y: e.offsetY - this.previousMousePosition.y,
+            };
 
+            if (this.isGrabbing) {
+                const deltaRotationQuaternion = new Quaternion().setFromEuler(
+                    new Euler(this.toRadians(deltaMove.y * 0.1), this.toRadians(deltaMove.x * 0.1), 0),
+                );
+                this.logo.quaternion.multiplyQuaternions(deltaRotationQuaternion, this.logo.quaternion);
+            }
+
+            this.previousMousePosition = {
+                x: e.offsetX,
+                y: e.offsetY,
+            };
+        },
+        onMouseLeave: function() {
+            this.isGrabbing = false;
+        },
+        toRadians: function(angle) {
+            return angle * (Math.PI / 180);
+        },
+    },
+    mounted() {
+        this.init();
+        this.animate();
+        this.animateOnScroll();
+    },
+    created: function() {
+        window.addEventListener('resize', this.onResize);
+        this.$nextTick(() => {
+            this.$refs.container.addEventListener('mousedown', this.onCanvasMouseDown);
+            this.$refs.container.addEventListener('mouseup', this.onCanvasMouseUp);
+            this.$refs.container.addEventListener('mousemove', this.onCanvasMouseMove);
+            window.addEventListener('mouseout', this.onMouseLeave);
+        });
+    },
+    beforeDestroy: function() {
+        window.removeEventListener('resize', this.onResize);
+        this.$refs.container.removeEventListener('mousedown', this.onCanvasMouseDown);
+        this.$refs.container.removeEventListener('mouseup', this.onCanvasMouseUp);
+        this.$refs.container.removeEventListener('mousemove', this.onCanvasMouseMove);
+        window.removeEventListener('mouseout', this.onMouseLeave);
+    },
+    components: {
+        Footer,
+    },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -413,7 +421,7 @@
     pointer-events: none;
     min-height: 100vh;
     @include mq(sm) {
-        padding-top: 120px
+        padding-top: 120px;
     }
     .header-content {
         flex-basis: 100%;
@@ -449,7 +457,7 @@
                 display: grid;
                 grid-template-columns: auto auto;
                 grid-gap: 15%;
-                max-width: 1040px
+                max-width: 1040px;
             }
             .sticky {
                 position: sticky;
@@ -480,7 +488,7 @@
                     .hide-points {
                         background-color: clr(background, secondary);
                     }
-                    .list-icon-container{
+                    .list-icon-container {
                         position: relative;
                         &::before {
                             content: '';
@@ -594,24 +602,30 @@
         .pink::before {
             content: '';
             position: absolute;
-            top: 0; left: 0;
-            height: 100%; width: 100%;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
             filter: brightness(0.4);
             background-color: clr(brand, pink);
         }
         .blue::before {
             content: '';
             position: absolute;
-            top: 0; left: 0;
-            height: 100%; width: 100%;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
             filter: brightness(0.4);
             background-color: clr(brand, blue);
         }
         .cyan::before {
             content: '';
             position: absolute;
-            top: 0; left: 0;
-            height: 100%; width: 100%;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
             filter: brightness(0.4);
             background-color: clr(brand, cyan);
         }

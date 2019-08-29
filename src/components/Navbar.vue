@@ -1,9 +1,9 @@
 <template>
-	<div class="navbar">
+    <div class="navbar">
         <header class="flex py1 px2">
             <div class="icon flex">
                 <router-link to="/" class="flex">
-                    <img src="@/assets/icons/logo.svg" alt="vocality-logo">
+                    <img src="@/assets/icons/logo.svg" alt="vocality-logo" />
                 </router-link>
             </div>
             <div class="flex-auto"></div>
@@ -22,20 +22,20 @@
             </nav>
             <div class="show-on-sm flex relative">
                 <transition name="fade">
-                    <div key=1 v-if="!sidenavOpen" class="flex h-100 absolute" style="right: 0">
+                    <div key="1" v-if="!sidenavOpen" class="flex h-100 absolute" style="right: 0">
                         <button class="icon" @click="openSidenavClick">
-                            <img src="@/assets/icons/menu.svg" alt="Open the menu" class="sidenav-button">
+                            <img src="@/assets/icons/menu.svg" alt="Open the menu" class="sidenav-button" />
                         </button>
                     </div>
-                    <div key=2 v-else class="flex h-100 absolute" style="right: 0">
+                    <div key="2" v-else class="flex h-100 absolute" style="right: 0">
                         <button class="icon" @click="closeSidenavClick">
-                            <img src="@/assets/icons/close.svg" alt="Close the menu" class="sidenav-button">
+                            <img src="@/assets/icons/close.svg" alt="Close the menu" class="sidenav-button" />
                         </button>
                     </div>
                 </transition>
             </div>
         </header>
-	</div>
+    </div>
 </template>
 
 <script>
@@ -44,19 +44,19 @@ export default {
     props: {
         sidenavOpen: {
             type: Boolean,
-            required: true
-        }
+            required: true,
+        },
     },
     methods: {
-        openSidenavClick () {
-            this.$emit('sidenavStateChange', true)
+        openSidenavClick() {
+            this.$emit('sidenavStateChange', true);
         },
 
-        closeSidenavClick () {
-            this.$emit('sidenavStateChange', false)
-        }
-    }
-}
+        closeSidenavClick() {
+            this.$emit('sidenavStateChange', false);
+        },
+    },
+};
 </script>
 
 <style scoped lang="scss">
@@ -88,7 +88,7 @@ header {
         transition: color 0.3s ease;
 
         &::after {
-            content: "";
+            content: '';
             display: block;
             position: absolute;
             height: 4px;

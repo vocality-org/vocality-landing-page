@@ -13,9 +13,9 @@ $palettes: (
         cyan: #29abe2,
         blue: #0c003f,
         pink: #ff3f60,
-    )
+    ),
 );
 
 @function clr($p, $c: 'default') {
-    @return map-get( map-get($palettes, $p), $c );
+    @return map-get(map-get($palettes, $p), $c);
 }

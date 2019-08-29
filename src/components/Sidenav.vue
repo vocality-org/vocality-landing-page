@@ -19,101 +19,98 @@
 <script>
 export default {
     name: 'sidenav',
-    data () {
+    data() {
         return {
-            isSidenavOpen: false
-        }
+            isSidenavOpen: false,
+        };
     },
     props: {
         isOpen: {
             type: Boolean,
-            required: false
+            required: false,
         },
         width: {
             type: Number,
-            required: true
-        }
+            required: true,
+        },
     },
     methods: {
-        openSidenav () {
-            this.$emit('openSidenav')
-            this.$refs.sidenavRef.style.width = this.openedWidth
-            this.pushPage()
+        openSidenav() {
+            this.$emit('openSidenav');
+            this.$refs.sidenavRef.style.width = this.openedWidth;
+            this.pushPage();
         },
 
-        closeSidenav () {
-            this.$emit('closeSidenav')
-            this.$refs.sidenavRef.style.width = '0px'
-            this.pullPage()
+        closeSidenav() {
+            this.$emit('closeSidenav');
+            this.$refs.sidenavRef.style.width = '0px';
+            this.pullPage();
         },
 
-        closeSidenavOnEsc (e) {
-            e = e || window.event
+        closeSidenavOnEsc(e) {
+            e = e || window.event;
 
             if (e.key === 'Escape' || e.keyCode === 27) {
-                this.closeSidenav()
+                this.closeSidenav();
             }
         },
 
-        closeSidenavOnDocumentClick (e) {
-            let className = null
+        closeSidenavOnDocumentClick(e) {
+            let className = null;
 
             if (e && e.target) {
-                className = e.target.className
+                className = e.target.className;
             }
 
-            if (
-                this.isOpen &&
-                !className.includes('sidenav')
-            ) {
-                this.closeSidenav()
+            if (this.isOpen && !className.includes('sidenav')) {
+                this.closeSidenav();
             }
         },
 
-        pushPage () {
-            document.querySelector('#page-wrap').style.transition = 'all 0.3s ease 0s'
-            document.querySelector('#page-wrap').style.transform = `translate3d(-${this.openedWidth}, 0px, 0px )`
-            document.querySelector('#app').style.overflow = 'hidden'
+        pushPage() {
+            document.querySelector('#page-wrap').style.transition = 'all 0.3s ease 0s';
+            document.querySelector('#page-wrap').style.transform = `translate3d(-${this.openedWidth}, 0px, 0px )`;
+            document.querySelector('#app').style.overflow = 'hidden';
         },
 
-        pullPage () {
-            document.querySelector('#page-wrap').style.transition = 'all 0.3s ease 0s'
-            document.querySelector('#page-wrap').style.transform = ''
-        }
+        pullPage() {
+            document.querySelector('#page-wrap').style.transition = 'all 0.3s ease 0s';
+            document.querySelector('#page-wrap').style.transform = '';
+        },
     },
-    mounted () {
-        document.addEventListener('keyup', this.closeSidenavOnEsc)
+    mounted() {
+        document.addEventListener('keyup', this.closeSidenavOnEsc);
     },
-    created: function () {
+    created: function() {
         // document.addEventListener('click', this.closeSidenavOnDocumentClick)
     },
-    destroyed: function () {
-        document.removeEventListener('keyup', this.closeSidenavOnEsc)
-        document.removeEventListener('click', this.closeSidenavOnDocumentClick)
+    destroyed: function() {
+        document.removeEventListener('keyup', this.closeSidenavOnEsc);
+        document.removeEventListener('click', this.closeSidenavOnDocumentClick);
     },
     watch: {
         isOpen: {
             deep: true,
             immediate: true,
-            handler (newValue, oldValue) {
-                this.isSidenavOpen = newValue
+            handler(newValue, oldValue) {
+                this.isSidenavOpen = newValue;
                 this.$nextTick(() => {
                     if (newValue) {
-                        this.openSidenav()
+                        this.openSidenav();
                     }
                     if (!newValue) {
-                        this.closeSidenav()
+                        this.closeSidenav();
                     }
-                })
-            }
-        }
+                });
+            },
+        },
     },
     computed: {
-        openedWidth: function () {
-            return `${this.width}px`
-        }
-    }
-}
+        openedWidth: function() {
+            return `${this.width}px`;
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -131,8 +128,7 @@ export default {
         height: 48px;
         line-height: 48px;
         &:hover,
-        &:focus
-        {
+        &:focus {
             background-color: clr(brand, pink);
         }
     }

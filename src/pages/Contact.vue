@@ -4,26 +4,30 @@
         <section class="contact-details max-mid relative mx-auto">
             <div class="container flex justify-center items-center flex-column">
                 <div class="data items-center">
-                    <a href="https://www.google.com/maps/" target="__blank" class="icon-container flex justify-center items-center">
-                        <img src="@/assets/icons/location.svg" alt="location" height="42">
+                    <a
+                        href="https://www.google.com/maps/"
+                        target="__blank"
+                        class="icon-container flex justify-center items-center"
+                    >
+                        <img src="@/assets/icons/location.svg" alt="location" height="42" />
                     </a>
                     <div class="flex items-center">1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA</div>
                     <a href="tel:+1 650-253-000" target="__blank" class="icon-container flex justify-center items-center">
-                        <img src="@/assets/icons/phone.svg" alt="phone" height="42">
+                        <img src="@/assets/icons/phone.svg" alt="phone" height="42" />
                     </a>
                     <div class="flex items-center">+1 650-253-000</div>
                     <a href="mailto:my-mail@email.com" target="__blank" class="icon-container flex justify-center items-center">
-                        <img src="@/assets/icons/email.svg" alt="email" height="42">
+                        <img src="@/assets/icons/email.svg" alt="email" height="42" />
                     </a>
                     <div class="flex items-center">my-mail@gmail.com</div>
                 </div>
                 <div class="map">
                     <l-map
-                    :zoom="zoom"
-                    :center="center"
-                    :options="mapOptions"
-                    @update:center="centerUpdate"
-                    @update:zoom="zoomUpdate"
+                        :zoom="zoom"
+                        :center="center"
+                        :options="mapOptions"
+                        @update:center="centerUpdate"
+                        @update:zoom="zoomUpdate"
                     >
                         <l-tile-layer :url="url" />
                         <l-marker :lat-lng="location">
@@ -39,13 +43,13 @@
         </section>
         <section class="social-media flex flex-column justify-center items-center">
             <a href="https://www.facebook.com/" target="__blank" class="icon-container flex justify-center items-center">
-                <img src="@/assets/icons/facebook.svg" alt="facebook" height="64">
+                <img src="@/assets/icons/facebook.svg" alt="facebook" height="64" />
             </a>
             <a href="https://www.instagram.com/" target="__blank" class="icon-container flex justify-center items-center">
-                <img src="@/assets/icons/instagram.svg" alt="instagran" height="64">
+                <img src="@/assets/icons/instagram.svg" alt="instagran" height="64" />
             </a>
             <a href="https://www.twitter.com/" target="__blank" class="icon-container flex justify-center items-center">
-                <img src="@/assets/icons/twitter.svg" alt="twitter" height="64">
+                <img src="@/assets/icons/twitter.svg" alt="twitter" height="64" />
             </a>
         </section>
         <section class="message mx-auto max-mid">
@@ -53,11 +57,27 @@
             <form ref="messageForm" class="form mt4 mx-auto" action="#0" method="post">
                 <div class="firstname">
                     <label for="firstname">Firstname</label>
-                    <input ref="firstname" type="text" id="firstname" name="firstname" required class="mt1 w-100" placeholder="Firstname">
+                    <input
+                        ref="firstname"
+                        type="text"
+                        id="firstname"
+                        name="firstname"
+                        required
+                        class="mt1 w-100"
+                        placeholder="Firstname"
+                    />
                 </div>
                 <div class="lastname">
                     <label for="lastname">Lastname</label>
-                    <input ref="lastname" type="text" id="lastname" name="lastname" required class="mt1 w-100" placeholder="Lastname">
+                    <input
+                        ref="lastname"
+                        type="text"
+                        id="lastname"
+                        name="lastname"
+                        required
+                        class="mt1 w-100"
+                        placeholder="Lastname"
+                    />
                 </div>
                 <div class="text">
                     <label for="firstname">Message</label>
@@ -70,7 +90,7 @@
             <div v-if="messageSubmitted" class="afterSubmit text-center mt2">
                 <div @click="requestForm" class="submit-request h3 flex items-center justify-center">
                     Submit again
-                    <img src="@/assets/icons/arrow-right.svg" alt="arrow pointing right" class="ml2">
+                    <img src="@/assets/icons/arrow-right.svg" alt="arrow pointing right" class="ml2" />
                 </div>
             </div>
         </section>
@@ -79,14 +99,14 @@
 </template>
 
 <script>
-import { latLng, Icon } from 'leaflet'
-import { LMap, LTileLayer, LMarker, LPopup } from 'vue2-leaflet'
-import HeroBanner from '@/components/HeroBanner.vue'
-import Footer from '@/components/Footer.vue'
+import { latLng, Icon } from 'leaflet';
+import { LMap, LTileLayer, LMarker, LPopup } from 'vue2-leaflet';
+import HeroBanner from '@/components/HeroBanner.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
     name: 'contact',
-    data () {
+    data() {
         return {
             zoom: 13,
             center: latLng(37.4219999, -122.0840575),
@@ -95,10 +115,10 @@ export default {
             currentCenter: latLng(37.4219999, -122.0840575),
             location: latLng(37.4219999, -122.0840575),
             mapOptions: {
-                zoomSnap: 0.5
+                zoomSnap: 0.5,
             },
-            messageSubmitted: false
-        }
+            messageSubmitted: false,
+        };
     },
     components: {
         HeroBanner,
@@ -106,61 +126,59 @@ export default {
         LMap,
         LTileLayer,
         LMarker,
-        LPopup
+        LPopup,
     },
     methods: {
-        zoomUpdate (zoom) {
-            this.currentZoom = zoom
+        zoomUpdate(zoom) {
+            this.currentZoom = zoom;
         },
-        centerUpdate (center) {
-            this.currentCenter = center
+        centerUpdate(center) {
+            this.currentCenter = center;
         },
-        requestForm () {
-            this.messageSubmitted = false
-            this.$refs.messageForm.classList.remove('slide-out-right')
-                void this.$refs.messageForm.offsetWidth
+        requestForm() {
+            this.messageSubmitted = false;
+            this.$refs.messageForm.classList.remove('slide-out-right');
+            void this.$refs.messageForm.offsetWidth;
         },
-        submitMessage (e) {
+        submitMessage(e) {
             if (this.isInputValid()) {
-                e.preventDefault()
-                this.$refs.messageForm.classList.remove('slide-out-right')
-                void this.$refs.messageForm.offsetWidth
-                this.$refs.messageForm.classList.add('slide-out-right')
-                this.clearInputs()
+                e.preventDefault();
+                this.$refs.messageForm.classList.remove('slide-out-right');
+                void this.$refs.messageForm.offsetWidth;
+                this.$refs.messageForm.classList.add('slide-out-right');
+                this.clearInputs();
                 setTimeout(() => {
-                    this.messageSubmitted = true
-                }, 700)
+                    this.messageSubmitted = true;
+                }, 700);
             } else {
-                this.$refs.submitButton.classList.remove('error-animation')
-                void this.$refs.submitButton.offsetWidth
-                this.$refs.submitButton.classList.add('error-animation')
+                this.$refs.submitButton.classList.remove('error-animation');
+                void this.$refs.submitButton.offsetWidth;
+                this.$refs.submitButton.classList.add('error-animation');
             }
         },
-        isInputValid () {
-            return this.$refs.firstname.value &&
-                this.$refs.lastname.value &&
-                this.$refs.text.value
+        isInputValid() {
+            return this.$refs.firstname.value && this.$refs.lastname.value && this.$refs.text.value;
         },
-        clearInputs () {
-            this.$refs.firstname.value = ''
-            this.$refs.lastname.value = ''
-            this.$refs.text.value = ''
-        }
+        clearInputs() {
+            this.$refs.firstname.value = '';
+            this.$refs.lastname.value = '';
+            this.$refs.text.value = '';
+        },
     },
-    created () {
-        delete Icon.Default.prototype._getIconUrl
+    created() {
+        delete Icon.Default.prototype._getIconUrl;
         Icon.Default.mergeOptions({
             iconUrl: require('@/assets/icons/logo.svg'),
             iconSize: [42, 42],
             shadowUrl: require('@/assets/icons/leaflet-shadow.svg'),
-            shadowAnchor: [4, 38]
-        })
-    }
-}
+            shadowAnchor: [4, 38],
+        });
+    },
+};
 </script>
 
 <style lang="scss" scoped>
-@import "../../node_modules/leaflet/dist/leaflet.css";
+@import '../../node_modules/leaflet/dist/leaflet.css';
 .contact {
     overflow: hidden;
 }
@@ -176,10 +194,10 @@ export default {
             grid-template-columns: 64px minmax(100px, 250px);
             grid-gap: 32px;
             .icon-container {
-                height: 64px; width: 64px;
+                height: 64px;
+                width: 64px;
                 background-color: clr(brand, pink);
-                box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2)
-                img {
+                box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2) img {
                     transition: all 0.1s ease;
                 }
                 &:hover,
@@ -197,7 +215,7 @@ export default {
                 margin: 0 0 0 64px;
             }
             width: 400px;
-            height:400px;
+            height: 400px;
             l-map {
                 height: 400px;
                 width: 400px;
@@ -249,11 +267,12 @@ export default {
             'submit';
         @include mq(md) {
             grid-template-areas:
-            'firstname lastname'
-            'text text'
-            'submit submit';
+                'firstname lastname'
+                'text text'
+                'submit submit';
         }
-        input, textarea {
+        input,
+        textarea {
             padding: 8px 12px;
             background-color: clr(background, secondary);
             color: clr(text);
@@ -327,7 +346,7 @@ export default {
     }
 }
 .slide-out-right {
-	animation: slide-out-right 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: slide-out-right 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 @keyframes slide-out-right {
     0% {

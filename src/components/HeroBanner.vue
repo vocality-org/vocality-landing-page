@@ -1,6 +1,6 @@
 <template>
     <div class="hero-banner text-center absolute w-100 top-0 overflow-hidden" :class="this.color">
-        <h1 class="h1 m0">{{title}}</h1>
+        <h1 class="h1 m0">{{ title }}</h1>
     </div>
 </template>
 
@@ -10,20 +10,20 @@ export default {
     props: {
         title: {
             type: String,
-            required: true
+            required: true,
         },
         color: {
             type: String,
             default: 'cyan',
-            validator: function (color) {
+            validator: function(color) {
                 if (color !== 'cyan' && color !== 'blue' && color !== 'pink') {
-                    return false
+                    return false;
                 }
-                return true
-            }
-        }
-    }
-}
+                return true;
+            },
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -43,10 +43,12 @@ $navbar-height: 80px;
     &::after {
         content: '';
         position: absolute;
-        top: -72px; left: -45px;
+        top: -72px;
+        left: -45px;
         opacity: 0.3;
-        width: 200%; height: 72px + $banner-height + $navbar-height;
-        background-image: url('../assets/icons/banner-bg.svg')
+        width: 200%;
+        height: 72px + $banner-height + $navbar-height;
+        background-image: url('../assets/icons/banner-bg.svg');
     }
 }
 .cyan {

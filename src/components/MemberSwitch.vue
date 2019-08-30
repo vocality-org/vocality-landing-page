@@ -11,10 +11,10 @@
         </svg>
         <h1 class="m0 h1">Team Members</h1>
         <div class="carousel mt3 flex justify-around relative">
-            <div class="previous absolute flex justify-center items-center" @click="currentBeforeOc--">
+            <div class="previous absolute flex justify-center items-center" @click="totalChanges--">
                 <img src="@/assets/icons/arrow-back.svg" alt="previous member" />
             </div>
-            <div class="next absolute flex justify-center items-center" @click="currentBeforeOc++">
+            <div class="next absolute flex justify-center items-center" @click="totalChanges++">
                 <img src="@/assets/icons/arrow-forward.svg" alt="next member" />
             </div>
             <img
@@ -44,7 +44,7 @@ export default {
     name: 'member-switch',
     data() {
         return {
-            currentBeforeOc: 0,
+            totalChanges: 0,
         };
     },
     props: {
@@ -53,26 +53,37 @@ export default {
     methods: {
         transitionClass: function(memberId) {
             return {
-                'before-oc': memberId === this.wrappingIndex,
-                before: memberId === this.getNextWithWrappingIndex(1),
-                current: memberId === this.getNextWithWrappingIndex(2),
-                after: memberId === this.getNextWithWrappingIndex(3),
-                'after-oc': memberId === this.getNextWithWrappingIndex(4),
-                //'hidden-oc': memberId > this.currentBeforeOc + 4 ? true : memberId < this.currentBeforeOc ? true : false,
+                'before-oc': memberId === this.computedTransitionClasses[0],
+                before: memberId === this.computedTransitionClasses[1],
+                current: memberId === this.computedTransitionClasses[2],
+                after: memberId === this.computedTransitionClasses[3],
+                'after-oc': memberId === this.computedTransitionClasses[4],
+                'hidden-oc': !this.computedTransitionClasses.includes(memberId),
             };
-        },
-        getNextWithWrappingIndex: function(position) {
-            if (this.wrappingIndex + 1 === this.members.length) {
-                return -1 + position;
-            }
-            return this.wrappingIndex + position;
         },
     },
     computed: {
         wrappingIndex: function() {
-            const a = ((this.currentBeforeOc % this.members.length) + this.members.length) % this.members.length;
-            console.log(a);
-            return a;
+            return ((this.totalChanges % this.members.length) + this.members.length) % this.members.length;
+        },
+        computedTransitionClasses: function() {
+            const posArr = [];
+
+            let count = 0;
+            for (let index = this.wrappingIndex; index < this.members.length; index++) {
+                if (count === 5) {
+                    break;
+                }
+                posArr.push(index);
+                count++;
+            }
+
+            const remaining = 5 - posArr.length;
+            for (let index = 0; index < remaining; index++) {
+                posArr.push(index);
+            }
+
+            return posArr;
         },
     },
 };
@@ -122,23 +133,24 @@ export default {
     }
     .before-oc {
         transform: translate3d(-500px, 200px, 0) rotate(-30deg) scale(0.5);
-        opacity: 0.5;
+        opacity: 0;
     }
     .before {
         transform: translate3d(-300px, 50px, 0) rotate(-20deg) scale(0.8);
     }
     .current {
         transform: none;
+        &:hover {
+        }
     }
     .after {
         transform: translate3d(300px, 50px, 0) rotate(20deg) scale(0.8);
     }
     .after-oc {
         transform: translate3d(500px, 200px, 0) rotate(30deg) scale(0.5);
-        opacity: 0.5;
+        opacity: 0;
     }
     .hidden-oc {
-        top: 9999px;
         opacity: 0;
     }
 }

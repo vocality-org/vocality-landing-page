@@ -23,8 +23,8 @@
             <h3 class="h4 mb2 mt3">Example</h3>
             <img :src="imageUrl" width="400" alt="example image" />
         </div>
-    </div> </template
->>
+    </div>
+</template>
 
 <script>
 export default {

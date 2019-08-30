@@ -52,15 +52,7 @@
             </div>
         </section>
         <Footer class="z1 relative mt4 pt4"></Footer>
-        <svg
-            class="bg-svg"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1920 2524"
-            height="180vh"
-            width="100%"
-            fill="none"
-            preserveAspectRatio="none"
-        >
+        <svg class="bg-svg" viewBox="0 0 1920 2524" height="180vh" width="100%" fill="none" preserveAspectRatio="none">
             <rect
                 width="727.426"
                 height="4670.24"

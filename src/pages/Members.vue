@@ -3,16 +3,8 @@
         <a to="/" class="back-button" @click="$router.go(-1)">
             <img src="@/assets/icons/arrow-back.svg" alt="back arrow" height="32" />
         </a>
-        <MemberSwitch class="member-switch" />
-        <svg
-            class="shapes"
-            width="110%"
-            height="110%"
-            viewBox="0 0 1920 1080"
-            preserveAspectRatio="none"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
+        <MemberSwitch class="member-switch" :members="members" />
+        <svg class="shapes" width="110%" height="110%" viewBox="0 0 1920 1080" preserveAspectRatio="none" fill="none">
             <path
                 d="M354 211C529.593 94.2073 376 -295.5 -262.5 127C-357.564 189.905 -163.207 151 -143.055 222.557C-122.904 294.114 -96.819 806.5 65 806.5C265 806.499 136 356 354 211Z"
                 fill="#29ABE2"
@@ -47,6 +39,47 @@ export default {
     name: 'members',
     components: {
         MemberSwitch,
+    },
+    data() {
+        return {
+            members: [
+                {
+                    id: 0,
+                    name: 'John Doe',
+                    position: 'HR Manager',
+                },
+                {
+                    id: 1,
+                    name: 'John Doe',
+                    position: 'HR Manager',
+                },
+                {
+                    id: 2,
+                    name: 'John Doe',
+                    position: 'HR Manager',
+                },
+                {
+                    id: 3,
+                    name: 'John Doe',
+                    position: 'HR Manager',
+                },
+                {
+                    id: 4,
+                    name: 'John Doe',
+                    position: 'HR Manager',
+                },
+                {
+                    id: 5,
+                    name: 'John Doe',
+                    position: 'HR Manager',
+                },
+                {
+                    id: 6,
+                    name: 'John Doe',
+                    position: 'HR Manager',
+                },
+            ],
+        };
     },
 };
 </script>

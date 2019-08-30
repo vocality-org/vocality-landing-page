@@ -10,8 +10,22 @@
             </defs>
         </svg>
         <h1 class="m0 h1">Team Members</h1>
-        <div class="carousel mt3">
-            <img class="polygon" src="@/assets/images/member.jpg" width="232" height="232" />
+        <div class="carousel mt3 flex justify-around relative">
+            <div class="previous absolute flex justify-center items-center" @click="currentBeforeOc--">
+                <img src="@/assets/icons/arrow-back.svg" alt="previous member" />
+            </div>
+            <div class="next absolute flex justify-center items-center" @click="currentBeforeOc++">
+                <img src="@/assets/icons/arrow-forward.svg" alt="next member" />
+            </div>
+            <img
+                v-for="m in members"
+                :key="m.id"
+                class="polygon absolute"
+                :class="transitionClass(m.id)"
+                src="@/assets/images/member.jpg"
+                width="232"
+                height="232"
+            />
         </div>
         <div class="information">
             <h2 class="m0 h3">John Doe</h2>
@@ -28,8 +42,38 @@
 <script>
 export default {
     name: 'member-switch',
+    data() {
+        return {
+            currentBeforeOc: 0,
+        };
+    },
     props: {
         members: Array,
+    },
+    methods: {
+        transitionClass: function(memberId) {
+            return {
+                'before-oc': memberId === this.wrappingIndex,
+                before: memberId === this.getNextWithWrappingIndex(1),
+                current: memberId === this.getNextWithWrappingIndex(2),
+                after: memberId === this.getNextWithWrappingIndex(3),
+                'after-oc': memberId === this.getNextWithWrappingIndex(4),
+                //'hidden-oc': memberId > this.currentBeforeOc + 4 ? true : memberId < this.currentBeforeOc ? true : false,
+            };
+        },
+        getNextWithWrappingIndex: function(position) {
+            if (this.wrappingIndex + 1 === this.members.length) {
+                return -1 + position;
+            }
+            return this.wrappingIndex + position;
+        },
+    },
+    computed: {
+        wrappingIndex: function() {
+            const a = ((this.currentBeforeOc % this.members.length) + this.members.length) % this.members.length;
+            console.log(a);
+            return a;
+        },
     },
 };
 </script>
@@ -50,8 +94,53 @@ export default {
 }
 .polygon {
     clip-path: url(#poly-clip);
+    min-width: 232px;
 }
 .carousel {
+    height: 280px;
+    .previous,
+    .next {
+        user-select: none;
+        top: 116px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+            background-color: clr(background, bright);
+        }
+    }
+    img {
+        transition: transform 0.4s ease, opacity 0.3s ease;
+    }
+    .previous {
+        left: 370px;
+    }
+    .next {
+        right: 370px;
+    }
+    .before-oc {
+        transform: translate3d(-500px, 200px, 0) rotate(-30deg) scale(0.5);
+        opacity: 0.5;
+    }
+    .before {
+        transform: translate3d(-300px, 50px, 0) rotate(-20deg) scale(0.8);
+    }
+    .current {
+        transform: none;
+    }
+    .after {
+        transform: translate3d(300px, 50px, 0) rotate(20deg) scale(0.8);
+    }
+    .after-oc {
+        transform: translate3d(500px, 200px, 0) rotate(30deg) scale(0.5);
+        opacity: 0.5;
+    }
+    .hidden-oc {
+        top: 9999px;
+        opacity: 0;
+    }
 }
 .information {
     h2,

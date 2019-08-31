@@ -10,32 +10,55 @@
             </defs>
         </svg>
         <h1 class="m0 h1">Team Members</h1>
-        <div class="carousel mt3 flex justify-around relative">
-            <div class="previous absolute flex justify-center items-center" @click="totalChanges--">
+        <div class="carousel mt3 flex justify-center relative">
+            <div
+                class="previous absolute flex justify-center items-center"
+                @click="
+                    {
+                        totalChanges--;
+                        lastChange = -1;
+                    }
+                "
+            >
                 <img src="@/assets/icons/arrow-back.svg" alt="previous member" />
             </div>
-            <div class="next absolute flex justify-center items-center" @click="totalChanges++">
+            <div
+                class="next absolute flex justify-center items-center"
+                @click="
+                    {
+                        totalChanges++;
+                        lastChange = 1;
+                    }
+                "
+            >
                 <img src="@/assets/icons/arrow-forward.svg" alt="next member" />
             </div>
-            <img
-                v-for="m in members"
-                :key="m.id"
-                class="polygon absolute"
-                :class="transitionClass(m.id)"
-                src="@/assets/images/member.jpg"
-                width="232"
-                height="232"
-            />
+            <div v-for="m in members" :key="m.id" class="flex justify-center image-wrapper">
+                <img
+                    class="polygon absolute"
+                    :class="transitionClass(m.id)"
+                    @click="handleImageClick(m.id)"
+                    src="@/assets/images/member.jpg"
+                    width="232"
+                    height="232"
+                />
+                <div
+                    v-if="computedTransitionClasses[2] === m.id"
+                    class="center-overlay z1 polygon flex justify-center items-center"
+                >
+                    <a :href="`https://github.com/${m.github}`" target="__blank">
+                        <img src="@/assets/icons/github.svg" alt="github" width="36" height="36" />
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="information">
-            <h2 class="m0 h3">John Doe</h2>
-            <h3 class="m0 h6 mt1">HR Manager</h3>
-            <p class="m0 h6  mt3 mx-auto">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-            </p>
-        </div>
+        <transition :name="`fade-${lastChange === -1 ? 'right' : 'left'}`">
+            <div class="information" :key="currentMember">
+                <h2 class="m0 h3">{{ currentMember.name }}</h2>
+                <h3 class="m0 h6 mt1">{{ currentMember.position }}</h3>
+                <p class="m0 h6  mt3 mx-auto">{{ currentMember.description }}</p>
+            </div>
+        </transition>
     </div>
 </template>
 
@@ -45,6 +68,7 @@ export default {
     data() {
         return {
             totalChanges: 0,
+            lastChange: 0,
         };
     },
     props: {
@@ -60,6 +84,16 @@ export default {
                 'after-oc': memberId === this.computedTransitionClasses[4],
                 'hidden-oc': !this.computedTransitionClasses.includes(memberId),
             };
+        },
+        handleImageClick: function(memberId) {
+            if (this.computedTransitionClasses[1] === memberId) {
+                this.totalChanges--;
+                this.lastChange = -1;
+            }
+            if (this.computedTransitionClasses[3] === memberId) {
+                this.totalChanges++;
+                this.lastChange = 1;
+            }
         },
     },
     computed: {
@@ -85,6 +119,9 @@ export default {
 
             return posArr;
         },
+        currentMember: function() {
+            return this.members[this.computedTransitionClasses[2]];
+        },
     },
 };
 </script>
@@ -97,7 +134,7 @@ export default {
     h1 {
         color: clr(brand, cyan);
     }
-    @include mq(sm) {
+    @media (min-width: 1040px) {
         background-color: clr(background, secondary);
         border-radius: 25px;
         height: unset;
@@ -109,6 +146,7 @@ export default {
 }
 .carousel {
     height: 280px;
+
     .previous,
     .next {
         user-select: none;
@@ -122,14 +160,39 @@ export default {
             background-color: clr(background, bright);
         }
     }
-    img {
-        transition: transform 0.4s ease, opacity 0.3s ease;
-    }
     .previous {
         left: 370px;
+        @media (max-width: 1040px) {
+            left: 20px;
+        }
     }
     .next {
         right: 370px;
+        @media (max-width: 1040px) {
+            right: 20px;
+        }
+    }
+    .image-wrapper {
+        .center-overlay {
+            position: absolute;
+            background-color: clr(brand, cyan);
+            width: 232px;
+            height: 232px;
+            opacity: 0;
+            transition: opacity 0.15s ease;
+            &:hover {
+                opacity: 0.7;
+            }
+            img {
+                transition: transform 0.2s ease;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+    img {
+        transition: transform 0.4s ease, opacity 0.3s ease;
     }
     .before-oc {
         transform: translate3d(-500px, 200px, 0) rotate(-30deg) scale(0.5);
@@ -137,14 +200,26 @@ export default {
     }
     .before {
         transform: translate3d(-300px, 50px, 0) rotate(-20deg) scale(0.8);
+        cursor: pointer;
+        &:hover {
+            filter: brightness(0.8);
+        }
+        @media (max-width: 1040px) {
+            opacity: 0;
+        }
     }
     .current {
         transform: none;
-        &:hover {
-        }
     }
     .after {
         transform: translate3d(300px, 50px, 0) rotate(20deg) scale(0.8);
+        cursor: pointer;
+        &:hover {
+            filter: brightness(0.8);
+        }
+        @media (max-width: 1040px) {
+            opacity: 0;
+        }
     }
     .after-oc {
         transform: translate3d(500px, 200px, 0) rotate(30deg) scale(0.5);
@@ -154,6 +229,7 @@ export default {
         opacity: 0;
     }
 }
+
 .information {
     h2,
     h3 {
@@ -164,7 +240,23 @@ export default {
         color: clr(text, secondary);
     }
     p {
-        max-width: 300px;
+        max-width: 230px;
     }
+}
+.fade-right-enter-active,
+.fade-right-leave-active,
+.fade-left-enter-active,
+.fade-left-leave-active {
+    transition: all 0.4s ease;
+}
+.fade-right-enter,
+.fade-right-leave-to {
+    opacity: 0;
+    transform: translateX(-200px);
+}
+.fade-left-enter,
+.fade-left-leave-to {
+    opacity: 0;
+    transform: translateX(200px);
 }
 </style>

@@ -45,38 +45,59 @@ export default {
             members: [
                 {
                     id: 0,
-                    name: 'John Doe',
+                    name: 'John Doe0',
                     position: 'HR Manager',
+                    description:
+                        'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et. Iusto est quisquam ea sit dolor aspernatur velit placeat.',
+                    github: 'JohnDoe',
                 },
                 {
                     id: 1,
-                    name: 'John Doe',
+                    name: 'John Doe1',
                     position: 'HR Manager',
+                    description:
+                        'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et. Iusto est quisquam ea sit dolor aspernatur velit placeat.',
+                    github: 'JohnDoe',
                 },
                 {
                     id: 2,
-                    name: 'John Doe',
+                    name: 'John Doe2',
                     position: 'HR Manager',
+                    description:
+                        'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et. Iusto est quisquam ea sit dolor aspernatur velit placeat.',
+                    github: 'JohnDoe',
                 },
                 {
                     id: 3,
-                    name: 'John Doe',
+                    name: 'John Doe3',
                     position: 'HR Manager',
+                    description:
+                        'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et. Iusto est quisquam ea sit dolor aspernatur velit placeat.',
+                    github: 'JohnDoe',
                 },
                 {
                     id: 4,
-                    name: 'John Doe',
+                    name: 'John Doe4',
                     position: 'HR Manager',
+                    description:
+                        'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et. Iusto est quisquam ea sit dolor aspernatur velit placeat.',
+                    github: 'JohnDoe',
                 },
                 {
                     id: 5,
-                    name: 'John Doe',
+                    name: 'John Doe5',
                     position: 'HR Manager',
+                    description:
+                        'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et. Iusto est quisquam ea sit dolor aspernatur velit placeat.',
+                    github: 'JohnDoe',
                 },
                 {
                     id: 6,
-                    name: 'John Doe',
+                    name: 'John Doe6',
                     position: 'HR Manager',
+                    description:
+                        'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et. Iusto est quisquam ea sit dolor aspernatur velit placeat.',
+                    github: 'JohnDoe',
                 },
             ],
         };

@@ -303,13 +303,17 @@ export default {
         animateOnScroll: function() {
             updateOnSroll(0, this.wh * 1.5, position => {
                 if (position === 1 && this.isScrollEnabled) {
-                    this.$refs.container.style.transform = 'translateX(100vw)';
+                    if (this.$refs.container) {
+                        this.$refs.container.style.transform = 'translateX(100vw)';
+                    }
                     this.isScrollEnabled = false;
                     return;
                 }
 
                 if (position < 1 && !this.isScrollEnabled) {
-                    this.$refs.container.style.transform = 'translateX(0px)';
+                    if (this.$refs.container) {
+                        this.$refs.container.style.transform = 'translateX(0px)';
+                    }
                     this.isScrollEnabled = true;
                 }
 

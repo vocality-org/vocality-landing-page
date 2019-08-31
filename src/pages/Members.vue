@@ -45,59 +45,41 @@ export default {
             members: [
                 {
                     id: 0,
-                    name: 'John Doe0',
-                    position: 'HR Manager',
-                    description:
-                        'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et. Iusto est quisquam ea sit dolor aspernatur velit placeat.',
-                    github: 'JohnDoe',
+                    name: 'Mia',
+                    position: 'Human Resources',
+                    description: 'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et.',
+                    github: '',
                 },
                 {
                     id: 1,
-                    name: 'John Doe1',
-                    position: 'HR Manager',
+                    name: 'Julian',
+                    position: 'Development',
                     description:
                         'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et. Iusto est quisquam ea sit dolor aspernatur velit placeat.',
-                    github: 'JohnDoe',
+                    github: 'KaindlJulian',
                 },
                 {
                     id: 2,
-                    name: 'John Doe2',
-                    position: 'HR Manager',
-                    description:
-                        'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et. Iusto est quisquam ea sit dolor aspernatur velit placeat.',
-                    github: 'JohnDoe',
+                    name: 'Matthias',
+                    position: 'Development',
+                    description: 'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et.',
+                    github: 'MatthiasHerzog2000',
                 },
                 {
                     id: 3,
-                    name: 'John Doe3',
-                    position: 'HR Manager',
+                    name: 'Thomas',
+                    position: 'Author',
                     description:
                         'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et. Iusto est quisquam ea sit dolor aspernatur velit placeat.',
-                    github: 'JohnDoe',
+                    github: '',
                 },
                 {
                     id: 4,
-                    name: 'John Doe4',
-                    position: 'HR Manager',
+                    name: 'Olivia',
+                    position: 'Human Resources',
                     description:
-                        'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et. Iusto est quisquam ea sit dolor aspernatur velit placeat.',
-                    github: 'JohnDoe',
-                },
-                {
-                    id: 5,
-                    name: 'John Doe5',
-                    position: 'HR Manager',
-                    description:
-                        'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et. Iusto est quisquam ea sit dolor aspernatur velit placeat.',
-                    github: 'JohnDoe',
-                },
-                {
-                    id: 6,
-                    name: 'John Doe6',
-                    position: 'HR Manager',
-                    description:
-                        'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et. Iusto est quisquam ea sit dolor aspernatur velit placeat.',
-                    github: 'JohnDoe',
+                        'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et. Iusto est quisquam ea.',
+                    github: '',
                 },
             ],
         };

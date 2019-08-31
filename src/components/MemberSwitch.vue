@@ -11,26 +11,10 @@
         </svg>
         <h1 class="m0 h1">Team Members</h1>
         <div class="carousel mt3 flex justify-center relative">
-            <div
-                class="previous absolute flex justify-center items-center"
-                @click="
-                    {
-                        totalChanges--;
-                        lastChange = -1;
-                    }
-                "
-            >
+            <div class="previous absolute flex justify-center items-center" @click="changeCarousel(-1)">
                 <img src="@/assets/icons/arrow-back.svg" alt="previous member" />
             </div>
-            <div
-                class="next absolute flex justify-center items-center"
-                @click="
-                    {
-                        totalChanges++;
-                        lastChange = 1;
-                    }
-                "
-            >
+            <div class="next absolute flex justify-center items-center" @click="changeCarousel(1)">
                 <img src="@/assets/icons/arrow-forward.svg" alt="next member" />
             </div>
             <div v-for="m in members" :key="m.id" class="flex justify-center image-wrapper">
@@ -38,7 +22,7 @@
                     class="polygon absolute"
                     :class="transitionClass(m.id)"
                     @click="handleImageClick(m.id)"
-                    src="@/assets/images/member.jpg"
+                    :src="require(`@/assets/images/${m.name.toLowerCase()}.jpg`)"
                     width="232"
                     height="232"
                 />
@@ -87,13 +71,18 @@ export default {
         },
         handleImageClick: function(memberId) {
             if (this.computedTransitionClasses[1] === memberId) {
-                this.totalChanges--;
-                this.lastChange = -1;
+                this.changeCarousel(-1);
             }
             if (this.computedTransitionClasses[3] === memberId) {
-                this.totalChanges++;
-                this.lastChange = 1;
+                this.changeCarousel(1);
             }
+        },
+        changeCarousel: function(change) {
+            this.totalChanges += change;
+            this.lastChange = change;
+        },
+        getImage: function() {
+            return '@/assets/images/members/julian.jpg';
         },
     },
     computed: {
@@ -241,6 +230,7 @@ export default {
     }
     p {
         max-width: 230px;
+        height: 80px;
     }
 }
 .fade-right-enter-active,

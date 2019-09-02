@@ -15,7 +15,7 @@
                             <router-link to="/donate">Donate</router-link>
                         </li>
                         <li class="pt1">
-                            <router-link to="/about">About</router-link>
+                            <router-link to="/dashboard-about">Web Dashboard</router-link>
                         </li>
                     </ul>
                 </div>

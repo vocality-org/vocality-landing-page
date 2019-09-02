@@ -49,6 +49,13 @@ export default new Router({
                 return import('./pages/Members.vue');
             },
         },
+        {
+            path: '/dashboard-about',
+            name: 'dashboardAbout',
+            component: function() {
+                return import('./pages/DashboardAbout.vue');
+            },
+        },
     ],
     scrollBehavior() {
         return { x: 0, y: 0 };

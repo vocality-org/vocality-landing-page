@@ -1,5 +1,5 @@
 <template>
-    <div class="faqSeg">
+    <div class="faq-seg">
         <div class="question flex items-center h3">
             <span class="drop-cap pl2 pb1 mr3">Q.</span>
             <p>
@@ -26,7 +26,7 @@ export default {};
     border-left: 4px solid;
 }
 .question {
-    .dropCap {
+    .drop-cap {
         color: clr(brand, pink);
     }
 }

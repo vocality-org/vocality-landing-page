@@ -77,16 +77,15 @@ export default {
             document.querySelector('#page-wrap').style.transition = 'all 0.3s ease 0s';
             document.querySelector('#page-wrap').style.transform = '';
         },
+        log(e) {
+            console.log(e);
+        },
     },
     mounted() {
         document.addEventListener('keyup', this.closeSidenavOnEsc);
     },
-    created: function() {
-        // document.addEventListener('click', this.closeSidenavOnDocumentClick)
-    },
     destroyed: function() {
         document.removeEventListener('keyup', this.closeSidenavOnEsc);
-        document.removeEventListener('click', this.closeSidenavOnDocumentClick);
     },
     watch: {
         isOpen: {

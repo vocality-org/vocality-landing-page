@@ -10,7 +10,7 @@
                 class="mb4 pb3"
             />
         </section>
-        <section class="faq-list max-mid mx-auto">
+        <section class="faq-list max-mid mx-auto pr3 border-box">
             <FaqSegment v-for="faq in filteredList" v-bind:key="faq.id" v-bind="faq" class="mb4">
                 <template v-slot:question>
                     {{ faq.question }}

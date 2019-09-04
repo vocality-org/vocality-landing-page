@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <Sidenav
-            :width="200"
+            :width="300"
             :isOpen="sidenavOpenState"
             @closeSidenav="
                 () => {

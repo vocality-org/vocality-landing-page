@@ -18,7 +18,7 @@
                 <div class="item h3 relative overflow-hidden">
                     5 €
                     <div class="popup">
-                        <a class="stripe-mock">Pay 5 €</a>
+                        <a class="stripe-mock" @click="checkout(5)">Pay 5 €</a>
                     </div>
                 </div>
                 <div class="item h3 relative overflow-hidden">
@@ -68,6 +68,7 @@
 <script>
 import Footer from '@/components/Footer.vue';
 import HeroBanner from '@/components/HeroBanner.vue';
+const stripe = window.Stripe('pk_live_yUZzw9XUHBhWuK2DGyzVrYna007EfC4aDj');
 
 export default {
     name: 'donate',
@@ -79,6 +80,50 @@ export default {
         return {
             otherInputValue: '',
         };
+    },
+    methods: {
+        async checkout(amount) {
+            if (amount === 5) {
+                await stripe.redirectToCheckout({
+                    items: [
+                        // Replace with the ID of your SKU
+                        { sku: 'sku_G574WItZf7GlZ1', quantity: 1 },
+                    ],
+                    successUrl: 'https://vocality-landing-page.kaindl745.now.sh/donate#success',
+                    cancelUrl: 'https://vocality-landing-page.kaindl745.now.sh/donate#cancel',
+                });
+            }
+            if (amount === 10) {
+                await stripe.redirectToCheckout({
+                    items: [
+                        // Replace with the ID of your SKU
+                        { sku: 'sku_G574OE9pV0sxxc', quantity: 1 },
+                    ],
+                    successUrl: 'https://vocality-landing-page.kaindl745.now.sh/donate#success',
+                    cancelUrl: 'https://vocality-landing-page.kaindl745.now.sh/donate#cancel',
+                });
+            }
+            if (amount === 25) {
+                await stripe.redirectToCheckout({
+                    items: [
+                        // Replace with the ID of your SKU
+                        { sku: 'sku_G575Yd7Fpsnh0E', quantity: 1 },
+                    ],
+                    successUrl: 'https://vocality-landing-page.kaindl745.now.sh/donate#success',
+                    cancelUrl: 'https://vocality-landing-page.kaindl745.now.sh/donate#cancel',
+                });
+            }
+            if (amount === 50) {
+                await stripe.redirectToCheckout({
+                    items: [
+                        // Replace with the ID of your SKU
+                        { sku: 'sku_G575KOegLzK4vI', quantity: 1 },
+                    ],
+                    successUrl: 'https://vocality-landing-page.kaindl745.now.sh/donate#success',
+                    cancelUrl: 'https://vocality-landing-page.kaindl745.now.sh/donate#cancel',
+                });
+            }
+        },
     },
 };
 </script>

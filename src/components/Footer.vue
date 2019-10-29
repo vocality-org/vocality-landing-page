@@ -15,7 +15,7 @@
                             <router-link to="/donate">Donate</router-link>
                         </li>
                         <li class="pt1">
-                            <router-link to="/dashboard-about">Web Dashboard</router-link>
+                            <a target="_blank" href="https://vocality-web-dashboard.kaindl745.now.sh/">Web Dashboard</a>
                         </li>
                     </ul>
                 </div>

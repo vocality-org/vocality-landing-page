@@ -9,8 +9,8 @@
             <div class="header-content">
                 <h1 class="no-events-on-drag">Vocality</h1>
                 <p class="h4 no-events-on-drag">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante
-                    dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
+                    The state of the art music delivery. We have a distributed dockerized music blockchain connected straight to
+                    your discord servers serial port. Absolute juicer mode big brain stuff. Trust me you need this bot.
                 </p>
                 <a
                     class="cta h3 bold text-decoration-none mt4 inline-block no-events-on-drag"
@@ -26,12 +26,11 @@
                 <div class="grid flex flex-column">
                     <div>
                         <div class="sticky">
-                            <h2 class="h1 m0">This is a section header</h2>
+                            <h2 class="h1 m0">Batteries included</h2>
                             <p class="h3">
-                                Sunt molestiae voluptas reprehenderit suscipit rerum beatae. Assumenda et et sint voluptatem.
-                                Sequi expedita nostrum quam recusandae quisquam alias. Molestiae quaerat perferendis sunt fuga et
-                                dignissimos. Deleniti delectus dolorum corporis velit occaecati qui blanditiis. Repudiandae alias
-                                voluptatem delectus laborum ratione qui sed aut.
+                                Vocality focuses on a minimal set of commands to keep it as simple as possible while providing all
+                                the features you expect from a music bot. We provide features that other bot want you to pay for!
+                                What really ? Yea thats' right billy.
                             </p>
                             <router-link to="/commands" tag="a" class="commands-link h3 flex items-center">
                                 See full list of commands
@@ -62,19 +61,19 @@
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
                                         <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
-                                        Something very nice
+                                        Videos
                                     </li>
                                     <li class="checklist-item">
                                         <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
-                                        Something nice
+                                        Playlists
                                     </li>
                                     <li class="checklist-item">
                                         <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
-                                        Something very nice
+                                        Radios
                                     </li>
                                     <li class="checklist-item">
                                         <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
-                                        Something nice
+                                        Livestreams
                                     </li>
                                 </ul>
                             </div>
@@ -89,19 +88,15 @@
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
                                         <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
-                                        Something nice
+                                        Songs
                                     </li>
                                     <li class="checklist-item">
                                         <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
-                                        Something very nice
+                                        Playlists
                                     </li>
                                     <li class="checklist-item">
                                         <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
-                                        Something nice
-                                    </li>
-                                    <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
-                                        Something very nice
+                                        Autoplay
                                     </li>
                                 </ul>
                             </div>
@@ -116,11 +111,11 @@
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
                                         <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
-                                        Something nice
+                                        Songs
                                     </li>
                                     <li class="checklist-item">
                                         <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
-                                        Something nice
+                                        Autoplay
                                     </li>
                                 </ul>
                             </div>
@@ -135,15 +130,15 @@
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
                                         <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
-                                        Something nice
+                                        Lyrics
                                     </li>
                                     <li class="checklist-item">
                                         <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
-                                        Something nice
+                                        Volume control
                                     </li>
                                     <li class="checklist-item">
                                         <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
-                                        Something nice
+                                        Manage your playlists
                                     </li>
                                 </ul>
                             </div>
@@ -158,15 +153,11 @@
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
                                         <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
-                                        Something nice
+                                        24/7
                                     </li>
                                     <li class="checklist-item">
                                         <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
-                                        Something nice
-                                    </li>
-                                    <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
-                                        Something nice
+                                        Prefix
                                     </li>
                                 </ul>
                             </div>
@@ -192,22 +183,22 @@
                 <div class="pink">
                     <div class="flex justify-center items-center flex-column">
                         <img src="@/assets/icons/volume.svg" alt="volume control" height="114" />
-                        <h4 class="h3 mt2 mb1">Settings</h4>
-                        <span class="text-center">Lorem ipsum. Itaque debitis aliquid ipsam eveniet.</span>
+                        <h4 class="h3 mt2 mb1">Volume control</h4>
+                        <span class="text-center">Change the global volume</span>
                     </div>
                 </div>
                 <div class="blue">
                     <div class="flex justify-center items-center flex-column">
                         <img src="@/assets/icons/clock.svg" alt="clock" height="114" />
-                        <h4 class="h3 mt2 mb1">Settings</h4>
-                        <span class="text-center">Lorem ipsum. Itaque debitis aliquid ipsam eveniet.</span>
+                        <h4 class="h3 mt2 mb1">24/7</h4>
+                        <span class="text-center">Play music all day every day</span>
                     </div>
                 </div>
                 <div class="cyan">
                     <div class="flex justify-center items-center flex-column">
                         <img src="@/assets/icons/key.svg" alt="key" height="114" />
-                        <h4 class="h3 mt2 mb1">Settings</h4>
-                        <span class="text-center">Lorem ipsum. Itaque debitis aliquid ipsam eveniet.</span>
+                        <h4 class="h3 mt2 mb1">Its a key</h4>
+                        <span class="text-center">Everyone likes keys right?</span>
                     </div>
                 </div>
             </div>

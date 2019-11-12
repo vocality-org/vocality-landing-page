@@ -9,7 +9,7 @@
             <div class="header-content">
                 <h1 class="no-events-on-drag">Vocality</h1>
                 <p class="h4 no-events-on-drag">
-                    The state of the art music delivery. We have a distributed dockerized music blockchain connected straight to
+                    State of the art music delivery. We have a distributed dockerized music blockchain connected straight to
                     your discord servers serial port. Absolute juicer mode big brain stuff. Trust me you need this bot.
                 </p>
                 <a

@@ -90,60 +90,7 @@ export default {
                 fontSize: '32px',
                 lineHeight: '32px',
             },
-            commands: [
-                {
-                    name: 'play',
-                    arguments: ['link or query'],
-                    description: 'Vitae magnam autem ut facere nihil consequuntur et quia. Nihil ut ut sit.',
-                    tags: ['general'],
-                    imageUrl: 'https://i.imgur.com/7Y19cDG.png',
-                },
-                {
-                    name: 'lyrics',
-                    arguments: ['query'],
-                    description: 'Vitae magnam autem ut facere nihil consequuntur et quia. Nihil ut ut sit.',
-                    tags: ['general'],
-                    imageUrl: 'https://i.imgur.com/7Y19cDG.png',
-                },
-                {
-                    name: 'help',
-                    description: 'Vitae magnam autem ut facere nihil consequuntur et quia. Nihil ut ut sit.',
-                    tags: ['general'],
-                    imageUrl: 'https://i.imgur.com/7Y19cDG.png',
-                },
-                {
-                    name: 'stop',
-                    description: 'Vitae magnam autem ut facere nihil consequuntur et quia. Nihil ut ut sit.',
-                    tags: ['general'],
-                    imageUrl: 'https://i.imgur.com/7Y19cDG.png',
-                },
-                {
-                    name: 'play2',
-                    arguments: ['link or query'],
-                    description: 'Vitae magnam autem ut facere nihil consequuntur et quia. Nihil ut ut sit.',
-                    tags: ['music'],
-                    imageUrl: 'https://i.imgur.com/7Y19cDG.png',
-                },
-                {
-                    name: 'lyrics2',
-                    arguments: ['query'],
-                    description: 'Vitae magnam autem ut facere nihil consequuntur et quia. Nihil ut ut sit.',
-                    tags: ['music2'],
-                    imageUrl: 'https://i.imgur.com/7Y19cDG.png',
-                },
-                {
-                    name: 'help2',
-                    description: 'Vitae magnam autem ut facere nihil consequuntur et quia. Nihil ut ut sit.',
-                    tags: ['music'],
-                    imageUrl: 'https://i.imgur.com/7Y19cDG.png',
-                },
-                {
-                    name: 'stop2',
-                    description: 'Vitae magnam autem ut facere nihil consequuntur et quia. Nihil ut ut sit.',
-                    tags: ['music'],
-                    imageUrl: 'https://i.imgur.com/7Y19cDG.png',
-                },
-            ],
+            commands: require('./commands.json'),
         };
     },
     computed: {

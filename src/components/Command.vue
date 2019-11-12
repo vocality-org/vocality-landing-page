@@ -21,7 +21,35 @@
                 <div v-for="t in tags" class="tag mx2 text-center" :key="t">{{ t }}</div>
             </div>
             <h3 class="h4 mb2 mt3">Example</h3>
-            <img :src="imageUrl" width="400" alt="example image" />
+            <div class="example">
+                <discord-messages>
+                    <discord-message> {{ prefix }}{{ example.input }} </discord-message>
+                    <discord-message
+                        :bot="true"
+                        author="Vocality"
+                        :avatar="require('@/assets/icons/logo.png')"
+                        role-color="violet"
+                        v-if="example.output || example.embed"
+                    >
+                        <span v-if="example.output">{{ example.output }}</span>
+                        <discord-embed
+                            v-else
+                            slot="embeds"
+                            :color="example.embed.color"
+                            :title="example.embed.title"
+                            :url="example.embed.url"
+                        >
+                            {{ example.embed.description }}
+                            <embed-fields v-if="example.embed.fields" slot="fields">
+                                <embed-field v-for="f in example.embed.fields" :key="f.name" :title="f.name">
+                                    {{ f.content }}
+                                </embed-field>
+                            </embed-fields>
+                            <footer>{{ example.embed.footer }}</footer>
+                        </discord-embed>
+                    </discord-message>
+                </discord-messages>
+            </div>
         </div>
     </div>
 </template>
@@ -33,6 +61,7 @@ export default {
         return {
             args: this.arguments,
             isExpanded: false,
+            prefix: '?',
         };
     },
     props: {
@@ -47,6 +76,7 @@ export default {
             },
         },
         description: {
+            required: true,
             type: String,
         },
         tags: {
@@ -55,8 +85,8 @@ export default {
                 return [];
             },
         },
-        imageUrl: {
-            type: String,
+        example: {
+            required: true,
         },
     },
     methods: {
@@ -113,6 +143,9 @@ export default {
                 background-color: clr(background, bright);
                 transform: translateY(-1px);
             }
+        }
+        .example {
+            margin-bottom: 16px;
         }
     }
 }

@@ -1,10 +1,21 @@
 <template>
     <div class="members absolute flex items-center top-0 h-100 w-100">
         <a to="/" class="back-button" @click="$router.go(-1)">
-            <img src="@/assets/icons/arrow-back.svg" alt="back arrow" height="32" />
+            <img
+                src="@/assets/icons/arrow-back.svg"
+                alt="back arrow"
+                height="32"
+            />
         </a>
         <MemberSwitch class="member-switch" :members="members" />
-        <svg class="shapes" width="110%" height="110%" viewBox="0 0 1920 1080" preserveAspectRatio="none" fill="none">
+        <svg
+            class="shapes"
+            width="110%"
+            height="110%"
+            viewBox="0 0 1920 1080"
+            preserveAspectRatio="none"
+            fill="none"
+        >
             <path
                 d="M354 211C529.593 94.2073 376 -295.5 -262.5 127C-357.564 189.905 -163.207 151 -143.055 222.557C-122.904 294.114 -96.819 806.5 65 806.5C265 806.499 136 356 354 211Z"
                 fill="#29ABE2"
@@ -33,57 +44,61 @@
 </template>
 
 <script>
-import MemberSwitch from '@/components/MemberSwitch.vue';
+import MemberSwitch from "@/components/MemberSwitch.vue";
 
 export default {
-    name: 'members',
+    name: "members",
     components: {
-        MemberSwitch,
+        MemberSwitch
     },
     data() {
         return {
             members: [
                 {
                     id: 0,
-                    name: 'Mia',
-                    position: 'Human Resources',
-                    description: 'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et.',
-                    github: '',
+                    name: "Julian",
+                    position: "Development",
+                    description: "",
+                    github: "KaindlJulian"
                 },
                 {
                     id: 1,
-                    name: 'Julian',
-                    position: 'Development',
-                    description:
-                        'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et. Iusto est quisquam ea sit dolor aspernatur velit placeat.',
-                    github: 'KaindlJulian',
+                    name: "Matthias",
+                    position: "Development",
+                    description: "",
+                    github: "MatthiasHerzog2000"
                 },
                 {
                     id: 2,
-                    name: 'Matthias',
-                    position: 'Development',
-                    description: 'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et.',
-                    github: 'MatthiasHerzog2000',
+                    name: "Julian",
+                    position: "Development",
+                    description: "",
+                    github: "KaindlJulian"
                 },
                 {
                     id: 3,
-                    name: 'Thomas',
-                    position: 'Author',
-                    description:
-                        'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et. Iusto est quisquam ea sit dolor aspernatur velit placeat.',
-                    github: '',
+                    name: "Matthias",
+                    position: "Development",
+                    description: "",
+                    github: "MatthiasHerzog2000"
                 },
                 {
                     id: 4,
-                    name: 'Olivia',
-                    position: 'Human Resources',
-                    description:
-                        'Lorem ipsum Quam deserunt deleniti adipisci aliquam sit velit enim. A eum sed a a et. Iusto est quisquam ea.',
-                    github: '',
+                    name: "Julian",
+                    position: "Development",
+                    description: "",
+                    github: "KaindlJulian"
                 },
-            ],
+                {
+                    id: 5,
+                    name: "Matthias",
+                    position: "Development",
+                    description: "",
+                    github: "MatthiasHerzog2000"
+                }
+            ]
         };
-    },
+    }
 };
 </script>
 

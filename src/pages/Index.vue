@@ -1,7 +1,11 @@
 <template>
     <div class="index">
         <section class="three z1 relative">
-            <div ref="container" id="container" class="container fixed flex justify-end">
+            <div
+                ref="container"
+                id="container"
+                class="container fixed flex justify-end"
+            >
                 <!--canvas goes here-->
             </div>
         </section>
@@ -9,7 +13,8 @@
             <div class="header-content">
                 <h1 class="no-events-on-drag">Vocality</h1>
                 <p class="h4 no-events-on-drag">
-                    State of the art music delivery. We pump the finest music juice right into the poipes of your discord server.
+                    State of the art music delivery. We pump the finest music
+                    juice right into the poipes of your discord server.
                 </p>
                 <a
                     class="cta h3 bold text-decoration-none mt4 inline-block no-events-on-drag"
@@ -27,13 +32,23 @@
                         <div class="sticky">
                             <h2 class="h1 m0">Batteries included</h2>
                             <p class="h3">
-                                Vocality focuses on a minimal set of commands to keep it as simple as possible while providing all
-                                the features you expect from a music bot. We provide features that other bot want you to pay for!
-                                What really ? Yea thats' right billy.
+                                Vocality focuses on a minimal set of commands to
+                                keep it as simple as possible while providing
+                                all the features you expect from a music bot. We
+                                provide features that other bot want you to pay
+                                for! What really ? Yea thats' right billy.
                             </p>
-                            <router-link to="/commands" tag="a" class="commands-link h3 flex items-center">
+                            <router-link
+                                to="/commands"
+                                tag="a"
+                                class="commands-link h3 flex items-center"
+                            >
                                 See full list of commands
-                                <img src="@/assets/icons/arrow-right.svg" alt="arrow pointing right" class="ml2" />
+                                <img
+                                    src="@/assets/icons/arrow-right.svg"
+                                    alt="arrow pointing right"
+                                    class="ml2"
+                                />
                             </router-link>
                         </div>
                     </div>
@@ -48,30 +63,55 @@
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink"
                             >
-                                <path d="M1,1 L1,1001" stroke="#f2f2f280" stroke-width="2" stroke-dasharray="2 8"></path>
+                                <path
+                                    d="M1,1 L1,1001"
+                                    stroke="#f2f2f280"
+                                    stroke-width="2"
+                                    stroke-dasharray="2 8"
+                                ></path>
                             </svg>
                         </div>
                         <section class="checklist">
                             <div class="list-icon-container">
-                                <img class="list-icon" src="@/assets/icons/youtube.svg" alt="youtube" />
+                                <img
+                                    class="list-icon"
+                                    src="@/assets/icons/youtube.svg"
+                                    alt="youtube"
+                                />
                             </div>
                             <div class="checklist-content pb3">
                                 <h3 class="h3 m0">Youtube</h3>
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
+                                        <img
+                                            src="@/assets/icons/checkmark.svg"
+                                            alt="checkmark"
+                                            class="checkmark-icon"
+                                        />
                                         Videos
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
+                                        <img
+                                            src="@/assets/icons/checkmark.svg"
+                                            alt="checkmark"
+                                            class="checkmark-icon"
+                                        />
                                         Playlists
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
+                                        <img
+                                            src="@/assets/icons/checkmark.svg"
+                                            alt="checkmark"
+                                            class="checkmark-icon"
+                                        />
                                         Radios
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
+                                        <img
+                                            src="@/assets/icons/checkmark.svg"
+                                            alt="checkmark"
+                                            class="checkmark-icon"
+                                        />
                                         Livestreams
                                     </li>
                                 </ul>
@@ -80,21 +120,37 @@
 
                         <section class="checklist">
                             <div class="list-icon-container">
-                                <img class="list-icon" src="@/assets/icons/soundcloud.svg" alt="soundcloud" />
+                                <img
+                                    class="list-icon"
+                                    src="@/assets/icons/soundcloud.svg"
+                                    alt="soundcloud"
+                                />
                             </div>
                             <div class="checklist-content pb3">
                                 <h3 class="h3 m0">SoundCloud</h3>
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
+                                        <img
+                                            src="@/assets/icons/checkmark.svg"
+                                            alt="checkmark"
+                                            class="checkmark-icon"
+                                        />
                                         Songs
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
+                                        <img
+                                            src="@/assets/icons/checkmark.svg"
+                                            alt="checkmark"
+                                            class="checkmark-icon"
+                                        />
                                         Playlists
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
+                                        <img
+                                            src="@/assets/icons/checkmark.svg"
+                                            alt="checkmark"
+                                            class="checkmark-icon"
+                                        />
                                         Autoplay
                                     </li>
                                 </ul>
@@ -103,17 +159,29 @@
 
                         <section class="checklist">
                             <div class="list-icon-container">
-                                <img class="list-icon" src="@/assets/icons/spotify.svg" alt="spotify" />
+                                <img
+                                    class="list-icon"
+                                    src="@/assets/icons/spotify.svg"
+                                    alt="spotify"
+                                />
                             </div>
                             <div class="checklist-content pb3">
                                 <h3 class="h3 m0">Spotify</h3>
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
+                                        <img
+                                            src="@/assets/icons/checkmark.svg"
+                                            alt="checkmark"
+                                            class="checkmark-icon"
+                                        />
                                         Songs
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
+                                        <img
+                                            src="@/assets/icons/checkmark.svg"
+                                            alt="checkmark"
+                                            class="checkmark-icon"
+                                        />
                                         Autoplay
                                     </li>
                                 </ul>
@@ -122,21 +190,37 @@
 
                         <section class="checklist">
                             <div class="list-icon-container">
-                                <img class="list-icon" src="@/assets/icons/music.svg" alt="music in general" />
+                                <img
+                                    class="list-icon"
+                                    src="@/assets/icons/music.svg"
+                                    alt="music in general"
+                                />
                             </div>
                             <div class="checklist-content pb3">
                                 <h3 class="h3 m0">Music and Playlists</h3>
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
+                                        <img
+                                            src="@/assets/icons/checkmark.svg"
+                                            alt="checkmark"
+                                            class="checkmark-icon"
+                                        />
                                         Lyrics
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
+                                        <img
+                                            src="@/assets/icons/checkmark.svg"
+                                            alt="checkmark"
+                                            class="checkmark-icon"
+                                        />
                                         Volume control
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
+                                        <img
+                                            src="@/assets/icons/checkmark.svg"
+                                            alt="checkmark"
+                                            class="checkmark-icon"
+                                        />
                                         Manage your playlists
                                     </li>
                                 </ul>
@@ -145,17 +229,29 @@
 
                         <section class="checklist">
                             <div class="list-icon-container hide-points">
-                                <img class="list-icon" src="@/assets/icons/settings.svg" alt="bot settings" />
+                                <img
+                                    class="list-icon"
+                                    src="@/assets/icons/settings.svg"
+                                    alt="bot settings"
+                                />
                             </div>
                             <div class="checklist-content">
                                 <h3 class="h3 m0">Bot Settings</h3>
                                 <ul class="list-style-none m0 p0">
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
+                                        <img
+                                            src="@/assets/icons/checkmark.svg"
+                                            alt="checkmark"
+                                            class="checkmark-icon"
+                                        />
                                         24/7
                                     </li>
                                     <li class="checklist-item">
-                                        <img src="@/assets/icons/checkmark.svg" alt="checkmark" class="checkmark-icon" />
+                                        <img
+                                            src="@/assets/icons/checkmark.svg"
+                                            alt="checkmark"
+                                            class="checkmark-icon"
+                                        />
                                         Prefix
                                     </li>
                                 </ul>
@@ -165,7 +261,9 @@
                 </div>
             </div>
             <div class="grid-stripe-container absolute z1 top-0 bottom-0 w-100">
-                <div class="background-grid h-100 w-100 flex flex-column items-center absolute">
+                <div
+                    class="background-grid h-100 w-100 flex flex-column items-center absolute"
+                >
                     <div class="grid w-100 h-100">
                         <div class="stripe">
                             <div class="pink"></div>
@@ -181,30 +279,50 @@
             <div class="banner">
                 <div class="pink">
                     <div class="flex justify-center items-center flex-column">
-                        <img src="@/assets/icons/volume.svg" alt="volume control" height="114" />
+                        <img
+                            src="@/assets/icons/volume.svg"
+                            alt="volume control"
+                            height="114"
+                        />
                         <h4 class="h3 mt2 mb1">Volume control</h4>
-                        <span class="text-center">Change the global volume</span>
+                        <span class="text-center"
+                            >Change the global volume</span
+                        >
                     </div>
                 </div>
                 <div class="blue">
                     <div class="flex justify-center items-center flex-column">
-                        <img src="@/assets/icons/clock.svg" alt="clock" height="114" />
+                        <img
+                            src="@/assets/icons/clock.svg"
+                            alt="clock"
+                            height="114"
+                        />
                         <h4 class="h3 mt2 mb1">24/7</h4>
-                        <span class="text-center">Play music all day every day</span>
+                        <span class="text-center"
+                            >Play music all day every day</span
+                        >
                     </div>
                 </div>
                 <div class="cyan">
                     <div class="flex justify-center items-center flex-column">
-                        <img src="@/assets/icons/key.svg" alt="key" height="114" />
+                        <img
+                            src="@/assets/icons/key.svg"
+                            alt="key"
+                            height="114"
+                        />
                         <h4 class="h3 mt2 mb1">Its a key</h4>
-                        <span class="text-center">Everyone likes keys right?</span>
+                        <span class="text-center"
+                            >Everyone likes keys right?</span
+                        >
                     </div>
                 </div>
             </div>
         </section>
         <section class="third-content">
             <div class="donate z2 relative text-center">
-                <div class="flex  flex-column justify-center items-center max-mid my0 mx-auto w-100">
+                <div
+                    class="flex  flex-column justify-center items-center max-mid my0 mx-auto w-100"
+                >
                     <h2 class="h1 m0">Enter the free gift card giveaway</h2>
                     <router-link to="/donate" class="cta h3 bold mt4">
                         Donate
@@ -218,7 +336,14 @@
 
 <script>
 import Footer from '@/components/Footer.vue';
-import { PerspectiveCamera, Scene, AmbientLight, WebGLRenderer, Euler, Quaternion } from 'three';
+import {
+    PerspectiveCamera,
+    Scene,
+    AmbientLight,
+    WebGLRenderer,
+    Euler,
+    Quaternion,
+} from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import updateOnSroll from 'uos';
 
@@ -269,7 +394,7 @@ export default {
                 },
                 error => {
                     console.log(error);
-                },
+                }
             );
 
             this.renderer = new WebGLRenderer({ antialias: true });
@@ -294,7 +419,8 @@ export default {
             updateOnSroll(0, this.wh * 1.5, position => {
                 if (position === 1 && this.isScrollEnabled) {
                     if (this.$refs.container) {
-                        this.$refs.container.style.transform = 'translateX(100vw)';
+                        this.$refs.container.style.transform =
+                            'translateX(100vw)';
                     }
                     this.isScrollEnabled = false;
                     return;
@@ -302,7 +428,8 @@ export default {
 
                 if (position < 1 && !this.isScrollEnabled) {
                     if (this.$refs.container) {
-                        this.$refs.container.style.transform = 'translateX(0px)';
+                        this.$refs.container.style.transform =
+                            'translateX(0px)';
                     }
                     this.isScrollEnabled = true;
                 }
@@ -354,9 +481,16 @@ export default {
 
             if (this.isGrabbing) {
                 const deltaRotationQuaternion = new Quaternion().setFromEuler(
-                    new Euler(this.toRadians(deltaMove.y * 0.1), this.toRadians(deltaMove.x * 0.1), 0),
+                    new Euler(
+                        this.toRadians(deltaMove.y * 0.1),
+                        this.toRadians(deltaMove.x * 0.1),
+                        0
+                    )
                 );
-                this.logo.quaternion.multiplyQuaternions(deltaRotationQuaternion, this.logo.quaternion);
+                this.logo.quaternion.multiplyQuaternions(
+                    deltaRotationQuaternion,
+                    this.logo.quaternion
+                );
             }
 
             this.previousMousePosition = {
@@ -379,17 +513,35 @@ export default {
     created: function() {
         window.addEventListener('resize', this.onResize);
         this.$nextTick(() => {
-            this.$refs.container.addEventListener('mousedown', this.onCanvasMouseDown);
-            this.$refs.container.addEventListener('mouseup', this.onCanvasMouseUp);
-            this.$refs.container.addEventListener('mousemove', this.onCanvasMouseMove);
+            this.$refs.container.addEventListener(
+                'mousedown',
+                this.onCanvasMouseDown
+            );
+            this.$refs.container.addEventListener(
+                'mouseup',
+                this.onCanvasMouseUp
+            );
+            this.$refs.container.addEventListener(
+                'mousemove',
+                this.onCanvasMouseMove
+            );
             window.addEventListener('mouseout', this.onMouseLeave);
         });
     },
     beforeDestroy: function() {
         window.removeEventListener('resize', this.onResize);
-        this.$refs.container.removeEventListener('mousedown', this.onCanvasMouseDown);
-        this.$refs.container.removeEventListener('mouseup', this.onCanvasMouseUp);
-        this.$refs.container.removeEventListener('mousemove', this.onCanvasMouseMove);
+        this.$refs.container.removeEventListener(
+            'mousedown',
+            this.onCanvasMouseDown
+        );
+        this.$refs.container.removeEventListener(
+            'mouseup',
+            this.onCanvasMouseUp
+        );
+        this.$refs.container.removeEventListener(
+            'mousemove',
+            this.onCanvasMouseMove
+        );
         window.removeEventListener('mouseout', this.onMouseLeave);
     },
     components: {
@@ -491,7 +643,10 @@ export default {
                             left: $icon-size / 2;
                             width: $icon-size * 2;
                             height: $icon-size * 2;
-                            transform: translate($icon-size * -1, $icon-size * -1);
+                            transform: translate(
+                                $icon-size * -1,
+                                $icon-size * -1
+                            );
                             border-radius: 50%;
                             background-color: clr(background, bright);
                         }

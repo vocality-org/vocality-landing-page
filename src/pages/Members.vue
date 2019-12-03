@@ -44,61 +44,61 @@
 </template>
 
 <script>
-import MemberSwitch from "@/components/MemberSwitch.vue";
+import MemberSwitch from '@/components/MemberSwitch.vue';
 
 export default {
-    name: "members",
+    name: 'members',
     components: {
-        MemberSwitch
+        MemberSwitch,
     },
     data() {
         return {
             members: [
                 {
                     id: 0,
-                    name: "Julian",
-                    position: "Development",
-                    description: "",
-                    github: "KaindlJulian"
+                    name: 'Julian',
+                    position: 'Development',
+                    description: '',
+                    github: 'KaindlJulian',
                 },
                 {
                     id: 1,
-                    name: "Matthias",
-                    position: "Development",
-                    description: "",
-                    github: "MatthiasHerzog2000"
+                    name: 'Matthias',
+                    position: 'Development',
+                    description: '',
+                    github: 'MatthiasHerzog2000',
                 },
                 {
                     id: 2,
-                    name: "Julian",
-                    position: "Development",
-                    description: "",
-                    github: "KaindlJulian"
+                    name: 'Julian',
+                    position: 'Development',
+                    description: '',
+                    github: 'KaindlJulian',
                 },
                 {
                     id: 3,
-                    name: "Matthias",
-                    position: "Development",
-                    description: "",
-                    github: "MatthiasHerzog2000"
+                    name: 'Matthias',
+                    position: 'Development',
+                    description: '',
+                    github: 'MatthiasHerzog2000',
                 },
                 {
                     id: 4,
-                    name: "Julian",
-                    position: "Development",
-                    description: "",
-                    github: "KaindlJulian"
+                    name: 'Julian',
+                    position: 'Development',
+                    description: '',
+                    github: 'KaindlJulian',
                 },
                 {
                     id: 5,
-                    name: "Matthias",
-                    position: "Development",
-                    description: "",
-                    github: "MatthiasHerzog2000"
-                }
-            ]
+                    name: 'Matthias',
+                    position: 'Development',
+                    description: '',
+                    github: 'MatthiasHerzog2000',
+                },
+            ],
         };
-    }
+    },
 };
 </script>
 

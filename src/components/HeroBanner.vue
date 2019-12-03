@@ -1,5 +1,8 @@
 <template>
-    <div class="hero-banner text-center absolute w-100 top-0 overflow-hidden" :class="this.color">
+    <div
+        class="hero-banner text-center absolute w-100 top-0 overflow-hidden"
+        :class="this.color"
+    >
         <h1 class="h1 m0">{{ title }}</h1>
     </div>
 </template>

@@ -3,7 +3,11 @@
         <footer>
             <nav class="mx-auto">
                 <div class="logo flex items-center">
-                    <img src="@/assets/icons/logo.svg" height="128" alt="logo" />
+                    <img
+                        src="@/assets/icons/logo.svg"
+                        height="128"
+                        alt="logo"
+                    />
                 </div>
                 <div class="bot pt2">
                     <h4 class="h4 m0">Bot</h4>
@@ -15,7 +19,11 @@
                             <router-link to="/donate">Donate</router-link>
                         </li>
                         <li class="pt1">
-                            <a target="_blank" href="https://vocality-web-dashboard.kaindl745.now.sh/">Web Dashboard</a>
+                            <a
+                                target="_blank"
+                                href="https://vocality-web-dashboard.kaindl745.now.sh/"
+                                >Web Dashboard</a
+                            >
                         </li>
                     </ul>
                 </div>

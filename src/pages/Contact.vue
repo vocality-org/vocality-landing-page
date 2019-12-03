@@ -9,15 +9,37 @@
                         target="__blank"
                         class="icon-container flex justify-center items-center"
                     >
-                        <img src="@/assets/icons/location.svg" alt="location" height="42" />
+                        <img
+                            src="@/assets/icons/location.svg"
+                            alt="location"
+                            height="42"
+                        />
                     </a>
-                    <div class="flex items-center">1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA</div>
-                    <a href="tel:+1 650-253-000" target="__blank" class="icon-container flex justify-center items-center">
-                        <img src="@/assets/icons/phone.svg" alt="phone" height="42" />
+                    <div class="flex items-center">
+                        1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA
+                    </div>
+                    <a
+                        href="tel:+1 650-253-000"
+                        target="__blank"
+                        class="icon-container flex justify-center items-center"
+                    >
+                        <img
+                            src="@/assets/icons/phone.svg"
+                            alt="phone"
+                            height="42"
+                        />
                     </a>
                     <div class="flex items-center">+1 650-253-000</div>
-                    <a href="mailto:my-mail@email.com" target="__blank" class="icon-container flex justify-center items-center">
-                        <img src="@/assets/icons/email.svg" alt="email" height="42" />
+                    <a
+                        href="mailto:my-mail@email.com"
+                        target="__blank"
+                        class="icon-container flex justify-center items-center"
+                    >
+                        <img
+                            src="@/assets/icons/email.svg"
+                            alt="email"
+                            height="42"
+                        />
                     </a>
                     <div class="flex items-center">my-mail@gmail.com</div>
                 </div>
@@ -41,20 +63,51 @@
                 </div>
             </div>
         </section>
-        <section class="social-media flex flex-column justify-center items-center">
-            <a href="https://www.facebook.com/" target="__blank" class="icon-container flex justify-center items-center">
-                <img src="@/assets/icons/facebook.svg" alt="facebook" height="64" />
+        <section
+            class="social-media flex flex-column justify-center items-center"
+        >
+            <a
+                href="https://www.facebook.com/"
+                target="__blank"
+                class="icon-container flex justify-center items-center"
+            >
+                <img
+                    src="@/assets/icons/facebook.svg"
+                    alt="facebook"
+                    height="64"
+                />
             </a>
-            <a href="https://www.instagram.com/" target="__blank" class="icon-container flex justify-center items-center">
-                <img src="@/assets/icons/instagram.svg" alt="instagran" height="64" />
+            <a
+                href="https://www.instagram.com/"
+                target="__blank"
+                class="icon-container flex justify-center items-center"
+            >
+                <img
+                    src="@/assets/icons/instagram.svg"
+                    alt="instagran"
+                    height="64"
+                />
             </a>
-            <a href="https://www.twitter.com/" target="__blank" class="icon-container flex justify-center items-center">
-                <img src="@/assets/icons/twitter.svg" alt="twitter" height="64" />
+            <a
+                href="https://www.twitter.com/"
+                target="__blank"
+                class="icon-container flex justify-center items-center"
+            >
+                <img
+                    src="@/assets/icons/twitter.svg"
+                    alt="twitter"
+                    height="64"
+                />
             </a>
         </section>
         <section class="message mx-auto max-mid">
             <h2 class="m0 w-100 text-center h1">Or send a message</h2>
-            <form ref="messageForm" class="form mt4 mx-auto" action="#0" method="post">
+            <form
+                ref="messageForm"
+                class="form mt4 mx-auto"
+                action="#0"
+                method="post"
+            >
                 <div class="firstname">
                     <label for="firstname">Firstname</label>
                     <input
@@ -81,16 +134,35 @@
                 </div>
                 <div class="text">
                     <label for="firstname">Message</label>
-                    <textarea ref="text" required type="text" id="text" class="mt1 flex w-100" />
+                    <textarea
+                        ref="text"
+                        required
+                        type="text"
+                        id="text"
+                        class="mt1 flex w-100"
+                    />
                 </div>
                 <div class="submit flex">
-                    <button ref="submitButton" @click="submitMessage" class="flex justify-center mx-auto cta">SUBMIT</button>
+                    <button
+                        ref="submitButton"
+                        @click="submitMessage"
+                        class="flex justify-center mx-auto cta"
+                    >
+                        SUBMIT
+                    </button>
                 </div>
             </form>
             <div v-if="messageSubmitted" class="afterSubmit text-center mt2">
-                <div @click="requestForm" class="submit-request h3 flex items-center justify-center">
+                <div
+                    @click="requestForm"
+                    class="submit-request h3 flex items-center justify-center"
+                >
                     Submit again
-                    <img src="@/assets/icons/arrow-right.svg" alt="arrow pointing right" class="ml2" />
+                    <img
+                        src="@/assets/icons/arrow-right.svg"
+                        alt="arrow pointing right"
+                        class="ml2"
+                    />
                 </div>
             </div>
         </section>
@@ -157,7 +229,11 @@ export default {
             }
         },
         isInputValid() {
-            return this.$refs.firstname.value && this.$refs.lastname.value && this.$refs.text.value;
+            return (
+                this.$refs.firstname.value &&
+                this.$refs.lastname.value &&
+                this.$refs.text.value
+            );
         },
         clearInputs() {
             this.$refs.firstname.value = '';

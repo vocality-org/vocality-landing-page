@@ -10,7 +10,10 @@
             "
         ></Sidenav>
         <div id="page-wrap">
-            <Navbar :sidenavOpen="sidenavOpenState" @sidenavStateChange="state => (this.sidenavOpenState = state)"></Navbar>
+            <Navbar
+                :sidenavOpen="sidenavOpenState"
+                @sidenavStateChange="state => (this.sidenavOpenState = state)"
+            ></Navbar>
             <router-view />
             <!--<Footer></Footer>-->
         </div>

@@ -1,5 +1,7 @@
 <template>
-    <div class="dashboard-about absolute top-0 h-100 w-100 flex justify-center items-center flex-column">
+    <div
+        class="dashboard-about absolute top-0 h-100 w-100 flex justify-center items-center flex-column"
+    >
         The Vocality Web Dashboard is coming soon
         <div class="countdown flex">
             <span class="mx3 px2">
@@ -50,8 +52,12 @@ export default {
             const distance = this.releaseDate - this.now;
             return {
                 days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-                hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-                minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+                hours: Math.floor(
+                    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                ),
+                minutes: Math.floor(
+                    (distance % (1000 * 60 * 60)) / (1000 * 60)
+                ),
                 seconds: Math.floor((distance % (1000 * 60)) / 1000),
             };
         },

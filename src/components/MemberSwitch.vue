@@ -1,5 +1,7 @@
 <template>
-    <div class="member-switch mx-auto text-center py4 flex flex-column justify-center">
+    <div
+        class="member-switch mx-auto text-center py4 flex flex-column justify-center"
+    >
         <svg height="0" width="0" class="absolute">
             <defs>
                 <clipPath id="poly-clip">
@@ -11,18 +13,33 @@
         </svg>
         <h1 class="m0 h1">Team Members</h1>
         <div class="carousel mt3 flex justify-center relative">
-            <div class="previous absolute flex justify-center items-center" @click="changeCarousel(-1)">
-                <img src="@/assets/icons/arrow-back.svg" alt="previous member" />
+            <div
+                class="previous absolute flex justify-center items-center"
+                @click="changeCarousel(-1)"
+            >
+                <img
+                    src="@/assets/icons/arrow-back.svg"
+                    alt="previous member"
+                />
             </div>
-            <div class="next absolute flex justify-center items-center" @click="changeCarousel(1)">
+            <div
+                class="next absolute flex justify-center items-center"
+                @click="changeCarousel(1)"
+            >
                 <img src="@/assets/icons/arrow-forward.svg" alt="next member" />
             </div>
-            <div v-for="m in members" :key="m.id" class="flex justify-center image-wrapper">
+            <div
+                v-for="m in members"
+                :key="m.id"
+                class="flex justify-center image-wrapper"
+            >
                 <img
                     class="polygon absolute"
                     :class="transitionClass(m.id)"
                     @click="handleImageClick(m.id)"
-                    :src="require(`@/assets/images/${m.name.toLowerCase()}.jpg`)"
+                    :src="
+                        require(`@/assets/images/${m.name.toLowerCase()}.jpg`)
+                    "
                     width="232"
                     height="232"
                 />
@@ -30,8 +47,16 @@
                     v-if="computedTransitionClasses[2] === m.id"
                     class="center-overlay z1 polygon flex justify-center items-center"
                 >
-                    <a :href="`https://github.com/${m.github}`" target="__blank">
-                        <img src="@/assets/icons/github.svg" alt="github" width="36" height="36" />
+                    <a
+                        :href="`https://github.com/${m.github}`"
+                        target="__blank"
+                    >
+                        <img
+                            src="@/assets/icons/github.svg"
+                            alt="github"
+                            width="36"
+                            height="36"
+                        />
                     </a>
                 </div>
             </div>
@@ -40,7 +65,9 @@
             <div class="information" :key="currentMember">
                 <h2 class="m0 h3">{{ currentMember.name }}</h2>
                 <h3 class="m0 h6 mt1">{{ currentMember.position }}</h3>
-                <p class="m0 h6  mt3 mx-auto">{{ currentMember.description }}</p>
+                <p class="m0 h6  mt3 mx-auto">
+                    {{ currentMember.description }}
+                </p>
             </div>
         </transition>
     </div>
@@ -87,13 +114,21 @@ export default {
     },
     computed: {
         wrappingIndex: function() {
-            return ((this.totalChanges % this.members.length) + this.members.length) % this.members.length;
+            return (
+                ((this.totalChanges % this.members.length) +
+                    this.members.length) %
+                this.members.length
+            );
         },
         computedTransitionClasses: function() {
             const posArr = [];
 
             let count = 0;
-            for (let index = this.wrappingIndex; index < this.members.length; index++) {
+            for (
+                let index = this.wrappingIndex;
+                index < this.members.length;
+                index++
+            ) {
                 if (count === 5) {
                     break;
                 }

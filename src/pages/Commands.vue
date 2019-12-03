@@ -44,15 +44,29 @@
                     </button>
                 </div>
                 <div class="pt3">
-                    <Command v-for="c in filteredList" v-bind:key="c.name" v-bind="c"></Command>
-                    <div v-if="filteredList.length === 0" class="flex justify-center p4 h2">
+                    <Command
+                        v-for="c in filteredList"
+                        v-bind:key="c.name"
+                        v-bind="c"
+                    ></Command>
+                    <div
+                        v-if="filteredList.length === 0"
+                        class="flex justify-center p4 h2"
+                    >
                         No Commands found
                     </div>
                 </div>
             </div>
         </section>
         <Footer class="z1 relative mt4 pt4"></Footer>
-        <svg class="bg-svg" viewBox="0 0 1920 2524" height="180vh" width="100%" fill="none" preserveAspectRatio="none">
+        <svg
+            class="bg-svg"
+            viewBox="0 0 1920 2524"
+            height="180vh"
+            width="100%"
+            fill="none"
+            preserveAspectRatio="none"
+        >
             <rect
                 width="727.426"
                 height="4670.24"
@@ -97,7 +111,10 @@ export default {
         filteredList() {
             return this.commands
                 .filter(c => {
-                    return c.name.indexOf(this.searchValue.trim().toLowerCase()) > -1;
+                    return (
+                        c.name.indexOf(this.searchValue.trim().toLowerCase()) >
+                        -1
+                    );
                 })
                 .filter(c => {
                     if (this.activeTag === 'all') {

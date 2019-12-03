@@ -32,77 +32,21 @@
 </template>
 
 <script>
-import HeroBanner from "@/components/HeroBanner.vue";
-import SearchField from "@/components/SearchField.vue";
-import FaqSegment from "@/components/FaqSegment.vue";
-import Footer from "@/components/Footer.vue";
-import { log } from "util";
+import HeroBanner from '@/components/HeroBanner.vue';
+import SearchField from '@/components/SearchField.vue';
+import FaqSegment from '@/components/FaqSegment.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
-    name: "faq",
+    name: 'faq',
     data() {
         return {
-            searchString: "",
+            searchString: '',
             searchFieldStyle: {
-                fontSize: "25px",
-                lineHeight: "25px"
+                fontSize: '25px',
+                lineHeight: '25px',
             },
-            faqList: [
-                {
-                    id: 0,
-                    question: "Lorem ipsum Search test?",
-                    answer:
-                        "Eum repellat cupiditate assumenda nemo qui excepturi impedit omnis. Et voluptatem consequatur cupiditate et minima necessitatibus consectetur dignissimos. Voluptas ratione omnis et sed minus. Consectetur earum autem qui architecto iusto illo adipisci id. Modi dolorem sapiente totam cum sapiente. Iste odit nisi dicta."
-                },
-                {
-                    id: 1,
-                    question: "Lorem ipsum?",
-                    answer:
-                        "Search test Eum repellat cupiditate assumenda nemo qui excepturi impedit omnis. Et voluptatem consequatur cupiditate et minima necessitatibus consectetur dignissimos. Voluptas ratione omnis et sed minus. Consectetur earum autem qui architecto iusto illo adipisci id. Modi dolorem sapiente totam cum sapiente. Iste odit nisi dicta."
-                },
-                {
-                    id: 2,
-                    question: "Lorem ipsum?",
-                    answer:
-                        "Eum repellat cupiditate assumenda nemo qui excepturi impedit omnis. Et voluptatem consequatur cupiditate et minima necessitatibus consectetur dignissimos. Voluptas ratione omnis et sed minus. Consectetur earum autem qui architecto iusto illo adipisci id. Modi dolorem sapiente totam cum sapiente. Iste odit nisi dicta."
-                },
-                {
-                    id: 3,
-                    question: "Lorem ipsum?",
-                    answer:
-                        "Eum repellat cupiditate assumenda nemo qui excepturi impedit omnis. Et voluptatem consequatur cupiditate et minima necessitatibus consectetur dignissimos. Voluptas ratione omnis et sed minus. Consectetur earum autem qui architecto iusto illo adipisci id. Modi dolorem sapiente totam cum sapiente. Iste odit nisi dicta."
-                },
-                {
-                    id: 4,
-                    question: "Lorem ipsum?",
-                    answer:
-                        "Eum repellat cupiditate assumenda nemo qui excepturi impedit omnis. Et voluptatem consequatur cupiditate et minima necessitatibus consectetur dignissimos. Voluptas ratione omnis et sed minus. Consectetur earum autem qui architecto iusto illo adipisci id. Modi dolorem sapiente totam cum sapiente. Iste odit nisi dicta."
-                },
-                {
-                    id: 5,
-                    question: "Lorem ipsum?",
-                    answer:
-                        "Eum repellat cupiditate assumenda nemo qui excepturi impedit omnis. Et voluptatem consequatur cupiditate et minima necessitatibus consectetur dignissimos. Voluptas ratione omnis et sed minus. Consectetur earum autem qui architecto iusto illo adipisci id. Modi dolorem sapiente totam cum sapiente. Iste odit nisi dicta."
-                },
-                {
-                    id: 6,
-                    question: "Lorem ipsum?",
-                    answer:
-                        "Eum repellat cupiditate assumenda nemo qui excepturi impedit omnis. Et voluptatem consequatur cupiditate et minima necessitatibus consectetur dignissimos. Voluptas ratione omnis et sed minus. Consectetur earum autem qui architecto iusto illo adipisci id. Modi dolorem sapiente totam cum sapiente. Iste odit nisi dicta."
-                },
-                {
-                    id: 7,
-                    question: "Lorem ipsum?",
-                    answer:
-                        "Eum repellat cupiditate assumenda nemo qui excepturi impedit omnis. Et voluptatem consequatur cupiditate et minima necessitatibus consectetur dignissimos. Voluptas ratione omnis et sed minus. Consectetur earum autem qui architecto iusto illo adipisci id. Modi dolorem sapiente totam cum sapiente. Iste odit nisi dicta."
-                },
-                {
-                    id: 8,
-                    question: "Lorem ipsum?",
-                    answer:
-                        "Eum repellat cupiditate assumenda nemo qui excepturi impedit omnis. Et voluptatem consequatur cupiditate et minima necessitatibus consectetur dignissimos. Voluptas ratione omnis et sed minus. Consectetur earum autem qui architecto iusto illo adipisci id. Modi dolorem sapiente totam cum sapiente. Iste odit nisi dicta."
-                }
-            ]
+            faqList: require('./faq.json'),
         };
     },
     computed: {
@@ -122,14 +66,14 @@ export default {
                 }
                 return foundInQuestion;
             });
-        }
+        },
     },
     components: {
         HeroBanner,
         SearchField,
         FaqSegment,
-        Footer
-    }
+        Footer,
+    },
 };
 </script>
 

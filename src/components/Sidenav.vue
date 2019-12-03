@@ -3,13 +3,25 @@
         <nav>
             <ul class="list-reset flex-column">
                 <li>
-                    <router-link to="/commands" class="text-decoration-none block h-100 pl2 h3">Commands</router-link>
+                    <router-link
+                        to="/commands"
+                        class="text-decoration-none block h-100 pl2 h3"
+                        >Commands</router-link
+                    >
                 </li>
                 <li>
-                    <router-link to="/faq" class="text-decoration-none block h-100 pl2 h3">FAQ</router-link>
+                    <router-link
+                        to="/faq"
+                        class="text-decoration-none block h-100 pl2 h3"
+                        >FAQ</router-link
+                    >
                 </li>
                 <li>
-                    <router-link to="/donate" class="text-decoration-none block h-100 pl2 h3">Donate</router-link>
+                    <router-link
+                        to="/donate"
+                        class="text-decoration-none block h-100 pl2 h3"
+                        >Donate</router-link
+                    >
                 </li>
             </ul>
         </nav>
@@ -68,13 +80,17 @@ export default {
         },
 
         pushPage() {
-            document.querySelector('#page-wrap').style.transition = 'all 0.3s ease 0s';
-            document.querySelector('#page-wrap').style.transform = `translate3d(-${this.openedWidth}, 0px, 0px )`;
+            document.querySelector('#page-wrap').style.transition =
+                'all 0.3s ease 0s';
+            document.querySelector(
+                '#page-wrap'
+            ).style.transform = `translate3d(-${this.openedWidth}, 0px, 0px )`;
             document.querySelector('#app').style.overflow = 'hidden';
         },
 
         pullPage() {
-            document.querySelector('#page-wrap').style.transition = 'all 0.3s ease 0s';
+            document.querySelector('#page-wrap').style.transition =
+                'all 0.3s ease 0s';
             document.querySelector('#page-wrap').style.transform = '';
         },
         log(e) {

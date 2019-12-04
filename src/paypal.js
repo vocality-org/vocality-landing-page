@@ -7,9 +7,11 @@ export default class Paypal {
         script.onload = callback;
 
         if (process.env.NODE_ENV === 'production') {
-            script.src = `${sdkUrl}Ac_VG0aFSUTEqCXUI7g4bstecPNJa1a7LSLwfaIHgZPTtJXk8e3549YcOQbpuayhBJBF170lwvdTvKnH`;
+            // the value of this env variable is only set in the now build process
+            // to test locally add it to a .env.local file and set NODE_ENV to production
+            script.src = `${sdkUrl}${process.env.VUE_APP_PAYPAL_LIVE_CLIENT_ID}`;
         } else {
-            script.src = `${sdkUrl}Ac_VG0aFSUTEqCXUI7g4bstecPNJa1a7LSLwfaIHgZPTtJXk8e3549YcOQbpuayhBJBF170lwvdTvKnH`;
+            script.src = `${sdkUrl}${process.env.VUE_APP_PAYPAL_SANBOX_CLIENT_ID}`;
         }
 
         document.head.appendChild(script);

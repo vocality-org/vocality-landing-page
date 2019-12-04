@@ -1,0 +1,8 @@
+{
+    "build": {
+        "env": {
+            "VUE_APP_PAYPAL_LIVE_CLIENT_ID": "@paypal-live-client-id",
+            "NODE_ENV": "production"
+        }
+    }
+}

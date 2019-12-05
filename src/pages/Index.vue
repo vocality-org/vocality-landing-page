@@ -13,8 +13,7 @@
             <div class="header-content">
                 <h1 class="no-events-on-drag">Vocality</h1>
                 <p class="h4 no-events-on-drag">
-                    State of the art music delivery. We pump the finest music
-                    juice right into the poipes of your discord server.
+                    The selfhosted discord music bot for you
                 </p>
                 <a
                     class="cta h3 bold text-decoration-none mt4 inline-block no-events-on-drag"
@@ -30,13 +29,11 @@
                 <div class="grid flex flex-column">
                     <div>
                         <div class="sticky">
-                            <h2 class="h1 m0">Batteries included</h2>
+                            <h2 class="h1 m0">Everything you need</h2>
                             <p class="h3">
                                 Vocality focuses on a minimal set of commands to
                                 keep it as simple as possible while providing
-                                all the features you expect from a music bot. We
-                                provide features that other bot want you to pay
-                                for! What really ? Yea thats' right billy.
+                                all the features you expect from a music bot.
                             </p>
                             <router-link
                                 to="/commands"
@@ -285,9 +282,7 @@
                             height="114"
                         />
                         <h4 class="h3 mt2 mb1">Volume control</h4>
-                        <span class="text-center"
-                            >Change the global volume</span
-                        >
+                        <span class="text-center">Change the music volume</span>
                     </div>
                 </div>
                 <div class="blue">
@@ -306,13 +301,13 @@
                 <div class="cyan">
                     <div class="flex justify-center items-center flex-column">
                         <img
-                            src="@/assets/icons/key.svg"
+                            src="@/assets/icons/settings.svg"
                             alt="key"
                             height="114"
                         />
-                        <h4 class="h3 mt2 mb1">Its a key</h4>
+                        <h4 class="h3 mt2 mb1">Highly Customizeable</h4>
                         <span class="text-center"
-                            >Everyone likes keys right?</span
+                            >Tweak the settigs to your needs</span
                         >
                     </div>
                 </div>
@@ -323,7 +318,7 @@
                 <div
                     class="flex  flex-column justify-center items-center max-mid my0 mx-auto w-100"
                 >
-                    <h2 class="h1 m0">Enter the free gift card giveaway</h2>
+                    <h2 class="h1 m0">Support us with a donation</h2>
                     <router-link to="/donate" class="cta h3 bold mt4">
                         Donate
                     </router-link>

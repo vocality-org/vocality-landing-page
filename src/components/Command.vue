@@ -23,12 +23,29 @@
         <div ref="content" class="content px2">
             <h3 class="h4 mb2 mt2">Description</h3>
             <span class="description h5">{{ description }}</span>
-            <h3 class="h4 mb2 mt3">Tags</h3>
-            <div class="tags flex">
-                <div v-for="t in tags" class="tag mx2 text-center" :key="t">
-                    {{ t }}
+            <div class="flex">
+                <div class="tags">
+                    <h3 class="h4 mb2 mt3">Tags</h3>
+                    <div class="tags flex">
+                        <div
+                            v-for="t in tags"
+                            class="tag mx2 text-center"
+                            :key="t"
+                        >
+                            {{ t }}
+                        </div>
+                    </div>
+                </div>
+                <div class="aliases ml4" v-if="aliases">
+                    <h3 class="h4 mb2 mt3">Aliases</h3>
+                    <ul>
+                        <li v-for="a in aliases" class="alias mx2" :key="a">
+                            {{ a }}
+                        </li>
+                    </ul>
                 </div>
             </div>
+
             <h3 class="h4 mb2 mt3">Example</h3>
             <div class="example">
                 <discord-messages>
@@ -60,7 +77,7 @@
                                     :key="f.name"
                                     :title="f.name"
                                 >
-                                    {{ f.content }}
+                                    <div v-html="f.content"></div>
                                 </embed-field>
                             </embed-fields>
                             <footer>{{ example.embed.footer }}</footer>
@@ -105,6 +122,9 @@ export default {
         },
         example: {
             required: true,
+        },
+        aliases: {
+            type: Array,
         },
     },
     methods: {

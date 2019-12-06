@@ -141,7 +141,7 @@
     },
     {
         "name": "autoplay",
-        "aliases": "auto",
+        "aliases": ["auto"],
         "description": "Bot continues playing songs after queue is finished",
         "tags": ["music"],
         "example": {
@@ -151,7 +151,7 @@
     },
     {
         "name": "move",
-        "aliases": "mv",
+        "aliases": ["mv"],
         "description": "Moves a Song to a given position in queue",
         "tags": ["music"],
         "arguments": ["position", "new position"],
@@ -162,7 +162,7 @@
     },
     {
         "name": "queue",
-        "aliases": "qu",
+        "aliases": ["qu"],
         "description": "Lists all songs in the queue",
         "tags": ["music"],
         "arguments": ["optional list size"],

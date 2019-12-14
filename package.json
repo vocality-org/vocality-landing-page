@@ -4,7 +4,7 @@
     "description": "Landing page for a discord music bot",
     "author": "Julian Kaindl <kaindl745@gmail.com>",
     "scripts": {
-        "build": "vue-cli-service build",
+        "build": "NODE_ENV=production vue-cli-service build",
         "lint": "vue-cli-service lint",
         "start": "vue-cli-service serve"
     },
@@ -20,8 +20,8 @@
         "vue2-leaflet": "^2.2.1"
     },
     "devDependencies": {
-        "@vue/cli-plugin-eslint": "^3.12.1",
         "@vue/cli-service": "^3.12.1",
+        "@vue/cli-plugin-eslint": "^3.12.1",
         "@vue/eslint-config-standard": "^4.0.0",
         "eslint": "^5.16.0",
         "eslint-plugin-vue": "^5.0.0",

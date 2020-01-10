@@ -1,15 +1,22 @@
-# Vocality Landing Page
+# vocality-landing-page
 
-## Getting Started
+> Vocality Landing Page
 
-Cloning the repository
+## Build Setup
 
-> git clone https://github.com/KaindlJulian/vocality-landing-page.git
+```bash
+# install dependencies
+$ npm run install
 
-Installing dependencies
+# serve with hot reload at localhost:3000
+$ npm run dev
 
-> npm install
+# build for production and launch server
+$ npm run build
+$ npm run start
 
-Starting local development server at `localhost:8080`
+# generate static project
+$ npm run generate
+```
 
-> npm start
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

@@ -1,0 +1,16 @@
+$palettes: (
+  brand: (
+    cyan: #29abe2,
+    blue: #0c003f,
+    pink: #ff3f60,
+  ),
+  discord: (
+    purple: #7289da,
+  ),
+);
+
+// USAGE
+// color: clr(brand, pink);
+@function clr($p, $c: 'default') {
+  @return map-get(map-get($palettes, $p), $c);
+}

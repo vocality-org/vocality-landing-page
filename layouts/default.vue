@@ -65,9 +65,11 @@
 </template>
 
 <script lang="ts">
+import { reactive, createComponent, toRefs } from '@vue/composition-api';
+
 export default {
-  data() {
-    return {
+  setup() {
+    const state = reactive({
       clipped: false,
       drawer: false,
       fixed: false,
@@ -87,7 +89,9 @@ export default {
       right: true,
       rightDrawer: false,
       title: 'Vuetify.js',
-    };
+    });
+
+    return { ...state };
   },
 };
 </script>

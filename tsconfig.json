@@ -10,9 +10,9 @@
     "strict": true,
     "noEmit": true,
     "baseUrl": ".",
+    "experimentalDecorators": true,
     "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./*"]
+      "~/*": ["./*"]
     },
     "types": ["@types/node", "@nuxt/types"]
   },

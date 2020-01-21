@@ -1,10 +1,11 @@
-<template> </template>
+<template>
+  <div></div>
+</template>
 
 <script lang="ts">
-import Logo from '../components/Logo.vue';
-import VuetifyLogo from '../components/VuetifyLogo.vue';
+import Vue from 'vue';
+import Component from 'vue-class-component';
 
-import { createComponent } from '@vue/composition-api';
-
-export default {};
+@Component({})
+export default class Index extends Vue {}
 </script>

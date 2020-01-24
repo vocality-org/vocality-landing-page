@@ -12,7 +12,8 @@
     "baseUrl": ".",
     "experimentalDecorators": true,
     "paths": {
-      "~/*": ["./*"]
+      "~/*": ["./*"],
+      "@/*": ["./*"]
     },
     "types": ["@types/node", "@nuxt/types"]
   },

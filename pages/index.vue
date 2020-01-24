@@ -319,24 +319,16 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import {
-  PerspectiveCamera,
-  Scene,
-  AmbientLight,
-  WebGLRenderer,
-  Euler,
-  Quaternion,
-} from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import updateOnSroll from 'uos';
+import Component from 'vue-class-component';
 
-export class Index extends Vue {
-  camera: PerspectiveCamera | null = null;
-  scene: Scene | null = null;
-  renderer: WebGLRenderer | null = null;
-  logo: Scene | null = null;
-  ww = window.innerWidth;
-  wh = window.innerHeight;
+@Component({})
+export default class Index extends Vue {
+  // camera: PerspectiveCamera | null = null;
+  // scene: Scene | null = null;
+  // renderer: WebGLRenderer | null = null;
+  // logo: Scene | null = null;
+  // ww = window.innerWidth;
+  // wh = window.innerHeight;
   rotationState = -1;
   isScrollingDown = true;
   isScrollEnabled = true;
@@ -347,93 +339,93 @@ export class Index extends Vue {
     y: 0,
   };
 
-  init() {
-    let container = document.getElementById('container')!;
+  //init() {
+  //  let container = document.getElementById('container')!;
+  //
+  //  this.camera = new PerspectiveCamera(50, this.ww / this.wh);
+  //  this.camera.position.z = 0.75;
+  //  this.camera.position.y = 0.3;
+  //
+  //  this.scene = new Scene();
+  //
+  //  const light = new AmbientLight('#fff', 1);
+  //  this.scene.add(light);
+  //
+  //  new GLTFLoader().load(
+  //    'vocality-logo-3d.glb',
+  //    gltf => {
+  //      this.logo = gltf.scene;
+  //      this.logo.scale.set(4.5, 4.5, 4.5);
+  //      this.logo.position.set(0.3, 0.24, 0);
+  //      this.scene!.add(this.logo);
+  //    },
+  //    xhr => {
+  //      console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
+  //    },
+  //    error => {
+  //      console.log(error);
+  //    }
+  //  );
+  //
+  //  this.renderer = new WebGLRenderer({ antialias: true });
+  //  this.renderer.setClearColor('#121212', 1);
+  //  // this.renderer.gammaOutput = true;
+  //  this.renderer.setSize(this.ww, this.wh);
+  //  container.appendChild(this.renderer.domElement);
+  //}
 
-    this.camera = new PerspectiveCamera(50, this.ww / this.wh);
-    this.camera.position.z = 0.75;
-    this.camera.position.y = 0.3;
+  //animate() {
+  //  requestAnimationFrame(this.animate);
+  //  if (this.logo) {
+  //    if (this.logo.rotation.y > 0.45) {
+  //      this.rotationState = -1;
+  //    } else if (this.logo.rotation.y < -0.65) {
+  //      this.rotationState = 1;
+  //    }
+  //    this.logo.rotation.y += 0.001 * this.rotationState;
+  //  }
+  //  this.renderer!.render(this.scene!, this.camera!);
+  //}
 
-    this.scene = new Scene();
+  //animateOnScroll() {
+  //  updateOnSroll(0, this.wh * 1.5, (position: any) => {
+  //    if (position === 1 && this.isScrollEnabled) {
+  //      if (this.$refs.container) {
+  //        (this.$refs.container as HTMLElement).style.transform =
+  //          'translateX(100vw)';
+  //      }
+  //      this.isScrollEnabled = false;
+  //      return;
+  //    }
+  //
+  //    if (position < 1 && !this.isScrollEnabled) {
+  //      if (this.$refs.container) {
+  //        (this.$refs.container as HTMLElement).style.transform =
+  //          'translateX(0px)';
+  //      }
+  //      this.isScrollEnabled = true;
+  //    }
+  //
+  //    this.isScrollingDown = position >= this.previousScrollPosition;
+  //    this.logo!.rotation.y += this.isScrollingDown ? 0.05 : -1 * 0.05;
+  //
+  //    if (position < 0.5) {
+  //      this.logo!.position.x = -1 * position + 0.28;
+  //    }
+  //
+  //    this.previousScrollPosition = position;
+  //  });
+  //}
 
-    const light = new AmbientLight('#fff', 1);
-    this.scene.add(light);
-
-    new GLTFLoader().load(
-      'vocality-logo-3d.glb',
-      gltf => {
-        this.logo = gltf.scene;
-        this.logo.scale.set(4.5, 4.5, 4.5);
-        this.logo.position.set(0.3, 0.24, 0);
-        this.scene!.add(this.logo);
-      },
-      xhr => {
-        console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
-      },
-      error => {
-        console.log(error);
-      }
-    );
-
-    this.renderer = new WebGLRenderer({ antialias: true });
-    this.renderer.setClearColor('#121212', 1);
-    // this.renderer.gammaOutput = true;
-    this.renderer.setSize(this.ww, this.wh);
-    container.appendChild(this.renderer.domElement);
-  }
-
-  animate() {
-    requestAnimationFrame(this.animate);
-    if (this.logo) {
-      if (this.logo.rotation.y > 0.45) {
-        this.rotationState = -1;
-      } else if (this.logo.rotation.y < -0.65) {
-        this.rotationState = 1;
-      }
-      this.logo.rotation.y += 0.001 * this.rotationState;
-    }
-    this.renderer!.render(this.scene!, this.camera!);
-  }
-
-  animateOnScroll() {
-    updateOnSroll(0, this.wh * 1.5, (position: any) => {
-      if (position === 1 && this.isScrollEnabled) {
-        if (this.$refs.container) {
-          (this.$refs.container as HTMLElement).style.transform =
-            'translateX(100vw)';
-        }
-        this.isScrollEnabled = false;
-        return;
-      }
-
-      if (position < 1 && !this.isScrollEnabled) {
-        if (this.$refs.container) {
-          (this.$refs.container as HTMLElement).style.transform =
-            'translateX(0px)';
-        }
-        this.isScrollEnabled = true;
-      }
-
-      this.isScrollingDown = position >= this.previousScrollPosition;
-      this.logo!.rotation.y += this.isScrollingDown ? 0.05 : -1 * 0.05;
-
-      if (position < 0.5) {
-        this.logo!.position.x = -1 * position + 0.28;
-      }
-
-      this.previousScrollPosition = position;
-    });
-  }
-
-  onResize() {
-    if (this.renderer && this.camera) {
-      const ww = window.innerWidth;
-      const wh = window.innerHeight;
-      this.renderer.setSize(ww, wh);
-      this.camera.aspect = ww / wh;
-      this.camera.updateProjectionMatrix();
-    }
-  }
+  //onResize() {
+  //  if (this.renderer && this.camera) {
+  //    const ww = window.innerWidth;
+  //    const wh = window.innerHeight;
+  //    this.renderer.setSize(ww, wh);
+  //    this.camera.aspect = ww / wh;
+  //    this.camera.updateProjectionMatrix();
+  //  }
+  //}
 
   onCanvasMouseDown() {
     this.isGrabbing = true;
@@ -456,31 +448,31 @@ export class Index extends Vue {
     }
   }
 
-  onCanvasMouseMove(e: any) {
-    const deltaMove = {
-      x: e.offsetX - this.previousMousePosition.x,
-      y: e.offsetY - this.previousMousePosition.y,
-    };
-
-    if (this.isGrabbing) {
-      const deltaRotationQuaternion = new Quaternion().setFromEuler(
-        new Euler(
-          this.toRadians(deltaMove.y * 0.1),
-          this.toRadians(deltaMove.x * 0.1),
-          0
-        )
-      );
-      this.logo!.quaternion.multiplyQuaternions(
-        deltaRotationQuaternion,
-        this.logo!.quaternion
-      );
-    }
-
-    this.previousMousePosition = {
-      x: e.offsetX,
-      y: e.offsetY,
-    };
-  }
+  // onCanvasMouseMove(e: any) {
+  //   const deltaMove = {
+  //     x: e.offsetX - this.previousMousePosition.x,
+  //     y: e.offsetY - this.previousMousePosition.y,
+  //   };
+  //
+  //   if (this.isGrabbing) {
+  //     const deltaRotationQuaternion = new Quaternion().setFromEuler(
+  //       new Euler(
+  //         this.toRadians(deltaMove.y * 0.1),
+  //         this.toRadians(deltaMove.x * 0.1),
+  //         0
+  //       )
+  //     );
+  //     this.logo!.quaternion.multiplyQuaternions(
+  //       deltaRotationQuaternion,
+  //       this.logo!.quaternion
+  //     );
+  //   }
+  //
+  //   this.previousMousePosition = {
+  //     x: e.offsetX,
+  //     y: e.offsetY,
+  //   };
+  // }
   onMouseLeave() {
     this.isGrabbing = false;
   }
@@ -488,46 +480,46 @@ export class Index extends Vue {
     return angle * (Math.PI / 180);
   }
 
-  mounted() {
-    this.init();
-    this.animate();
-    this.animateOnScroll();
-  }
-  created() {
-    window.addEventListener('resize', this.onResize);
-    this.$nextTick(() => {
-      (this.$refs.container as HTMLElement).addEventListener(
-        'mousedown',
-        this.onCanvasMouseDown
-      );
-      (this.$refs.container as HTMLElement).addEventListener(
-        'mouseup',
-        this.onCanvasMouseUp
-      );
-      (this.$refs.container as HTMLElement).addEventListener(
-        'mousemove',
-        this.onCanvasMouseMove
-      );
-      window.addEventListener('mouseout', this.onMouseLeave);
-    });
-  }
+  // mounted() {
+  //   this.init();
+  //   this.animate();
+  //   this.animateOnScroll();
+  // }
+  //created() {
+  //  window.addEventListener('resize', this.onResize);
+  //  this.$nextTick(() => {
+  //    (this.$refs.container as HTMLElement).addEventListener(
+  //      'mousedown',
+  //      this.onCanvasMouseDown
+  //    );
+  //    (this.$refs.container as HTMLElement).addEventListener(
+  //      'mouseup',
+  //      this.onCanvasMouseUp
+  //    );
+  //    (this.$refs.container as HTMLElement).addEventListener(
+  //      'mousemove',
+  //      this.onCanvasMouseMove
+  //    );
+  //    window.addEventListener('mouseout', this.onMouseLeave);
+  //  });
+  //}
 
-  beforeDestroy() {
-    window.removeEventListener('resize', this.onResize);
-    (this.$refs.container as HTMLElement).removeEventListener(
-      'mousedown',
-      this.onCanvasMouseDown
-    );
-    (this.$refs.container as HTMLElement).removeEventListener(
-      'mouseup',
-      this.onCanvasMouseUp
-    );
-    (this.$refs.container as HTMLElement).removeEventListener(
-      'mousemove',
-      this.onCanvasMouseMove
-    );
-    window.removeEventListener('mouseout', this.onMouseLeave);
-  }
+  //beforeDestroy() {
+  //  window.removeEventListener('resize', this.onResize);
+  //  (this.$refs.container as HTMLElement).removeEventListener(
+  //    'mousedown',
+  //    this.onCanvasMouseDown
+  //  );
+  //  (this.$refs.container as HTMLElement).removeEventListener(
+  //    'mouseup',
+  //    this.onCanvasMouseUp
+  //  );
+  //  (this.$refs.container as HTMLElement).removeEventListener(
+  //    'mousemove',
+  //    this.onCanvasMouseMove
+  //  );
+  //  window.removeEventListener('mouseout', this.onMouseLeave);
+  //}
 }
 </script>
 

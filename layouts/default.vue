@@ -86,6 +86,7 @@ export default class Layout extends Vue {
 
   navigateTo(path: string) {
     this.$router.push({ name: path });
+    this.drawer = false;
   }
 }
 </script>

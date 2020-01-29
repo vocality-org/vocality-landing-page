@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors';
+require('dotenv').config();
 
 export default {
   mode: 'universal',
@@ -47,6 +48,11 @@ export default {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
   ],
+  env: {
+    VUE_APP_PAYPAL_SANDBOX_CLIENT_ID:
+      process.env.VUE_APP_PAYPAL_SANDBOX_CLIENT_ID,
+    VUE_APP_PAYPAL_LIVE_CLIENT_ID: process.env.VUE_APP_PAYPAL_LIVE_CLIENT_ID,
+  },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module

@@ -1,5 +1,5 @@
 <template>
-  <div class="donate text-center">
+  <div class="donate">
     <section class="donate-cta max-mid mx-auto">
       <h2 class="m0 h1 mb4 pb2">Supporting Vocality</h2>
       <p class="m0 mb3 pb1 bold">
@@ -14,33 +14,24 @@
       </p>
     </section>
     <section class="select-amount">
-      <h3 class="m0 h2 p4">Select amount</h3>
-      <div class="grid mx-auto pt3">
-        <div class="item h3 relative overflow-hidden" @click="cashGrab('5.00')">
+      <h3 class="m0 h2" style="padding: 40px 0; margin: 0">Select amount</h3>
+      <div class="grid" style="padding-top: 15px">
+        <div class="item h3" @click="cashGrab('5.00')">
           5 €
         </div>
-        <div
-          class="item h3 relative overflow-hidden"
-          @click="cashGrab('10.00')"
-        >
+        <div class="item h3" @click="cashGrab('10.00')">
           10 €
         </div>
-        <div
-          class="item h3 relative overflow-hidden"
-          @click="cashGrab('25.00')"
-        >
+        <div class="item h3" @click="cashGrab('25.00')">
           25 €
         </div>
-        <div
-          class="item h3 relative overflow-hidden"
-          @click="cashGrab('50.00')"
-        >
+        <div class="item h3" @click="cashGrab('50.00')">
           50 €
         </div>
-        <div class="item h3 relative overflow-hidden">
+        <div class="item h3">
           OTHER
           <div class="popup other">
-            <div class="flex flex-column justify-center items-center h-100">
+            <div class="popup__inner">
               <div>
                 <input
                   class="my2 pr1"
@@ -78,12 +69,6 @@
         </div>
       </transition>
     </section>
-    <section class="other-inqs">
-      <h2 class="h1 m0 mb3">For other Inquiries</h2>
-      <router-link to="/contact" class="cta h3 bold py1 px3">
-        Contact Us
-      </router-link>
-    </section>
   </div>
 </template>
 
@@ -91,6 +76,21 @@
 export default {
   name: 'donate',
   components: {},
+  head() {
+    const sdkUrl = 'https://www.paypal.com/sdk/js?client-id=';
+    return {
+      script: [
+        {
+          src:
+            process.env.NODE_ENV === 'production'
+              ? `${sdkUrl}${process.env.VUE_APP_PAYPAL_LIVE_CLIENT_ID}`
+              : `${sdkUrl}${process.env.VUE_APP_PAYPAL_SANDBOX_CLIENT_ID}`,
+          type: 'text/javascript',
+          callback: () => {},
+        },
+      ],
+    };
+  },
   data() {
     return {
       otherInputValue: '',
@@ -111,8 +111,8 @@ export default {
       this.$nextTick().then(() => this.renderPaypalBtn(amount));
     },
     renderPaypalBtn(amount) {
-      if (!this.alreadyRendered) {
-        this.$paypal
+      if (!this.alreadyRendered && process.browser) {
+        window.paypal
           .Buttons({
             createOrder: function(data, actions) {
               return actions.order.create({
@@ -141,13 +141,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.donate {
+  background: clr(background);
+  text-align: center;
+}
 .cancel-link {
   text-decoration: underline;
 }
 .donate-cta {
-  margin-top: 469px;
-  padding: 180px 20px 0;
+  padding: 100px 200px 0;
   h2 {
+    margin-bottom: 30px;
     color: clr(brand, cyan);
   }
   .secondary-paragraph {
@@ -166,6 +170,8 @@ export default {
     justify-content: center;
     grid-template-columns: repeat(auto-fit, $item-size);
     .item {
+      overflow: hidden;
+      position: relative;
       width: $item-size;
       height: $item-size;
       line-height: $item-size;
@@ -188,6 +194,13 @@ export default {
         position: absolute;
         background-color: rgba(12, 12, 12, 0.7);
         transition: transform 0.2s ease;
+        &__inner {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+        }
       }
       .other {
         line-height: normal;

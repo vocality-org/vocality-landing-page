@@ -36,7 +36,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar color="transparent" fixed app class="elevation-0">
+    <v-app-bar color="#303030" elevate-on-scroll fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-spacer />
       <v-btn outlined class="mx-2" color="grey" @click="navigateTo('plugins')">
@@ -61,9 +61,7 @@
     </v-app-bar>
 
     <v-content>
-      <v-container>
-        <nuxt />
-      </v-container>
+      <nuxt />
     </v-content>
   </v-app>
 </template>
@@ -91,3 +89,9 @@ export default class Layout extends Vue {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.theme--dark.v-application {
+  background: transparent !important;
+}
+</style>

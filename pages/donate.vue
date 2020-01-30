@@ -144,6 +144,7 @@ export default {
 .donate {
   background: clr(background);
   text-align: center;
+  min-height: 100vh;
 }
 .cancel-link {
   text-decoration: underline;

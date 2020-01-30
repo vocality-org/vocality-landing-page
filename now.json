@@ -8,6 +8,6 @@
     }
   ],
   "env": {
-    "VUE_APP_PAYPAL_CLIENT_ID": "@paypal-live-client-id"
+    "NUXT_ENV_PAYPAL_CLIENT_ID": "@paypal-live-client-id"
   }
 }

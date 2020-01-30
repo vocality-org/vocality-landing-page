@@ -81,7 +81,7 @@ export default {
     return {
       script: [
         {
-          src: `${sdkUrl}${process.env.VUE_APP_PAYPAL_CLIENT_ID}`,
+          src: `${sdkUrl}${process.env.NUXT_ENV_PAYPAL_CLIENT_ID}`,
           type: 'text/javascript',
           callback: () => {},
         },

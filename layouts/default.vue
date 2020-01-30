@@ -2,6 +2,14 @@
   <v-app>
     <v-navigation-drawer v-model="drawer" fixed app>
       <v-list>
+        <v-list-item link @click="navigateTo('index')">
+          <v-list-item-icon>
+            <v-icon>{{ homeIcon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>Home</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
         <v-list-item link @click="navigateTo('plugins')">
           <v-list-item-icon>
             <v-icon>{{ pluginIcon }}</v-icon>
@@ -54,7 +62,7 @@
         outlined
         class="mx-2"
         color="primary"
-        @click="navigateTo('members')"
+        @click="navigateTo('donate')"
       >
         Donate
       </v-btn>
@@ -74,6 +82,7 @@ import {
   mdiAccountGroup,
   mdiGithubCircle,
   mdiGift,
+  mdiHome,
 } from '@mdi/js';
 
 @Component({})
@@ -83,6 +92,7 @@ export default class Layout extends Vue {
   membersIcon = mdiAccountGroup;
   githubIcon = mdiGithubCircle;
   donateIcon = mdiGift;
+  homeIcon = mdiHome;
 
   navigateTo(path: string) {
     this.$router.push({ name: path });

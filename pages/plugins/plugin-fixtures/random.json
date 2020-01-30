@@ -1,0 +1,87 @@
+[
+  {
+    "name": "random",
+    "aliases": ["rand", "rndm"],
+    "description": "Execute a random subcommand",
+    "example": {
+      "input": "random",
+      "output": "\"how could I know ?\""
+    },
+    "subcommands": [
+      {
+        "name": "fraction",
+        "arguments": ["decimals", "amount"],
+        "aliases": ["frac"],
+        "description": "This command generates true random decimal fractions in the interval of [0,1]",
+        "example": {
+          "input": "random fraction 3 5",
+          "output": "0.123, 0.232, 0.523, 0.963, 0.042"
+        }
+      },
+      {
+        "name": "name",
+        "description": "Generates a random name",
+        "example": {
+          "input": "random fraction",
+          "output": "John Doe"
+        }
+      },
+      {
+        "name": "gaussian",
+        "aliases": ["normalDistribution"],
+        "description": "This command generates true random numbers from a gaussian distribution",
+        "arguments": ["mean", "standard deviation", "amount"],
+        "example": {
+          "input": "random gaussian",
+          "output": "0.75"
+        }
+      },
+      {
+        "name": "number",
+        "aliases": ["num", "int", "integer"],
+        "description": "This command generates true random integers within a user defined range",
+        "arguments": ["min-max", "amount"],
+        "example": {
+          "input": "random number <20,5> 3",
+          "output": "17, 21, 19"
+        }
+      },
+      {
+        "name": "string",
+        "description": "This command generates true random strings",
+        "arguments": ["characters", "length", "amount"],
+        "example": {
+          "input": "random string abc 5 3",
+          "output": "aabbc, abcab, bacba"
+        }
+      },
+      {
+        "name": "uuid",
+        "description": "This command generates true random uuids",
+        "arguments": ["amount"],
+        "example": {
+          "input": "random uuid",
+          "output": "123e4567-e89b-12d3-a456-426655440000"
+        }
+      },
+      {
+        "name": "word",
+        "description": "This command generates random words",
+        "arguments": ["amount"],
+        "example": {
+          "input": "random word",
+          "output": "word"
+        }
+      },
+      {
+        "name": "image",
+        "description": "This sends a random image",
+        "arguments": ["width", "length"],
+        "example": {
+          "input": "random image 200 200",
+          "output": "(image from unsplash.com)"
+        }
+      }
+    ]
+  }
+]

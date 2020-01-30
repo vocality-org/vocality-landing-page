@@ -1,0 +1,165 @@
+[
+  {
+    "name": "play",
+    "aliases": ["p", "pl"],
+    "arguments": ["link or query"],
+    "description": "Play a song.",
+    "example": {
+      "input": "play darude sandstorm",
+      "output": "Now playing Darude - Sandstorm"
+    }
+  },
+  {
+    "name": "current",
+    "description": "Display the current song.",
+    "example": {
+      "input": "current",
+      "embed": {
+        "title": "Currently Playing",
+        "url": "https://www.youtube.com/watch?v=y6120QOlsfU",
+        "color": "#00e773",
+        "description": "Darude - Sandstorm",
+        "fields": [
+          {
+            "name": "Time",
+            "content": "1:23 / 3:52"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "disconnect",
+    "aliases": ["dc"],
+    "description": "Make the bot disconnect from voice channels.",
+    "example": {
+      "input": "disconnect"
+    }
+  },
+  {
+    "name": "loop",
+    "description": "If set to true it loops the current song.",
+    "example": {
+      "input": "loop",
+      "output": "Repeating is now `enabled"
+    }
+  },
+  {
+    "name": "lyrics",
+    "description": "Display the songs lyrics.",
+    "example": {
+      "input": "lyrics",
+      "embed": {
+        "title": "Lyrics for Darude - Sandstorm",
+        "url": "https://genius.com/Darude-sandstorm-lyrics",
+        "description": "[Verse] Duuuuuuuuuuuuuuuuuuuuuuun Dun dun dun dun dun dun dun dun dun dun dun dundun dun dundundun dun dun dun dun dun dun dundun dundun ...",
+        "color": "#00e773",
+        "footer": "Page 1 of 2"
+      },
+      "reactions": ["◀", "▶"]
+    },
+    "arguments": ["optional search query"]
+  },
+  {
+    "name": "pause",
+    "description": "Pause the current song.",
+    "example": {
+      "input": "stop"
+    }
+  },
+  {
+    "name": "remove",
+    "aliases": ["rm"],
+    "description": "Remove a song from the queue.",
+    "example": {
+      "input": "remove 2",
+      "output": "Removed NOMA - Brainpower"
+    },
+    "arguments": ["index of song in queue"]
+  },
+  {
+    "name": "resume",
+    "description": "Resume the song after pausing.",
+    "example": {
+      "input": "resume"
+    }
+  },
+  {
+    "name": "shuffle",
+    "description": "Shuffle the queue.",
+    "example": {
+      "input": "shuffle",
+      "output": "Random play is now `enabled"
+    }
+  },
+  {
+    "name": "skip",
+    "aliases": ["next"],
+    "description": "Skip the current song.",
+    "example": {
+      "input": "skip"
+    },
+    "arguments": ["amount of songs to skip"]
+  },
+  {
+    "name": "stop",
+    "description": "Stop the bot.",
+    "example": {
+      "input": "stop"
+    }
+  },
+  {
+    "name": "autoplay",
+    "aliases": ["auto"],
+    "description": "Bot continues playing songs after queue is finished",
+    "example": {
+      "input": "autoplay",
+      "output": "Autoplay is now `enabled"
+    }
+  },
+  {
+    "name": "move",
+    "aliases": ["mv"],
+    "description": "Moves a Song to a given position in queue",
+    "arguments": ["position", "new position"],
+    "example": {
+      "input": "move 1 2",
+      "output": "Moved 'Darude - Sandstorm' from position 1 to 2"
+    }
+  },
+  {
+    "name": "queue",
+    "aliases": ["qu"],
+    "description": "Lists all songs in the queue",
+    "arguments": ["optional list size"],
+    "example": {
+      "input": "queue",
+      "embed": {
+        "url": "https://genius.com/Darude-sandstorm-lyrics",
+        "fields": [
+          {
+            "name": "Current Song Queue",
+            "content": "<b>1. Entry</b> <a>NOMA - Brain Power</a> | length: 00:03:07 | requested by: User"
+          },
+          {
+            "name": "Now Playing",
+            "content": "Darude - Sandstorm "
+          }
+        ],
+        "color": "#00e773",
+        "footer": "Page 1 of 1"
+      },
+      "reactions": ["◀", "▶"]
+    }
+  },
+  {
+    "name": "volume",
+    "aliases": ["vol"],
+    "description": "Change the Volume of the bot between 0 and 100%",
+    "arguments": ["volume"],
+    "example": {
+      "input": "volume 42",
+      "output": "Volume changed to 42"
+    }
+  }
+]

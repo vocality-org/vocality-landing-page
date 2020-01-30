@@ -1,0 +1,51 @@
+[
+  {
+    "name": "changePrefix",
+    "arguments": ["new prefix"],
+    "description": "Change the bots prefix.",
+    "example": {
+      "input": "changePrefix !",
+      "output": "Prefix changed to `!`"
+    }
+  },
+  {
+    "name": "help",
+    "aliases": ["h"],
+    "description": "Display a help message.",
+    "example": {
+      "input": "help",
+      "output": "Dynamically generated help message"
+    }
+  },
+  {
+    "name": "plugins",
+    "aliases": ["plugin"],
+    "description": "List all plugins. Load and unload plugins with subcommands",
+    "example": {
+      "input": "plugins",
+      "embed": {
+        "title": "Found 2 Plugins",
+        "color": "#29abe2",
+        "description": "✓ - vocality-votes\n✓ - vocality-random"
+      }
+    },
+    "subcommands": [
+      {
+        "name": "plugins load",
+        "arguments": ["plugin-name"],
+        "description": "Loads a plugin for the guild",
+        "example": {
+          "input": "load vocality-votes"
+        }
+      },
+      {
+        "name": "plugins unload",
+        "arguments": ["plugin-name"],
+        "description": "Unloads a plugin for the guild",
+        "example": {
+          "input": "unload vocality-votes"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "wizard",
+    "aliases": ["h"],
+    "arguments": ["wizard type"],
+    "description": "Start a wizard for your poll",
+    "example": {
+      "input": "wizard",
+      "output": "Dynamically generated help message"
+    },
+    "subcommands": [
+      {
+        "name": "new",
+        "description": "Start a poll with advanced settings",
+        "example": {
+          "input": "wizard new"
+        }
+      },
+      {
+        "name": "quick",
+        "description": "Start a poll with reduced settings",
+        "example": {
+          "input": "wizard quick"
+        }
+      }
+    ]
+  },
+  {
+    "name": "end",
+    "description": "End a Poll",
+    "arguments": ["id or username"],
+    "example": {
+      "input": "help",
+      "output": "Dynamically generated help message"
+    }
+  }
+]

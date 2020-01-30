@@ -462,7 +462,7 @@ export default class Index extends Vue {
     background: #303030;
     top: 0;
     bottom: 0;
-    height: 120%;
+    height: 100%;
     width: 100vw;
     .color-grid {
       width: 100%;

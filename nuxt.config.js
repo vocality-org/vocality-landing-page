@@ -51,9 +51,7 @@ export default {
     '@nuxtjs/dotenv',
   ],
   env: {
-    VUE_APP_PAYPAL_SANDBOX_CLIENT_ID:
-      process.env.VUE_APP_PAYPAL_SANDBOX_CLIENT_ID,
-    VUE_APP_PAYPAL_LIVE_CLIENT_ID: process.env.VUE_APP_PAYPAL_LIVE_CLIENT_ID,
+    VUE_APP_PAYPAL_CLIENT_ID: process.env.VUE_APP_PAYPAL_CLIENT_ID,
   },
   /*
    ** vuetify module configuration

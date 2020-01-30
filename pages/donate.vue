@@ -81,10 +81,7 @@ export default {
     return {
       script: [
         {
-          src:
-            process.env.NODE_ENV === 'production'
-              ? `${sdkUrl}${process.env.VUE_APP_PAYPAL_LIVE_CLIENT_ID}`
-              : `${sdkUrl}${process.env.VUE_APP_PAYPAL_SANDBOX_CLIENT_ID}`,
+          src: `${sdkUrl}${process.env.VUE_APP_PAYPAL_CLIENT_ID}`,
           type: 'text/javascript',
           callback: () => {},
         },

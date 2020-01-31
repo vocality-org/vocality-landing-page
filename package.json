@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Vocality Landing Page",
   "author": "Vocality Authors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vocality-org/vocality-landing-page.git"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt generate",

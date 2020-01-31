@@ -5,7 +5,7 @@
   "author": "Vocality Authors",
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
+    "build": "nuxt generate",
     "start": "NODE_ENV=production nuxt start",
     "generate": "nuxt generate"
   },

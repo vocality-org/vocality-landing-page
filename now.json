@@ -1,12 +1,10 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "nuxt.config.js",
-      "use": "@nuxtjs/now-builder",
-      "config": {}
+  "build": {
+    "env": {
+      "NUXT_ENV_PAYPAL_CLIENT_ID": "@paypal-live-client-id"
     }
-  ],
+  },
   "env": {
     "NUXT_ENV_PAYPAL_CLIENT_ID": "@paypal-live-client-id"
   }

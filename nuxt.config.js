@@ -34,6 +34,7 @@ export default {
     scss: ['assets/scss/main.scss'],
   },
   plugins: [{ src: '~/plugins/discord-message.ts', mode: 'client' }],
+  dev: process.env.NODE_ENV !== 'production',
   /*
    ** Nuxt.js dev-modules
    */

@@ -23,6 +23,17 @@ export default {
    ** Customize the progress-bar color
    */
   loading: { color: '#29abe2' },
+  /* */
+  generate: {
+    routes: function() {
+      return [
+        { route: '/plugins/core' },
+        { route: '/plugins/music' },
+        { route: '/plugins/votes' },
+        { route: '/plugins/random' },
+      ];
+    },
+  },
   /*
    ** Global CSS
    */

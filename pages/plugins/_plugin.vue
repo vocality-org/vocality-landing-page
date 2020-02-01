@@ -44,6 +44,9 @@ export default class Plugin extends Vue {
 </script>
 
 <style lang="scss" scoped>
+.v-content__wrap {
+  background: #303030 !important;
+}
 .background {
   background-color: #303030;
   min-height: 100vh;

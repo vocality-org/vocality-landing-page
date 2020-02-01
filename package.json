@@ -28,7 +28,7 @@
     "@mdi/js": "^4.8.95",
     "@nuxt/typescript-build": "^0.5.5",
     "@nuxtjs/style-resources": "^1.0.0",
-    "@nuxtjs/vuetify": "^1.0.0",
+    "@nuxtjs/vuetify": "^1.10.3",
     "node-sass": "^4.13.1",
     "prettier": "^1.16.4",
     "sass-loader": "^8.0.2",

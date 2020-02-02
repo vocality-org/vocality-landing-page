@@ -31,7 +31,7 @@
     "arguments": ["id or username"],
     "example": {
       "input": "help",
-      "output": "Dynamically generated help message"
+      "output": "Vote results"
     }
   },
   {

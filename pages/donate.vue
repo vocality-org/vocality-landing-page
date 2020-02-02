@@ -38,17 +38,10 @@
                   type="number"
                   min="0"
                   v-model="otherInputValue"
+                  @focus="cashGrab(otherInputValue)"
                 />
                 <span>€</span>
               </div>
-              <transition name="slide-up">
-                <a
-                  v-if="submittable"
-                  class="submit"
-                  @click="cashGrab(otherInputValue)"
-                  >SUBMIT</a
-                >
-              </transition>
             </div>
           </div>
         </div>

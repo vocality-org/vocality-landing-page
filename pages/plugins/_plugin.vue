@@ -3,7 +3,12 @@
     <div class="containerized">
       <h1 class="h2">{{ name }}</h1>
       <v-row justify="center" class="commands">
-        <v-expansion-panels popout focusable multiple>
+        <v-expansion-panels
+          popout
+          focusable
+          multiple
+          style="margin-bottom: 16px"
+        >
           <Command v-for="c in commands" :key="c.name" v-bind="c" />
         </v-expansion-panels>
       </v-row>

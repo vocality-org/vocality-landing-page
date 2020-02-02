@@ -33,5 +33,46 @@
       "input": "help",
       "output": "Dynamically generated help message"
     }
+  },
+  {
+    "name": "myvote",
+    "description": "Shows you the vote for your last or any specific active poll",
+    "example": {
+      "input": "myvote",
+      "output": "Information about your votes"
+    }
+  },
+  {
+    "name": "archived",
+    "description": "Shows you archived Polls either as list or detailed",
+    "example": {
+      "input": "archived"
+    },
+    "subcommands": [
+      {
+        "name": "details",
+        "description": "Show the detailed outcome of a Poll",
+        "arguments": ["poll id"],
+        "example": {
+          "input": "archived details 123e4567-e89b-12d3-a456-426655440000",
+          "output": "No archived Polls to show"
+        }
+      },
+      {
+        "name": "list",
+        "description": "Shows a list of all archived Polls for this guild",
+        "example": {
+          "input": "archived list",
+          "embed": {
+            "title": "Archived Polls",
+            "url": "https://genius.com/Darude-sandstorm-lyrics",
+            "description": "1.Entry 123e4567-e89b-12d3-a456-426655440000 initiated by User with question Yes or no ?",
+            "color": "#29abe2",
+            "footer": "Page 1 of 1"
+          },
+          "reactions": ["◀", "▶"]
+        }
+      }
+    ]
   }
 ]

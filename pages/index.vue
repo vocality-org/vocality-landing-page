@@ -7,8 +7,13 @@
       <div class="header-content">
         <h1 class="no-events-on-drag">Vocality</h1>
         <p class="h4 no-events-on-drag">
-          State of the Art Discord Bot Pluginification
+          Extendable Discord Bot building Framework
         </p>
+        <router-link to="cli">
+          <v-btn large color="primary" class="no-events-on-drag">
+            Get Started
+          </v-btn>
+        </router-link>
       </div>
     </section>
 
@@ -422,9 +427,8 @@ export default class Index extends Vue {
 .header {
   position: fixed;
   top: 240px;
-  left: 80px;
+  left: 240px;
   padding: 20px 20px 0px;
-  pointer-events: none;
   @include mq(sm) {
     padding-top: 120px;
   }

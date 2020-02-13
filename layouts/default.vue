@@ -18,6 +18,14 @@
             <v-list-item-title>Plugins</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        <v-list-item link @click="navigateTo('cli')">
+          <v-list-item-icon>
+            <v-icon>{{ cliIcon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>Vocality CLI</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
         <v-list-item link @click="navigateTo('members')">
           <v-list-item-icon>
             <v-icon>{{ membersIcon }}</v-icon>
@@ -83,6 +91,7 @@ import {
   mdiGithubCircle,
   mdiGift,
   mdiHome,
+  mdiConsole,
 } from '@mdi/js';
 
 @Component({})
@@ -93,6 +102,7 @@ export default class Layout extends Vue {
   githubIcon = mdiGithubCircle;
   donateIcon = mdiGift;
   homeIcon = mdiHome;
+  cliIcon = mdiConsole;
 
   navigateTo(path: string) {
     this.$router.push({ name: path });

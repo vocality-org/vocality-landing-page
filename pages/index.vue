@@ -187,6 +187,41 @@
                   </ul>
                 </div>
               </section>
+
+              <section class="checklist">
+                <div class="list-icon-container hide-points">
+                  <v-icon class="list-icon">{{ modIcon }}</v-icon>
+                </div>
+                <div class="checklist-content pb3">
+                  <h3 class="h3 m0">Moderation</h3>
+                  <ul class="checklist-content__ul m0 p0">
+                    <li class="checklist-item">
+                      <img
+                        src="@/assets/icons/checkmark.svg"
+                        alt="checkmark"
+                        class="checkmark-icon"
+                      />
+                      Ban/Kick
+                    </li>
+                    <li class="checklist-item">
+                      <img
+                        src="@/assets/icons/checkmark.svg"
+                        alt="checkmark"
+                        class="checkmark-icon"
+                      />
+                      Server Mute
+                    </li>
+                    <li class="checklist-item">
+                      <img
+                        src="@/assets/icons/checkmark.svg"
+                        alt="checkmark"
+                        class="checkmark-icon"
+                      />
+                      Record User Warnings
+                    </li>
+                  </ul>
+                </div>
+              </section>
             </div>
           </div>
         </div>
@@ -200,7 +235,13 @@ import Vue from 'vue';
 import Component from 'vue-class-component';
 //@ts-ignore (we dont need not types)
 import * as THREE from 'three-full';
-import { mdiMusic, mdiLanguageTypescript, mdiVote, mdiNumeric } from '@mdi/js';
+import {
+  mdiMusic,
+  mdiLanguageTypescript,
+  mdiVote,
+  mdiNumeric,
+  mdiBank,
+} from '@mdi/js';
 
 @Component({})
 export default class Index extends Vue {
@@ -224,6 +265,7 @@ export default class Index extends Vue {
   tsIcon = mdiLanguageTypescript;
   voteIcon = mdiVote;
   randomIcon = mdiNumeric;
+  modIcon = mdiBank;
 
   init() {
     let container = document.getElementById('container')!;

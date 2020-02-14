@@ -35,7 +35,7 @@ export default class Plugin extends Vue {
   commands = [];
 
   beforeRouteEnter(to: Route, from: Route, next: any) {
-    const plugins = ['core', 'music', 'votes', 'random'];
+    const plugins = ['core', 'music', 'votes', 'random', 'moderation'];
     if (plugins.includes(to.params.plugin)) {
       next((model: any) => {
         model.$data.name = to.params.plugin;

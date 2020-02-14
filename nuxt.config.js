@@ -31,6 +31,7 @@ export default {
         { route: '/plugins/music' },
         { route: '/plugins/votes' },
         { route: '/plugins/random' },
+        { route: '/plugins/moderation' },
       ];
     },
   },

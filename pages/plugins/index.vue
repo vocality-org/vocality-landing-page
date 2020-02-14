@@ -29,6 +29,7 @@ export default class Plugins extends Vue {
     { name: 'music', color: 'blue' },
     { name: 'votes', color: 'pink' },
     { name: 'random', color: 'cyan' },
+    { name: 'moderation', color: 'blue' },
   ];
 
   navigateTo(name: string) {

@@ -1,0 +1,85 @@
+[
+  {
+    "name": "ban",
+    "arguments": ["@user", "(reason)"],
+    "description": "Ban a user from the server",
+    "example": {
+      "input": "ban @John spamming"
+    },
+    "subcommands": [
+      {
+        "name": "temporary",
+        "arguments": ["@user", "(reason)", "(duration)"],
+        "aliases": ["temp"],
+        "description": "Ban a user from the server for a given amount of days",
+        "example": {
+          "input": "ban temporary @John spamming 5"
+        }
+      }
+    ]
+  },
+  {
+    "name": "unban",
+    "arguments": ["@user"],
+    "description": "Unban a user",
+    "example": {
+      "input": "unban @John"
+    }
+  },
+  {
+    "name": "kick",
+    "arguments": ["@user"],
+    "description": "Kick a user",
+    "example": {
+      "input": "kick @John"
+    }
+  },
+  {
+    "name": "mute",
+    "arguments": ["@user", "(reason)"],
+    "description": "Server mute a user",
+    "example": {
+      "input": "mute @John"
+    },
+    "subcommands": [
+      {
+        "name": "temporary",
+        "arguments": ["@user", "(duration)"],
+        "aliases": ["temp"],
+        "description": "Servermute a user for a given amount of days",
+        "example": {
+          "input": "mute temporary @John 5"
+        }
+      }
+    ]
+  },
+  {
+    "name": "unmute",
+    "arguments": ["@user"],
+    "description": "Unmute a user",
+    "example": {
+      "input": "unmute @John"
+    }
+  },
+  {
+    "name": "warn",
+    "arguments": ["@user", "(message)"],
+    "description": "Send a warn message to a users via direct message",
+    "example": {
+      "input": "warn @John spamming"
+    }
+  },
+  {
+    "name": "incidents",
+    "arguments": ["@user"],
+    "description": "List all warnings a user received",
+    "example": {
+      "input": "incidents @John",
+      "embed": {
+        "title": "John has 1 Warning",
+        "description": "1. spamming",
+        "color": "#29abe2"
+      }
+    }
+  }
+]
